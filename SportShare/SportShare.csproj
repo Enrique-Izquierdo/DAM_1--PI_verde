@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clase\Actividades.cs" />
+    <Compile Include="Clase\Campeonato.cs" />
+    <Compile Include="Clase\ConexionBDpST.cs" />
+    <Compile Include="Clase\Mensaje.cs" />
+    <Compile Include="Clase\Usuario.cs" />
+    <Compile Include="Clase\Valoración.cs" />
+    <Compile Include="Idiomas\Español.Designer.cs" />
     <Compile Include="IniciarSesión.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +86,7 @@
     <Compile Include="Valoración.Designer.cs">
       <DependentUpon>Valoración.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Idiomas\Español.resx" />
     <EmbeddedResource Include="IniciarSesión.resx">
       <DependentUpon>IniciarSesión.cs</DependentUpon>
     </EmbeddedResource>
