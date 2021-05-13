@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnAtletismoBuscar" xml:space="preserve">
+    <value>Atletismo</value>
+  </data>
+  <data name="btnAñadirActiCampeonatoCrear" xml:space="preserve">
+    <value>Añadir Actividad</value>
+  </data>
+  <data name="btnBaloncestoBuscar" xml:space="preserve">
+    <value>Baloncesto</value>
+  </data>
+  <data name="btnCerrarSesion" xml:space="preserve">
+    <value>Cerrar Sesion</value>
+  </data>
+  <data name="btnCiclismoBuscar" xml:space="preserve">
+    <value>Ciclismo</value>
+  </data>
+  <data name="btnCrearCampeonatoCrear" xml:space="preserve">
+    <value>Crear Campeonato</value>
+  </data>
+  <data name="btnFutbolBuscar" xml:space="preserve">
+    <value>Futbol</value>
+  </data>
+  <data name="btnModificarMiPerfil" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+  <data name="btnSalir" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <data name="btnTenisBuscar" xml:space="preserve">
+    <value>Tenis</value>
+  </data>
+  <data name="bttnCancelarCrear" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="bttnSiCrear" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+  <data name="bttnVolverCrear" xml:space="preserve">
+    <value>Volver a pantalla anterior</value>
+  </data>
+  <data name="gbxAmigosMiPerfil" xml:space="preserve">
+    <value>Amigos</value>
+  </data>
+  <data name="gbxAyudaAyuda" xml:space="preserve">
+    <value>Contacta con nosotros</value>
+  </data>
+  <data name="gbxMisUltEvenMiPerfil" xml:space="preserve">
+    <value>Mis Últimos Eventos</value>
+  </data>
+  <data name="grboxEstadoCrear" xml:space="preserve">
+    <value>Estado de mi inscripción:</value>
+  </data>
+  <data name="grpboxDatosCelebracionCrear" xml:space="preserve">
+    <value>Datos Celebración Evento:</value>
+  </data>
+  <data name="grpboxListaCrear" xml:space="preserve">
+    <value>Actividades:</value>
+  </data>
+  <data name="grpboxOrganizadorCrear" xml:space="preserve">
+    <value>Campeonato:</value>
+  </data>
+  <data name="grpboxParticipantesCrear" xml:space="preserve">
+    <value>Descripción Campeonato:</value>
+  </data>
+  <data name="grpboxRequisitosCrear" xml:space="preserve">
+    <value>Requisitos a cumplir por participantes:</value>
+  </data>
+  <data name="lblAlturaMiPerfil" xml:space="preserve">
+    <value>Altura:</value>
+  </data>
+  <data name="lblApellidosMiPerfil" xml:space="preserve">
+    <value>Apellidos:</value>
+  </data>
+  <data name="lblCampeonatoExistenteCrear" xml:space="preserve">
+    <value>Nombre Campeonato:</value>
+  </data>
+  <data name="lblDeporteCrear" xml:space="preserve">
+    <value>Deporte:</value>
+  </data>
+  <data name="lblDepPrefMiperfil" xml:space="preserve">
+    <value>Deporte Preferido:</value>
+  </data>
+  <data name="lblDescripcionEventoCrear" xml:space="preserve">
+    <value>Descripción del Evento:</value>
+  </data>
+  <data name="lblDestacadosBuscar" xml:space="preserve">
+    <value>Destacados</value>
+  </data>
+  <data name="lblDiaCrear" xml:space="preserve">
+    <value>Día:</value>
+  </data>
+  <data name="lblEdadCrear" xml:space="preserve">
+    <value>Edad:</value>
+  </data>
+  <data name="lblEdadMiPerfil" xml:space="preserve">
+    <value>Edad:</value>
+  </data>
+  <data name="lblEmailAyuda" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="lblEmailMiPerfil" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="lblEnfermedadesMiPerfil" xml:space="preserve">
+    <value>Enfermedades:</value>
+  </data>
+  <data name="lblEventActivMisEventos" xml:space="preserve">
+    <value>Mis Eventos Activos</value>
+  </data>
+  <data name="lblEventPasMisEventos" xml:space="preserve">
+    <value>Mis Eventos Pasados</value>
+  </data>
+  <data name="lblFacebookAyuda" xml:space="preserve">
+    <value>Facebook:</value>
+  </data>
+  <data name="lblFechaLimiteCrear" xml:space="preserve">
+    <value>Fecha límite inscripción:</value>
+  </data>
+  <data name="lblHoraCrear" xml:space="preserve">
+    <value>Hora:</value>
+  </data>
+  <data name="lblInstagramAyuda" xml:space="preserve">
+    <value>Instagram:</value>
+  </data>
+  <data name="lblListaEsperaCrear" xml:space="preserve">
+    <value>En lista de espera:</value>
+  </data>
+  <data name="lblLocalizacionCrear" xml:space="preserve">
+    <value>Localización:</value>
+  </data>
+  <data name="lblMaterialesCrear" xml:space="preserve">
+    <value>Materiales a aportar:</value>
+  </data>
+  <data name="lblMensajesEnviadosNotificaciones" xml:space="preserve">
+    <value>Mensajes Enviados</value>
+  </data>
+  <data name="lblMensajesRecibidosNotificaciones" xml:space="preserve">
+    <value>Mensajes Recibidos</value>
+  </data>
+  <data name="lblNivelDeportivoCrear" xml:space="preserve">
+    <value>Nivel Deportivo:</value>
+  </data>
+  <data name="lblNombreEventoCrear" xml:space="preserve">
+    <value>Nombre Evento:</value>
+  </data>
+  <data name="lblNombreMiPerfil" xml:space="preserve">
+    <value>Nombre:</value>
+  </data>
+  <data name="lblNumParticipantesCrear" xml:space="preserve">
+    <value>Núm. máximo participantes:</value>
+  </data>
+  <data name="lblPaticipaciónCrear" xml:space="preserve">
+    <value>Participación aceptada:</value>
+  </data>
+  <data name="lblPesoMiperfil" xml:space="preserve">
+    <value>Peso:</value>
+  </data>
+  <data name="lblPoblaciónMiPerfil" xml:space="preserve">
+    <value>Población:</value>
+  </data>
+  <data name="lblPrecioCrear" xml:space="preserve">
+    <value>Precio:</value>
+  </data>
+  <data name="lblPrecioNumCrear" xml:space="preserve">
+    <value>$</value>
+  </data>
+  <data name="lblProvinciaMiPerfil" xml:space="preserve">
+    <value>Provincia:</value>
+  </data>
+  <data name="lblTelefonoAyuda" xml:space="preserve">
+    <value>Teléfono:</value>
+  </data>
+  <data name="lblTlfMiPerfil" xml:space="preserve">
+    <value>Teléfono:</value>
+  </data>
+  <data name="lblTwitterAyuda" xml:space="preserve">
+    <value>Twitter:</value>
+  </data>
+</root>
