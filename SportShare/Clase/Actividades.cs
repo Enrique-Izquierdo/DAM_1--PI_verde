@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SportShare.Clase;
 
 namespace SportShare.Clases
 {
@@ -56,15 +57,6 @@ namespace SportShare.Clases
             organizador = orga;
         }
 
-        public string List<Actividades> BuscarActividad()
-        {
-
-        }
-
-        public string List<Actividades> ActividadesEnTuPoblacion() 
-        {
-
-        }
 
         public void InfoActividad()
         {

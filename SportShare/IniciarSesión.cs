@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SportShare.Clase;
 
 namespace SportShare
 {
@@ -16,7 +17,7 @@ namespace SportShare
         {
             InitializeComponent();
         }
-
+        ConexionBD bd = new ConexionBD();
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
             Principal pr = new Principal();
@@ -25,8 +26,15 @@ namespace SportShare
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
+            Registrarse reg = new Registrarse();
+            reg.ShowDialog();
 
+        }
 
+        private void IniciarSesión_Load(object sender, EventArgs e)
+        {
+            bd.AbrirConexion();
+            bd.CerrarConexion();
         }
     }
 }
