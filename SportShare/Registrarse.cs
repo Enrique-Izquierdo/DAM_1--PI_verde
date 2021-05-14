@@ -19,6 +19,7 @@ namespace SportShare
         }
 
         ConexionBD bd = new ConexionBD();
+<<<<<<< HEAD
         public bool ControlErrores()
         {
             bool ok = true;
@@ -105,10 +106,13 @@ namespace SportShare
             }
             return ok;
         }
+=======
+>>>>>>> origin/proyC#bueno
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
             bd.AbrirConexion();
+<<<<<<< HEAD
             if (ControlErrores())
             {
                 if (Usuario.UsuarioExiste(bd.Conexion, txtIdUsu.Text))
@@ -132,6 +136,11 @@ namespace SportShare
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
+=======
+            Usuario usu = new Usuario(txtIdUsu.Text, txtContraseñaRegist.Text, txtNombreRegist.Text, txtApellidosRegist.Text,Convert.ToDateTime(dtpFechNac.Value), Convert.ToDouble(txtPesoRegist.Text), Convert.ToDouble(txtAlturaRegist.Text), Convert.ToInt32(txtTlfRegist.Text), txtPoblaciónRegist.Text, txtProvinciaRegist.Text, cbxDeporteCrear.Text, txtEnfermedadesRegist.Text);
+            usu.RegistrarUsuario(bd.Conexion, usu);
+            bd.CerrarConexion();
+>>>>>>> origin/proyC#bueno
         }
     }
 }

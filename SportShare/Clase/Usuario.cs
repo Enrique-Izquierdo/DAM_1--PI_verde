@@ -74,6 +74,7 @@ namespace SportShare.Clase
 
             return retorno;
         }
+<<<<<<< HEAD
 
         public static bool UsuarioExiste(MySqlConnection conexion, string nom)
         {
@@ -168,5 +169,7 @@ namespace SportShare.Clase
 
             comando.ExecuteNonQuery();
         }
+=======
+>>>>>>> origin/proyC#bueno
     }
 }

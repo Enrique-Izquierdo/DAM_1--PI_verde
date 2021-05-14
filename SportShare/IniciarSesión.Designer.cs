@@ -171,6 +171,7 @@
             this.Name = "IniciarSesión";
             this.Text = "Iniciar Sesión";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.IniciarSesión_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxSportShare)).EndInit();
             this.gbxiniciarsesion.ResumeLayout(false);
             this.gbxiniciarsesion.PerformLayout();
