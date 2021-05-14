@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SportShare.Clases
+namespace SportShare.Clase
 {
     class Campeonato
     {

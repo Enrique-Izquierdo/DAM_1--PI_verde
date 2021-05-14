@@ -430,7 +430,7 @@
             this.grpboxLista.Size = new System.Drawing.Size(431, 296);
             this.grpboxLista.TabIndex = 37;
             this.grpboxLista.TabStop = false;
-            this.grpboxLista.Text = "Actividades:";
+            this.grpboxLista.Text = "Actividad:";
             // 
             // btnCrearCampeonato
             // 

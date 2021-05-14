@@ -7,7 +7,7 @@ using SportShare.Clase;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
-namespace SportShare.Clases
+namespace SportShare.Clase
 {
     class Mensaje
     {
