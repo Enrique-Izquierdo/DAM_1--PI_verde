@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pbxSportShare = new System.Windows.Forms.PictureBox();
             this.gbxiniciarsesion = new System.Windows.Forms.GroupBox();
             this.btnRegistrarse = new System.Windows.Forms.Button();
@@ -38,8 +39,10 @@
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblNomUsu = new System.Windows.Forms.Label();
             this.lblIniciarSes = new System.Windows.Forms.Label();
+            this.errores = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbxSportShare)).BeginInit();
             this.gbxiniciarsesion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errores)).BeginInit();
             this.SuspendLayout();
             // 
             // pbxSportShare
@@ -112,6 +115,7 @@
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(515, 34);
             this.txtContraseña.TabIndex = 4;
+            this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // txtNomUsu
             // 
@@ -152,6 +156,10 @@
             this.lblIniciarSes.TabIndex = 0;
             this.lblIniciarSes.Text = "Inicio de Sesión";
             // 
+            // errores
+            // 
+            this.errores.ContainerControl = this;
+            // 
             // IniciarSesión
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -166,6 +174,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxSportShare)).EndInit();
             this.gbxiniciarsesion.ResumeLayout(false);
             this.gbxiniciarsesion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -182,6 +191,7 @@
         private System.Windows.Forms.Button btnRegistrarse;
         private System.Windows.Forms.Label lblRegistrar;
         private System.Windows.Forms.Button btnIniciarSesion;
+        private System.Windows.Forms.ErrorProvider errores;
     }
 }
 

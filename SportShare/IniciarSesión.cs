@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SportShare.Clase;
 
 namespace SportShare
 {
@@ -16,17 +17,69 @@ namespace SportShare
         {
             InitializeComponent();
         }
-
+        public bool ControlErrores()
+        {
+            bool ok = true;
+            if (txtNomUsu.Text == "")
+            {
+                errores.SetError(txtNomUsu, "Introduzca un ID usuario");
+                ok = false;
+            }
+            else
+            {
+                errores.Clear();
+            }
+            if (txtContraseña.Text == "")
+            {
+                errores.SetError(txtContraseña, "Introduzca su contraseña");
+                ok = false;
+            }
+            else
+            {
+                errores.Clear();
+            }
+            return ok;
+        }
+            ConexionBD bd = new ConexionBD();
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            Principal pr = new Principal();
-            pr.ShowDialog();
+            bd.AbrirConexion();
+            errores.Clear();
+            if (ControlErrores())
+            {
+                if (Usuario.UsuarioExiste(bd.Conexion, txtNomUsu.Text))
+                {
+                    if (Usuario.VerificarContraseña(bd.Conexion, txtContraseña.Text, txtNomUsu.Text))
+                    {
+                        Datos.usu = Usuario.BuscarUsuario(bd.Conexion,txtNomUsu.Text);
+                        Principal pr = new Principal();
+                        
+                        
+                        pr.ShowDialog();
+
+                    }
+                    else
+                    {
+                        errores.SetError(txtContraseña, "Contraseña incorrecta");
+                    }
+                }
+                else
+                {
+                    errores.SetError(txtNomUsu, "Nombre de usuario inexistente");
+                }
+            }
+            
+            bd.CerrarConexion();
+            
         }
 
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
-
+            Registrarse reg = new Registrarse();
+            reg.ShowDialog();
 
         }
+
+       
     }
 }

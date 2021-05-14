@@ -49,7 +49,8 @@
   <ItemGroup>
     <Compile Include="Clase\Actividades.cs" />
     <Compile Include="Clase\Campeonato.cs" />
-    <Compile Include="Clase\ConexionBDpST.cs" />
+    <Compile Include="Clase\ConexiónBD.cs" />
+    <Compile Include="Clase\Datos.cs" />
     <Compile Include="Clase\Mensaje.cs" />
     <Compile Include="Clase\Usuario.cs" />
     <Compile Include="Clase\Valoración.cs" />

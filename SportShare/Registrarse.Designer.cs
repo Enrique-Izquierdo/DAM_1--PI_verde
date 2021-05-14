@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnRegistrarse = new System.Windows.Forms.Button();
             this.txtEnfermedadesRegist = new System.Windows.Forms.TextBox();
             this.txtProvinciaRegist = new System.Windows.Forms.TextBox();
             this.txtPoblaciónRegist = new System.Windows.Forms.TextBox();
             this.txtAlturaRegist = new System.Windows.Forms.TextBox();
-            this.txtPesoRegist = new System.Windows.Forms.TextBox();
-            this.txtEdadRegist = new System.Windows.Forms.TextBox();
-            this.txtEmailRegist = new System.Windows.Forms.TextBox();
             this.txtTlfRegist = new System.Windows.Forms.TextBox();
             this.txtApellidosRegist = new System.Windows.Forms.TextBox();
             this.txtNombreRegist = new System.Windows.Forms.TextBox();
@@ -43,33 +41,38 @@
             this.lblProvinciaRegist = new System.Windows.Forms.Label();
             this.lblPolaciónRegist = new System.Windows.Forms.Label();
             this.lblAlturaRegist = new System.Windows.Forms.Label();
-            this.lblPesoRegist = new System.Windows.Forms.Label();
-            this.lblEdadRegist = new System.Windows.Forms.Label();
             this.lblDepPrefRegist = new System.Windows.Forms.Label();
             this.lblApellidosRegist = new System.Windows.Forms.Label();
             this.lblNombreRegist = new System.Windows.Forms.Label();
-            this.lblEmailRegist = new System.Windows.Forms.Label();
             this.lblTlfRegist = new System.Windows.Forms.Label();
             this.gbxRegistrarse = new System.Windows.Forms.GroupBox();
-            this.cbxDeporteCrear = new System.Windows.Forms.ComboBox();
-            this.pbxSportShre = new System.Windows.Forms.PictureBox();
+            this.txtPeso = new System.Windows.Forms.TextBox();
+            this.lblPeso = new System.Windows.Forms.Label();
+            this.dtpFechNac = new System.Windows.Forms.DateTimePicker();
+            this.lblFechNac = new System.Windows.Forms.Label();
             this.lblIdUsu = new System.Windows.Forms.Label();
             this.txtIdUsu = new System.Windows.Forms.TextBox();
-            this.lblFechNac = new System.Windows.Forms.Label();
-            this.dtpFechNac = new System.Windows.Forms.DateTimePicker();
+            this.cbxDeporte = new System.Windows.Forms.ComboBox();
+            this.lblContraseñaRegist = new System.Windows.Forms.Label();
+            this.txtContraseñaRegist = new System.Windows.Forms.TextBox();
+            this.pbxSportShre = new System.Windows.Forms.PictureBox();
+            this.errores = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnVolver = new System.Windows.Forms.Button();
             this.gbxRegistrarse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSportShre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errores)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegistrarse
             // 
             this.btnRegistrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarse.Location = new System.Drawing.Point(874, 556);
+            this.btnRegistrarse.Location = new System.Drawing.Point(985, 555);
             this.btnRegistrarse.Name = "btnRegistrarse";
             this.btnRegistrarse.Size = new System.Drawing.Size(218, 53);
             this.btnRegistrarse.TabIndex = 122;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = true;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
             // txtEnfermedadesRegist
             // 
@@ -104,34 +107,10 @@
             this.txtAlturaRegist.Size = new System.Drawing.Size(161, 34);
             this.txtAlturaRegist.TabIndex = 117;
             // 
-            // txtPesoRegist
-            // 
-            this.txtPesoRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesoRegist.Location = new System.Drawing.Point(564, 617);
-            this.txtPesoRegist.Name = "txtPesoRegist";
-            this.txtPesoRegist.Size = new System.Drawing.Size(123, 34);
-            this.txtPesoRegist.TabIndex = 116;
-            // 
-            // txtEdadRegist
-            // 
-            this.txtEdadRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEdadRegist.Location = new System.Drawing.Point(562, 524);
-            this.txtEdadRegist.Name = "txtEdadRegist";
-            this.txtEdadRegist.Size = new System.Drawing.Size(123, 34);
-            this.txtEdadRegist.TabIndex = 115;
-            // 
-            // txtEmailRegist
-            // 
-            this.txtEmailRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailRegist.Location = new System.Drawing.Point(277, 450);
-            this.txtEmailRegist.Name = "txtEmailRegist";
-            this.txtEmailRegist.Size = new System.Drawing.Size(443, 34);
-            this.txtEmailRegist.TabIndex = 114;
-            // 
             // txtTlfRegist
             // 
             this.txtTlfRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTlfRegist.Location = new System.Drawing.Point(277, 302);
+            this.txtTlfRegist.Location = new System.Drawing.Point(277, 449);
             this.txtTlfRegist.Name = "txtTlfRegist";
             this.txtTlfRegist.Size = new System.Drawing.Size(272, 34);
             this.txtTlfRegist.TabIndex = 113;
@@ -139,7 +118,7 @@
             // txtApellidosRegist
             // 
             this.txtApellidosRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidosRegist.Location = new System.Drawing.Point(277, 236);
+            this.txtApellidosRegist.Location = new System.Drawing.Point(277, 302);
             this.txtApellidosRegist.Name = "txtApellidosRegist";
             this.txtApellidosRegist.Size = new System.Drawing.Size(272, 34);
             this.txtApellidosRegist.TabIndex = 112;
@@ -147,7 +126,7 @@
             // txtNombreRegist
             // 
             this.txtNombreRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreRegist.Location = new System.Drawing.Point(277, 164);
+            this.txtNombreRegist.Location = new System.Drawing.Point(277, 236);
             this.txtNombreRegist.Name = "txtNombreRegist";
             this.txtNombreRegist.Size = new System.Drawing.Size(272, 34);
             this.txtNombreRegist.TabIndex = 111;
@@ -192,26 +171,6 @@
             this.lblAlturaRegist.TabIndex = 107;
             this.lblAlturaRegist.Text = "Altura:";
             // 
-            // lblPesoRegist
-            // 
-            this.lblPesoRegist.AutoSize = true;
-            this.lblPesoRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPesoRegist.Location = new System.Drawing.Point(454, 620);
-            this.lblPesoRegist.Name = "lblPesoRegist";
-            this.lblPesoRegist.Size = new System.Drawing.Size(80, 29);
-            this.lblPesoRegist.TabIndex = 106;
-            this.lblPesoRegist.Text = "Peso:";
-            // 
-            // lblEdadRegist
-            // 
-            this.lblEdadRegist.AutoSize = true;
-            this.lblEdadRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdadRegist.Location = new System.Drawing.Point(451, 527);
-            this.lblEdadRegist.Name = "lblEdadRegist";
-            this.lblEdadRegist.Size = new System.Drawing.Size(81, 29);
-            this.lblEdadRegist.TabIndex = 105;
-            this.lblEdadRegist.Text = "Edad:";
-            // 
             // lblDepPrefRegist
             // 
             this.lblDepPrefRegist.AutoSize = true;
@@ -226,7 +185,7 @@
             // 
             this.lblApellidosRegist.AutoSize = true;
             this.lblApellidosRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidosRegist.Location = new System.Drawing.Point(117, 239);
+            this.lblApellidosRegist.Location = new System.Drawing.Point(117, 305);
             this.lblApellidosRegist.Name = "lblApellidosRegist";
             this.lblApellidosRegist.Size = new System.Drawing.Size(130, 29);
             this.lblApellidosRegist.TabIndex = 104;
@@ -236,27 +195,17 @@
             // 
             this.lblNombreRegist.AutoSize = true;
             this.lblNombreRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreRegist.Location = new System.Drawing.Point(133, 167);
+            this.lblNombreRegist.Location = new System.Drawing.Point(133, 239);
             this.lblNombreRegist.Name = "lblNombreRegist";
             this.lblNombreRegist.Size = new System.Drawing.Size(114, 29);
             this.lblNombreRegist.TabIndex = 102;
             this.lblNombreRegist.Text = "Nombre:";
             // 
-            // lblEmailRegist
-            // 
-            this.lblEmailRegist.AutoSize = true;
-            this.lblEmailRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailRegist.Location = new System.Drawing.Point(161, 453);
-            this.lblEmailRegist.Name = "lblEmailRegist";
-            this.lblEmailRegist.Size = new System.Drawing.Size(86, 29);
-            this.lblEmailRegist.TabIndex = 101;
-            this.lblEmailRegist.Text = "Email:";
-            // 
             // lblTlfRegist
             // 
             this.lblTlfRegist.AutoSize = true;
             this.lblTlfRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTlfRegist.Location = new System.Drawing.Point(122, 305);
+            this.lblTlfRegist.Location = new System.Drawing.Point(122, 452);
             this.lblTlfRegist.Name = "lblTlfRegist";
             this.lblTlfRegist.Size = new System.Drawing.Size(125, 29);
             this.lblTlfRegist.TabIndex = 100;
@@ -264,17 +213,20 @@
             // 
             // gbxRegistrarse
             // 
+            this.gbxRegistrarse.Controls.Add(this.btnVolver);
+            this.gbxRegistrarse.Controls.Add(this.txtPeso);
+            this.gbxRegistrarse.Controls.Add(this.lblPeso);
             this.gbxRegistrarse.Controls.Add(this.dtpFechNac);
             this.gbxRegistrarse.Controls.Add(this.lblFechNac);
             this.gbxRegistrarse.Controls.Add(this.lblIdUsu);
             this.gbxRegistrarse.Controls.Add(this.txtIdUsu);
-            this.gbxRegistrarse.Controls.Add(this.cbxDeporteCrear);
+            this.gbxRegistrarse.Controls.Add(this.cbxDeporte);
             this.gbxRegistrarse.Controls.Add(this.lblNombreRegist);
             this.gbxRegistrarse.Controls.Add(this.btnRegistrarse);
             this.gbxRegistrarse.Controls.Add(this.lblTlfRegist);
             this.gbxRegistrarse.Controls.Add(this.txtEnfermedadesRegist);
             this.gbxRegistrarse.Controls.Add(this.txtProvinciaRegist);
-            this.gbxRegistrarse.Controls.Add(this.lblEmailRegist);
+            this.gbxRegistrarse.Controls.Add(this.lblContraseñaRegist);
             this.gbxRegistrarse.Controls.Add(this.txtPoblaciónRegist);
             this.gbxRegistrarse.Controls.Add(this.lblApellidosRegist);
             this.gbxRegistrarse.Controls.Add(this.txtAlturaRegist);
@@ -284,7 +236,7 @@
             this.gbxRegistrarse.Controls.Add(this.lblEnfermedadesRegist);
             this.gbxRegistrarse.Controls.Add(this.txtTlfRegist);
             this.gbxRegistrarse.Controls.Add(this.lblProvinciaRegist);
-            this.gbxRegistrarse.Controls.Add(this.txtEmailRegist);
+            this.gbxRegistrarse.Controls.Add(this.txtContraseñaRegist);
             this.gbxRegistrarse.Controls.Add(this.lblPolaciónRegist);
             this.gbxRegistrarse.Controls.Add(this.lblAlturaRegist);
             this.gbxRegistrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -295,38 +247,41 @@
             this.gbxRegistrarse.TabStop = false;
             this.gbxRegistrarse.Text = "Registrarse";
             // 
-            // cbxDeporteCrear
+            // txtPeso
             // 
-            this.cbxDeporteCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxDeporteCrear.FormattingEnabled = true;
-            this.cbxDeporteCrear.Items.AddRange(new object[] {
-            "Futbol",
-            "Baloncesto",
-            "Tenis",
-            "Ciclismo",
-            "Atletismo",
-            "Natación",
-            "Padel",
-            "Petanca",
-            "VoleyBall",
-            "Badminton",
-            "Hockey",
-            "Baseball"});
-            this.cbxDeporteCrear.Location = new System.Drawing.Point(277, 376);
-            this.cbxDeporteCrear.Name = "cbxDeporteCrear";
-            this.cbxDeporteCrear.Size = new System.Drawing.Size(208, 37);
-            this.cbxDeporteCrear.TabIndex = 123;
-            this.cbxDeporteCrear.Text = "Futbol";
+            this.txtPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPeso.Location = new System.Drawing.Point(278, 513);
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.Size = new System.Drawing.Size(161, 34);
+            this.txtPeso.TabIndex = 129;
             // 
-            // pbxSportShre
+            // lblPeso
             // 
-            this.pbxSportShre.Image = global::SportShare.Properties.Resources._1616437656472;
-            this.pbxSportShre.Location = new System.Drawing.Point(885, 89);
-            this.pbxSportShre.Name = "pbxSportShre";
-            this.pbxSportShre.Size = new System.Drawing.Size(407, 63);
-            this.pbxSportShre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxSportShre.TabIndex = 124;
-            this.pbxSportShre.TabStop = false;
+            this.lblPeso.AutoSize = true;
+            this.lblPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeso.Location = new System.Drawing.Point(160, 516);
+            this.lblPeso.Name = "lblPeso";
+            this.lblPeso.Size = new System.Drawing.Size(80, 29);
+            this.lblPeso.TabIndex = 128;
+            this.lblPeso.Text = "Peso:";
+            // 
+            // dtpFechNac
+            // 
+            this.dtpFechNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechNac.Location = new System.Drawing.Point(941, 305);
+            this.dtpFechNac.Name = "dtpFechNac";
+            this.dtpFechNac.Size = new System.Drawing.Size(200, 38);
+            this.dtpFechNac.TabIndex = 127;
+            // 
+            // lblFechNac
+            // 
+            this.lblFechNac.AutoSize = true;
+            this.lblFechNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechNac.Location = new System.Drawing.Point(632, 305);
+            this.lblFechNac.Name = "lblFechNac";
+            this.lblFechNac.Size = new System.Drawing.Size(268, 29);
+            this.lblFechNac.TabIndex = 126;
+            this.lblFechNac.Text = "Fecha de Nacimiento:";
             // 
             // lblIdUsu
             // 
@@ -346,23 +301,72 @@
             this.txtIdUsu.Size = new System.Drawing.Size(443, 34);
             this.txtIdUsu.TabIndex = 125;
             // 
-            // lblFechNac
+            // cbxDeporte
             // 
-            this.lblFechNac.AutoSize = true;
-            this.lblFechNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechNac.Location = new System.Drawing.Point(632, 305);
-            this.lblFechNac.Name = "lblFechNac";
-            this.lblFechNac.Size = new System.Drawing.Size(268, 29);
-            this.lblFechNac.TabIndex = 126;
-            this.lblFechNac.Text = "Fecha de Nacimiento:";
+            this.cbxDeporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxDeporte.FormattingEnabled = true;
+            this.cbxDeporte.Items.AddRange(new object[] {
+            "Futbol",
+            "Baloncesto",
+            "Tenis",
+            "Ciclismo",
+            "Atletismo",
+            "Natación",
+            "Padel",
+            "Petanca",
+            "VoleyBall",
+            "Badminton",
+            "Hockey",
+            "Baseball"});
+            this.cbxDeporte.Location = new System.Drawing.Point(277, 376);
+            this.cbxDeporte.Name = "cbxDeporte";
+            this.cbxDeporte.Size = new System.Drawing.Size(208, 37);
+            this.cbxDeporte.TabIndex = 123;
+            this.cbxDeporte.Text = "Futbol";
             // 
-            // dtpFechNac
+            // lblContraseñaRegist
             // 
-            this.dtpFechNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechNac.Location = new System.Drawing.Point(941, 305);
-            this.dtpFechNac.Name = "dtpFechNac";
-            this.dtpFechNac.Size = new System.Drawing.Size(200, 38);
-            this.dtpFechNac.TabIndex = 127;
+            this.lblContraseñaRegist.AutoSize = true;
+            this.lblContraseñaRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseñaRegist.Location = new System.Drawing.Point(94, 167);
+            this.lblContraseñaRegist.Name = "lblContraseñaRegist";
+            this.lblContraseñaRegist.Size = new System.Drawing.Size(153, 29);
+            this.lblContraseñaRegist.TabIndex = 101;
+            this.lblContraseñaRegist.Text = "Contraseña:";
+            // 
+            // txtContraseñaRegist
+            // 
+            this.txtContraseñaRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseñaRegist.Location = new System.Drawing.Point(277, 164);
+            this.txtContraseñaRegist.Name = "txtContraseñaRegist";
+            this.txtContraseñaRegist.Size = new System.Drawing.Size(272, 34);
+            this.txtContraseñaRegist.TabIndex = 114;
+            this.txtContraseñaRegist.UseSystemPasswordChar = true;
+            // 
+            // pbxSportShre
+            // 
+            this.pbxSportShre.Image = global::SportShare.Properties.Resources._1616437656472;
+            this.pbxSportShre.Location = new System.Drawing.Point(885, 89);
+            this.pbxSportShre.Name = "pbxSportShre";
+            this.pbxSportShre.Size = new System.Drawing.Size(407, 63);
+            this.pbxSportShre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxSportShre.TabIndex = 124;
+            this.pbxSportShre.TabStop = false;
+            // 
+            // errores
+            // 
+            this.errores.ContainerControl = this;
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(793, 555);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(156, 53);
+            this.btnVolver.TabIndex = 130;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // Registrarse
             // 
@@ -371,18 +375,14 @@
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.pbxSportShre);
             this.Controls.Add(this.gbxRegistrarse);
-            this.Controls.Add(this.txtPesoRegist);
-            this.Controls.Add(this.txtEdadRegist);
-            this.Controls.Add(this.lblPesoRegist);
-            this.Controls.Add(this.lblEdadRegist);
             this.Name = "Registrarse";
             this.Text = "Registrarse";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.gbxRegistrarse.ResumeLayout(false);
             this.gbxRegistrarse.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSportShre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errores)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -393,9 +393,6 @@
         private System.Windows.Forms.TextBox txtProvinciaRegist;
         private System.Windows.Forms.TextBox txtPoblaciónRegist;
         private System.Windows.Forms.TextBox txtAlturaRegist;
-        private System.Windows.Forms.TextBox txtPesoRegist;
-        private System.Windows.Forms.TextBox txtEdadRegist;
-        private System.Windows.Forms.TextBox txtEmailRegist;
         private System.Windows.Forms.TextBox txtTlfRegist;
         private System.Windows.Forms.TextBox txtApellidosRegist;
         private System.Windows.Forms.TextBox txtNombreRegist;
@@ -403,19 +400,22 @@
         private System.Windows.Forms.Label lblProvinciaRegist;
         private System.Windows.Forms.Label lblPolaciónRegist;
         private System.Windows.Forms.Label lblAlturaRegist;
-        private System.Windows.Forms.Label lblPesoRegist;
-        private System.Windows.Forms.Label lblEdadRegist;
         private System.Windows.Forms.Label lblDepPrefRegist;
         private System.Windows.Forms.Label lblApellidosRegist;
         private System.Windows.Forms.Label lblNombreRegist;
-        private System.Windows.Forms.Label lblEmailRegist;
         private System.Windows.Forms.Label lblTlfRegist;
         private System.Windows.Forms.GroupBox gbxRegistrarse;
         private System.Windows.Forms.PictureBox pbxSportShre;
-        private System.Windows.Forms.ComboBox cbxDeporteCrear;
+        private System.Windows.Forms.ComboBox cbxDeporte;
         private System.Windows.Forms.DateTimePicker dtpFechNac;
         private System.Windows.Forms.Label lblFechNac;
         private System.Windows.Forms.Label lblIdUsu;
         private System.Windows.Forms.TextBox txtIdUsu;
+        private System.Windows.Forms.Label lblContraseñaRegist;
+        private System.Windows.Forms.TextBox txtContraseñaRegist;
+        private System.Windows.Forms.TextBox txtPeso;
+        private System.Windows.Forms.Label lblPeso;
+        private System.Windows.Forms.ErrorProvider errores;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

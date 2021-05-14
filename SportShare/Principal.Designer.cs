@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.tbcPrincipal = new System.Windows.Forms.TabControl();
             this.tbpBuscar = new System.Windows.Forms.TabPage();
+            this.pbxbuscar = new System.Windows.Forms.PictureBox();
             this.gbxdestacadosbuscar = new System.Windows.Forms.GroupBox();
             this.lblDestacadosBusc = new System.Windows.Forms.Label();
             this.btnfutbolbusc = new System.Windows.Forms.Button();
@@ -105,7 +106,13 @@
             this.lblMensajesEnviados = new System.Windows.Forms.Label();
             this.lblMensajesRecibidos = new System.Windows.Forms.Label();
             this.gbxderNotif = new System.Windows.Forms.GroupBox();
+            this.pbxlogoNotificaciones = new System.Windows.Forms.PictureBox();
             this.tbpAyuda = new System.Windows.Forms.TabPage();
+            this.pbxFacebook = new System.Windows.Forms.PictureBox();
+            this.pbxTwitter = new System.Windows.Forms.PictureBox();
+            this.pbxInstagram = new System.Windows.Forms.PictureBox();
+            this.pbxEmail = new System.Windows.Forms.PictureBox();
+            this.pbxTelefono = new System.Windows.Forms.PictureBox();
             this.gbxAyuda = new System.Windows.Forms.GroupBox();
             this.lblUsuFacebook = new System.Windows.Forms.Label();
             this.lblUsuTwitter = new System.Windows.Forms.Label();
@@ -118,6 +125,7 @@
             this.lblTlfNum = new System.Windows.Forms.Label();
             this.lblTelefonoAyuda = new System.Windows.Forms.Label();
             this.gbxderAyuda = new System.Windows.Forms.GroupBox();
+            this.pbxlogoAyuda = new System.Windows.Forms.PictureBox();
             this.tbpMiPerfil = new System.Windows.Forms.TabPage();
             this.btnModificar = new System.Windows.Forms.Button();
             this.txtDepPrefMiPerfil = new System.Windows.Forms.TextBox();
@@ -127,7 +135,7 @@
             this.txtAlturaMiPerfil = new System.Windows.Forms.TextBox();
             this.txtPesoMiPerfil = new System.Windows.Forms.TextBox();
             this.txtEdadMiPerfil = new System.Windows.Forms.TextBox();
-            this.txtEmailMiPerfil = new System.Windows.Forms.TextBox();
+            this.txtNomUsuPerfil = new System.Windows.Forms.TextBox();
             this.txtTelefonoMiPerfil = new System.Windows.Forms.TextBox();
             this.txtApellidosMiPerfil = new System.Windows.Forms.TextBox();
             this.txtNombreMiPerfil = new System.Windows.Forms.TextBox();
@@ -140,7 +148,7 @@
             this.lblDepPrefMiperfil = new System.Windows.Forms.Label();
             this.lblApellidosMiperfil = new System.Windows.Forms.Label();
             this.lblNomMiPerfil = new System.Windows.Forms.Label();
-            this.lblEmailMiPerfil = new System.Windows.Forms.Label();
+            this.lblNomUsuMiPerfil = new System.Windows.Forms.Label();
             this.lblTlfMiPerfil = new System.Windows.Forms.Label();
             this.gbxderMiPerfil = new System.Windows.Forms.GroupBox();
             this.gbxMisUltEvenMiPerfil = new System.Windows.Forms.GroupBox();
@@ -149,17 +157,11 @@
             this.dgvAmigosMiPerfil = new System.Windows.Forms.DataGridView();
             this.btnCerrarSesión = new System.Windows.Forms.Button();
             this.pbxsportshare = new System.Windows.Forms.PictureBox();
-            this.pbxbuscar = new System.Windows.Forms.PictureBox();
-            this.pbxFacebook = new System.Windows.Forms.PictureBox();
-            this.pbxTwitter = new System.Windows.Forms.PictureBox();
-            this.pbxInstagram = new System.Windows.Forms.PictureBox();
-            this.pbxEmail = new System.Windows.Forms.PictureBox();
-            this.pbxTelefono = new System.Windows.Forms.PictureBox();
-            this.pbxlogoAyuda = new System.Windows.Forms.PictureBox();
-            this.pbxlogoNotificaciones = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnConfirmarMod = new System.Windows.Forms.Button();
             this.tbcPrincipal.SuspendLayout();
             this.tbpBuscar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxbuscar)).BeginInit();
             this.gbxdestacadosbuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).BeginInit();
             this.tbpCrear.SuspendLayout();
@@ -182,9 +184,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMensajesEnviados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMensajesRecibidos)).BeginInit();
             this.gbxderNotif.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxlogoNotificaciones)).BeginInit();
             this.tbpAyuda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFacebook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxTwitter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxInstagram)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxTelefono)).BeginInit();
             this.gbxAyuda.SuspendLayout();
             this.gbxderAyuda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxlogoAyuda)).BeginInit();
             this.tbpMiPerfil.SuspendLayout();
             this.gbxderMiPerfil.SuspendLayout();
             this.gbxMisUltEvenMiPerfil.SuspendLayout();
@@ -192,14 +201,6 @@
             this.gbxAmigosMiPerfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmigosMiPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxsportshare)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxbuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxFacebook)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxTwitter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxInstagram)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEmail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxTelefono)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxlogoAyuda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxlogoNotificaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcPrincipal
@@ -234,6 +235,17 @@
             this.tbpBuscar.Text = "    Buscar    ";
             this.tbpBuscar.UseVisualStyleBackColor = true;
             // 
+            // pbxbuscar
+            // 
+            this.pbxbuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxbuscar.Image = ((System.Drawing.Image)(resources.GetObject("pbxbuscar.Image")));
+            this.pbxbuscar.Location = new System.Drawing.Point(1286, 70);
+            this.pbxbuscar.Name = "pbxbuscar";
+            this.pbxbuscar.Size = new System.Drawing.Size(51, 43);
+            this.pbxbuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxbuscar.TabIndex = 11;
+            this.pbxbuscar.TabStop = false;
+            // 
             // gbxdestacadosbuscar
             // 
             this.gbxdestacadosbuscar.BackColor = System.Drawing.Color.LightGray;
@@ -258,7 +270,6 @@
             this.lblDestacadosBusc.Size = new System.Drawing.Size(173, 38);
             this.lblDestacadosBusc.TabIndex = 2;
             this.lblDestacadosBusc.Text = "Destacados";
-            this.lblDestacadosBusc.Click += new System.EventHandler(this.lblDestacadosBusc_Click);
             // 
             // btnfutbolbusc
             // 
@@ -270,7 +281,6 @@
             this.btnfutbolbusc.TabIndex = 1;
             this.btnfutbolbusc.Text = "Futbol";
             this.btnfutbolbusc.UseVisualStyleBackColor = false;
-            this.btnfutbolbusc.Click += new System.EventHandler(this.btnfutbolbusc_Click);
             // 
             // btnBaloncestoBusc
             // 
@@ -282,7 +292,6 @@
             this.btnBaloncestoBusc.TabIndex = 3;
             this.btnBaloncestoBusc.Text = "Baloncesto";
             this.btnBaloncestoBusc.UseVisualStyleBackColor = false;
-            this.btnBaloncestoBusc.Click += new System.EventHandler(this.btnBaloncestoBusc_Click);
             // 
             // btnAtletismoBusc
             // 
@@ -294,7 +303,6 @@
             this.btnAtletismoBusc.TabIndex = 6;
             this.btnAtletismoBusc.Text = "Atletismo";
             this.btnAtletismoBusc.UseVisualStyleBackColor = false;
-            this.btnAtletismoBusc.Click += new System.EventHandler(this.btnAtletismoBusc_Click);
             // 
             // btnTenisBusc
             // 
@@ -306,7 +314,6 @@
             this.btnTenisBusc.TabIndex = 4;
             this.btnTenisBusc.Text = "Tenis";
             this.btnTenisBusc.UseVisualStyleBackColor = false;
-            this.btnTenisBusc.Click += new System.EventHandler(this.btnTenisBusc_Click);
             // 
             // btnCiclismoBusc
             // 
@@ -318,7 +325,6 @@
             this.btnCiclismoBusc.TabIndex = 5;
             this.btnCiclismoBusc.Text = "Ciclismo";
             this.btnCiclismoBusc.UseVisualStyleBackColor = false;
-            this.btnCiclismoBusc.Click += new System.EventHandler(this.btnCiclismoBusc_Click);
             // 
             // dgvBuscar
             // 
@@ -1044,6 +1050,16 @@
             this.gbxderNotif.TabIndex = 0;
             this.gbxderNotif.TabStop = false;
             // 
+            // pbxlogoNotificaciones
+            // 
+            this.pbxlogoNotificaciones.Image = global::SportShare.Properties.Resources._1620828087484__1_;
+            this.pbxlogoNotificaciones.Location = new System.Drawing.Point(183, 123);
+            this.pbxlogoNotificaciones.Name = "pbxlogoNotificaciones";
+            this.pbxlogoNotificaciones.Size = new System.Drawing.Size(126, 555);
+            this.pbxlogoNotificaciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxlogoNotificaciones.TabIndex = 1;
+            this.pbxlogoNotificaciones.TabStop = false;
+            // 
             // tbpAyuda
             // 
             this.tbpAyuda.Controls.Add(this.pbxFacebook);
@@ -1060,6 +1076,56 @@
             this.tbpAyuda.TabIndex = 4;
             this.tbpAyuda.Text = "    Ayuda    ";
             this.tbpAyuda.UseVisualStyleBackColor = true;
+            // 
+            // pbxFacebook
+            // 
+            this.pbxFacebook.Image = global::SportShare.Properties.Resources.facebook;
+            this.pbxFacebook.Location = new System.Drawing.Point(1127, 578);
+            this.pbxFacebook.Name = "pbxFacebook";
+            this.pbxFacebook.Size = new System.Drawing.Size(192, 181);
+            this.pbxFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxFacebook.TabIndex = 40;
+            this.pbxFacebook.TabStop = false;
+            // 
+            // pbxTwitter
+            // 
+            this.pbxTwitter.Image = global::SportShare.Properties.Resources.twitter;
+            this.pbxTwitter.Location = new System.Drawing.Point(834, 578);
+            this.pbxTwitter.Name = "pbxTwitter";
+            this.pbxTwitter.Size = new System.Drawing.Size(180, 181);
+            this.pbxTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxTwitter.TabIndex = 39;
+            this.pbxTwitter.TabStop = false;
+            // 
+            // pbxInstagram
+            // 
+            this.pbxInstagram.Image = global::SportShare.Properties.Resources.instagram;
+            this.pbxInstagram.Location = new System.Drawing.Point(536, 578);
+            this.pbxInstagram.Name = "pbxInstagram";
+            this.pbxInstagram.Size = new System.Drawing.Size(180, 181);
+            this.pbxInstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxInstagram.TabIndex = 38;
+            this.pbxInstagram.TabStop = false;
+            // 
+            // pbxEmail
+            // 
+            this.pbxEmail.Image = global::SportShare.Properties.Resources.gmail;
+            this.pbxEmail.Location = new System.Drawing.Point(1127, 311);
+            this.pbxEmail.Name = "pbxEmail";
+            this.pbxEmail.Size = new System.Drawing.Size(192, 202);
+            this.pbxEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxEmail.TabIndex = 37;
+            this.pbxEmail.TabStop = false;
+            // 
+            // pbxTelefono
+            // 
+            this.pbxTelefono.Image = global::SportShare.Properties.Resources.telefono;
+            this.pbxTelefono.Location = new System.Drawing.Point(1127, 89);
+            this.pbxTelefono.Name = "pbxTelefono";
+            this.pbxTelefono.Size = new System.Drawing.Size(192, 184);
+            this.pbxTelefono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxTelefono.TabIndex = 36;
+            this.pbxTelefono.TabStop = false;
             // 
             // gbxAyuda
             // 
@@ -1193,8 +1259,19 @@
             this.gbxderAyuda.TabIndex = 0;
             this.gbxderAyuda.TabStop = false;
             // 
+            // pbxlogoAyuda
+            // 
+            this.pbxlogoAyuda.Image = global::SportShare.Properties.Resources._1620828087484__1_;
+            this.pbxlogoAyuda.Location = new System.Drawing.Point(183, 123);
+            this.pbxlogoAyuda.Name = "pbxlogoAyuda";
+            this.pbxlogoAyuda.Size = new System.Drawing.Size(126, 555);
+            this.pbxlogoAyuda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxlogoAyuda.TabIndex = 0;
+            this.pbxlogoAyuda.TabStop = false;
+            // 
             // tbpMiPerfil
             // 
+            this.tbpMiPerfil.Controls.Add(this.btnConfirmarMod);
             this.tbpMiPerfil.Controls.Add(this.btnModificar);
             this.tbpMiPerfil.Controls.Add(this.txtDepPrefMiPerfil);
             this.tbpMiPerfil.Controls.Add(this.txtEnfermedadesMiPerfil);
@@ -1203,7 +1280,7 @@
             this.tbpMiPerfil.Controls.Add(this.txtAlturaMiPerfil);
             this.tbpMiPerfil.Controls.Add(this.txtPesoMiPerfil);
             this.tbpMiPerfil.Controls.Add(this.txtEdadMiPerfil);
-            this.tbpMiPerfil.Controls.Add(this.txtEmailMiPerfil);
+            this.tbpMiPerfil.Controls.Add(this.txtNomUsuPerfil);
             this.tbpMiPerfil.Controls.Add(this.txtTelefonoMiPerfil);
             this.tbpMiPerfil.Controls.Add(this.txtApellidosMiPerfil);
             this.tbpMiPerfil.Controls.Add(this.txtNombreMiPerfil);
@@ -1216,7 +1293,7 @@
             this.tbpMiPerfil.Controls.Add(this.lblDepPrefMiperfil);
             this.tbpMiPerfil.Controls.Add(this.lblApellidosMiperfil);
             this.tbpMiPerfil.Controls.Add(this.lblNomMiPerfil);
-            this.tbpMiPerfil.Controls.Add(this.lblEmailMiPerfil);
+            this.tbpMiPerfil.Controls.Add(this.lblNomUsuMiPerfil);
             this.tbpMiPerfil.Controls.Add(this.lblTlfMiPerfil);
             this.tbpMiPerfil.Controls.Add(this.gbxderMiPerfil);
             this.tbpMiPerfil.Location = new System.Drawing.Point(4, 45);
@@ -1235,6 +1312,7 @@
             this.btnModificar.TabIndex = 100;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // txtDepPrefMiPerfil
             // 
@@ -1300,14 +1378,14 @@
             this.txtEdadMiPerfil.Size = new System.Drawing.Size(123, 34);
             this.txtEdadMiPerfil.TabIndex = 70;
             // 
-            // txtEmailMiPerfil
+            // txtNomUsuPerfil
             // 
-            this.txtEmailMiPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailMiPerfil.Location = new System.Drawing.Point(340, 449);
-            this.txtEmailMiPerfil.Name = "txtEmailMiPerfil";
-            this.txtEmailMiPerfil.ReadOnly = true;
-            this.txtEmailMiPerfil.Size = new System.Drawing.Size(443, 34);
-            this.txtEmailMiPerfil.TabIndex = 69;
+            this.txtNomUsuPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomUsuPerfil.Location = new System.Drawing.Point(340, 449);
+            this.txtNomUsuPerfil.Name = "txtNomUsuPerfil";
+            this.txtNomUsuPerfil.ReadOnly = true;
+            this.txtNomUsuPerfil.Size = new System.Drawing.Size(272, 34);
+            this.txtNomUsuPerfil.TabIndex = 69;
             // 
             // txtTelefonoMiPerfil
             // 
@@ -1426,15 +1504,15 @@
             this.lblNomMiPerfil.TabIndex = 48;
             this.lblNomMiPerfil.Text = "Nombre:";
             // 
-            // lblEmailMiPerfil
+            // lblNomUsuMiPerfil
             // 
-            this.lblEmailMiPerfil.AutoSize = true;
-            this.lblEmailMiPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailMiPerfil.Location = new System.Drawing.Point(220, 452);
-            this.lblEmailMiPerfil.Name = "lblEmailMiPerfil";
-            this.lblEmailMiPerfil.Size = new System.Drawing.Size(86, 29);
-            this.lblEmailMiPerfil.TabIndex = 40;
-            this.lblEmailMiPerfil.Text = "Email:";
+            this.lblNomUsuMiPerfil.AutoSize = true;
+            this.lblNomUsuMiPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomUsuMiPerfil.Location = new System.Drawing.Point(164, 449);
+            this.lblNomUsuMiPerfil.Name = "lblNomUsuMiPerfil";
+            this.lblNomUsuMiPerfil.Size = new System.Drawing.Size(142, 29);
+            this.lblNomUsuMiPerfil.TabIndex = 40;
+            this.lblNomUsuMiPerfil.Text = "ID Usuario:";
             // 
             // lblTlfMiPerfil
             // 
@@ -1518,87 +1596,6 @@
             this.pbxsportshare.TabIndex = 1;
             this.pbxsportshare.TabStop = false;
             // 
-            // pbxbuscar
-            // 
-            this.pbxbuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbxbuscar.Image = ((System.Drawing.Image)(resources.GetObject("pbxbuscar.Image")));
-            this.pbxbuscar.Location = new System.Drawing.Point(1286, 70);
-            this.pbxbuscar.Name = "pbxbuscar";
-            this.pbxbuscar.Size = new System.Drawing.Size(51, 43);
-            this.pbxbuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxbuscar.TabIndex = 11;
-            this.pbxbuscar.TabStop = false;
-            // 
-            // pbxFacebook
-            // 
-            this.pbxFacebook.Image = global::SportShare.Properties.Resources.facebook;
-            this.pbxFacebook.Location = new System.Drawing.Point(1127, 578);
-            this.pbxFacebook.Name = "pbxFacebook";
-            this.pbxFacebook.Size = new System.Drawing.Size(192, 181);
-            this.pbxFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxFacebook.TabIndex = 40;
-            this.pbxFacebook.TabStop = false;
-            // 
-            // pbxTwitter
-            // 
-            this.pbxTwitter.Image = global::SportShare.Properties.Resources.twitter;
-            this.pbxTwitter.Location = new System.Drawing.Point(834, 578);
-            this.pbxTwitter.Name = "pbxTwitter";
-            this.pbxTwitter.Size = new System.Drawing.Size(180, 181);
-            this.pbxTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxTwitter.TabIndex = 39;
-            this.pbxTwitter.TabStop = false;
-            // 
-            // pbxInstagram
-            // 
-            this.pbxInstagram.Image = global::SportShare.Properties.Resources.instagram;
-            this.pbxInstagram.Location = new System.Drawing.Point(536, 578);
-            this.pbxInstagram.Name = "pbxInstagram";
-            this.pbxInstagram.Size = new System.Drawing.Size(180, 181);
-            this.pbxInstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxInstagram.TabIndex = 38;
-            this.pbxInstagram.TabStop = false;
-            // 
-            // pbxEmail
-            // 
-            this.pbxEmail.Image = global::SportShare.Properties.Resources.gmail;
-            this.pbxEmail.Location = new System.Drawing.Point(1127, 311);
-            this.pbxEmail.Name = "pbxEmail";
-            this.pbxEmail.Size = new System.Drawing.Size(192, 202);
-            this.pbxEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxEmail.TabIndex = 37;
-            this.pbxEmail.TabStop = false;
-            // 
-            // pbxTelefono
-            // 
-            this.pbxTelefono.Image = global::SportShare.Properties.Resources.telefono;
-            this.pbxTelefono.Location = new System.Drawing.Point(1127, 89);
-            this.pbxTelefono.Name = "pbxTelefono";
-            this.pbxTelefono.Size = new System.Drawing.Size(192, 184);
-            this.pbxTelefono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxTelefono.TabIndex = 36;
-            this.pbxTelefono.TabStop = false;
-            // 
-            // pbxlogoAyuda
-            // 
-            this.pbxlogoAyuda.Image = global::SportShare.Properties.Resources._1620828087484__1_;
-            this.pbxlogoAyuda.Location = new System.Drawing.Point(183, 123);
-            this.pbxlogoAyuda.Name = "pbxlogoAyuda";
-            this.pbxlogoAyuda.Size = new System.Drawing.Size(126, 555);
-            this.pbxlogoAyuda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxlogoAyuda.TabIndex = 0;
-            this.pbxlogoAyuda.TabStop = false;
-            // 
-            // pbxlogoNotificaciones
-            // 
-            this.pbxlogoNotificaciones.Image = global::SportShare.Properties.Resources._1620828087484__1_;
-            this.pbxlogoNotificaciones.Location = new System.Drawing.Point(183, 123);
-            this.pbxlogoNotificaciones.Name = "pbxlogoNotificaciones";
-            this.pbxlogoNotificaciones.Size = new System.Drawing.Size(126, 555);
-            this.pbxlogoNotificaciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxlogoNotificaciones.TabIndex = 1;
-            this.pbxlogoNotificaciones.TabStop = false;
-            // 
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1609,6 +1606,17 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnConfirmarMod
+            // 
+            this.btnConfirmarMod.Location = new System.Drawing.Point(1228, 677);
+            this.btnConfirmarMod.Name = "btnConfirmarMod";
+            this.btnConfirmarMod.Size = new System.Drawing.Size(218, 53);
+            this.btnConfirmarMod.TabIndex = 101;
+            this.btnConfirmarMod.Text = "Confirmar";
+            this.btnConfirmarMod.UseVisualStyleBackColor = true;
+            this.btnConfirmarMod.Visible = false;
+            this.btnConfirmarMod.Click += new System.EventHandler(this.btnConfirmarMod_Click);
             // 
             // Principal
             // 
@@ -1623,9 +1631,11 @@
             this.Name = "Principal";
             this.Text = "Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Principal_Load);
             this.tbcPrincipal.ResumeLayout(false);
             this.tbpBuscar.ResumeLayout(false);
             this.tbpBuscar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxbuscar)).EndInit();
             this.gbxdestacadosbuscar.ResumeLayout(false);
             this.gbxdestacadosbuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).EndInit();
@@ -1658,10 +1668,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMensajesEnviados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMensajesRecibidos)).EndInit();
             this.gbxderNotif.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxlogoNotificaciones)).EndInit();
             this.tbpAyuda.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFacebook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxTwitter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxInstagram)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxTelefono)).EndInit();
             this.gbxAyuda.ResumeLayout(false);
             this.gbxAyuda.PerformLayout();
             this.gbxderAyuda.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxlogoAyuda)).EndInit();
             this.tbpMiPerfil.ResumeLayout(false);
             this.tbpMiPerfil.PerformLayout();
             this.gbxderMiPerfil.ResumeLayout(false);
@@ -1670,14 +1687,6 @@
             this.gbxAmigosMiPerfil.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmigosMiPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxsportshare)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxbuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxFacebook)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxTwitter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxInstagram)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxEmail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxTelefono)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxlogoAyuda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxlogoNotificaciones)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1785,7 +1794,7 @@
         private System.Windows.Forms.Label lblDepPrefMiperfil;
         private System.Windows.Forms.Label lblApellidosMiperfil;
         private System.Windows.Forms.Label lblNomMiPerfil;
-        private System.Windows.Forms.Label lblEmailMiPerfil;
+        private System.Windows.Forms.Label lblNomUsuMiPerfil;
         private System.Windows.Forms.Label lblTlfMiPerfil;
         private System.Windows.Forms.TextBox txtEnfermedadesMiPerfil;
         private System.Windows.Forms.TextBox txtProvinciaMiPerfil;
@@ -1793,7 +1802,7 @@
         private System.Windows.Forms.TextBox txtAlturaMiPerfil;
         private System.Windows.Forms.TextBox txtPesoMiPerfil;
         private System.Windows.Forms.TextBox txtEdadMiPerfil;
-        private System.Windows.Forms.TextBox txtEmailMiPerfil;
+        private System.Windows.Forms.TextBox txtNomUsuPerfil;
         private System.Windows.Forms.TextBox txtTelefonoMiPerfil;
         private System.Windows.Forms.TextBox txtApellidosMiPerfil;
         private System.Windows.Forms.TextBox txtNombreMiPerfil;
@@ -1813,5 +1822,6 @@
         private System.Windows.Forms.PictureBox pbxlogoAyuda;
         private System.Windows.Forms.PictureBox pbxlogoNotificaciones;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnConfirmarMod;
     }
 }
