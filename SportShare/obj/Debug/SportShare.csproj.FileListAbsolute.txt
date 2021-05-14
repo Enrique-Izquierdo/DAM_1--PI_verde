@@ -67,3 +67,34 @@ C:\Users\frparu\Desktop\Repositorio P.I\SportShare\bin\Debug\System.Numerics.Vec
 C:\Users\frparu\Desktop\Repositorio P.I\SportShare\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\frparu\Desktop\Repositorio P.I\SportShare\bin\Debug\MySql.Data.xml
 C:\Users\frparu\Desktop\Repositorio P.I\SportShare\obj\Debug\SportShare.csproj.CopyComplete
+C:\Users\frparu\Desktop\SportShare\bin\Debug\SportShare.exe.config
+C:\Users\frparu\Desktop\SportShare\bin\Debug\SportShare.exe
+C:\Users\frparu\Desktop\SportShare\bin\Debug\SportShare.pdb
+C:\Users\frparu\Desktop\SportShare\bin\Debug\MySql.Data.dll
+C:\Users\frparu\Desktop\SportShare\bin\Debug\Google.Protobuf.dll
+C:\Users\frparu\Desktop\SportShare\bin\Debug\Zstandard.Net.dll
+C:\Users\frparu\Desktop\SportShare\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\frparu\Desktop\SportShare\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\frparu\Desktop\SportShare\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\frparu\Desktop\SportShare\bin\Debug\Renci.SshNet.dll
+C:\Users\frparu\Desktop\SportShare\bin\Debug\System.Memory.dll
+C:\Users\frparu\Desktop\SportShare\bin\Debug\System.Buffers.dll
+C:\Users\frparu\Desktop\SportShare\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\frparu\Desktop\SportShare\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\frparu\Desktop\SportShare\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\frparu\Desktop\SportShare\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\frparu\Desktop\SportShare\bin\Debug\MySql.Data.xml
+C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.csprojAssemblyReference.cache
+C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.exe.config
+C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.Idiomas.Español.resources
+C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.IniciarSesión.resources
+C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.Pantalla_Evento.resources
+C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.Principal.resources
+C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.Properties.Resources.resources
+C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.Registrarse.resources
+C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.Valoración.resources
+C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.csproj.GenerateResource.cache
+C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.csproj.CoreCompileInputs.cache
+C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.csproj.CopyComplete
+C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.exe
+C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.pdb

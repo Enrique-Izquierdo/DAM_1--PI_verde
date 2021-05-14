@@ -50,10 +50,7 @@
     <Compile Include="Clase\Actividades.cs" />
     <Compile Include="Clase\Campeonato.cs" />
     <Compile Include="Clase\ConexiónBD.cs" />
-<<<<<<< HEAD
     <Compile Include="Clase\Datos.cs" />
-=======
->>>>>>> origin/proyC#bueno
     <Compile Include="Clase\Mensaje.cs" />
     <Compile Include="Clase\Usuario.cs" />
     <Compile Include="Clase\Valoración.cs" />

@@ -34,11 +34,6 @@
             this.txtProvinciaRegist = new System.Windows.Forms.TextBox();
             this.txtPoblaciónRegist = new System.Windows.Forms.TextBox();
             this.txtAlturaRegist = new System.Windows.Forms.TextBox();
-<<<<<<< HEAD
-=======
-            this.txtPesoRegist = new System.Windows.Forms.TextBox();
-            this.txtEdadRegist = new System.Windows.Forms.TextBox();
->>>>>>> origin/proyC#bueno
             this.txtTlfRegist = new System.Windows.Forms.TextBox();
             this.txtApellidosRegist = new System.Windows.Forms.TextBox();
             this.txtNombreRegist = new System.Windows.Forms.TextBox();
@@ -51,30 +46,18 @@
             this.lblNombreRegist = new System.Windows.Forms.Label();
             this.lblTlfRegist = new System.Windows.Forms.Label();
             this.gbxRegistrarse = new System.Windows.Forms.GroupBox();
-<<<<<<< HEAD
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.lblPeso = new System.Windows.Forms.Label();
-=======
->>>>>>> origin/proyC#bueno
             this.dtpFechNac = new System.Windows.Forms.DateTimePicker();
             this.lblFechNac = new System.Windows.Forms.Label();
             this.lblIdUsu = new System.Windows.Forms.Label();
             this.txtIdUsu = new System.Windows.Forms.TextBox();
-<<<<<<< HEAD
             this.cbxDeporte = new System.Windows.Forms.ComboBox();
             this.lblContraseñaRegist = new System.Windows.Forms.Label();
             this.txtContraseñaRegist = new System.Windows.Forms.TextBox();
             this.pbxSportShre = new System.Windows.Forms.PictureBox();
             this.errores = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnVolver = new System.Windows.Forms.Button();
-=======
-            this.cbxDeporteCrear = new System.Windows.Forms.ComboBox();
-            this.lblContraseñaRegist = new System.Windows.Forms.Label();
-            this.txtContraseñaRegist = new System.Windows.Forms.TextBox();
-            this.pbxSportShre = new System.Windows.Forms.PictureBox();
-            this.txtPeso = new System.Windows.Forms.TextBox();
-            this.lblPeso = new System.Windows.Forms.Label();
->>>>>>> origin/proyC#bueno
             this.gbxRegistrarse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSportShre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errores)).BeginInit();
@@ -124,25 +107,6 @@
             this.txtAlturaRegist.Size = new System.Drawing.Size(161, 34);
             this.txtAlturaRegist.TabIndex = 117;
             // 
-<<<<<<< HEAD
-=======
-            // txtPesoRegist
-            // 
-            this.txtPesoRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesoRegist.Location = new System.Drawing.Point(564, 617);
-            this.txtPesoRegist.Name = "txtPesoRegist";
-            this.txtPesoRegist.Size = new System.Drawing.Size(123, 34);
-            this.txtPesoRegist.TabIndex = 116;
-            // 
-            // txtEdadRegist
-            // 
-            this.txtEdadRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEdadRegist.Location = new System.Drawing.Point(562, 524);
-            this.txtEdadRegist.Name = "txtEdadRegist";
-            this.txtEdadRegist.Size = new System.Drawing.Size(123, 34);
-            this.txtEdadRegist.TabIndex = 115;
-            // 
->>>>>>> origin/proyC#bueno
             // txtTlfRegist
             // 
             this.txtTlfRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -249,10 +213,7 @@
             // 
             // gbxRegistrarse
             // 
-<<<<<<< HEAD
             this.gbxRegistrarse.Controls.Add(this.btnVolver);
-=======
->>>>>>> origin/proyC#bueno
             this.gbxRegistrarse.Controls.Add(this.txtPeso);
             this.gbxRegistrarse.Controls.Add(this.lblPeso);
             this.gbxRegistrarse.Controls.Add(this.dtpFechNac);
@@ -286,7 +247,6 @@
             this.gbxRegistrarse.TabStop = false;
             this.gbxRegistrarse.Text = "Registrarse";
             // 
-<<<<<<< HEAD
             // txtPeso
             // 
             this.txtPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -305,8 +265,6 @@
             this.lblPeso.TabIndex = 128;
             this.lblPeso.Text = "Peso:";
             // 
-=======
->>>>>>> origin/proyC#bueno
             // dtpFechNac
             // 
             this.dtpFechNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -342,11 +300,6 @@
             this.txtIdUsu.Name = "txtIdUsu";
             this.txtIdUsu.Size = new System.Drawing.Size(443, 34);
             this.txtIdUsu.TabIndex = 125;
-<<<<<<< HEAD
-=======
-            // 
-            // cbxDeporteCrear
->>>>>>> origin/proyC#bueno
             // 
             // cbxDeporte
             // 
@@ -390,25 +343,6 @@
             this.txtContraseñaRegist.TabIndex = 114;
             this.txtContraseñaRegist.UseSystemPasswordChar = true;
             // 
-            // lblContraseñaRegist
-            // 
-            this.lblContraseñaRegist.AutoSize = true;
-            this.lblContraseñaRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseñaRegist.Location = new System.Drawing.Point(94, 167);
-            this.lblContraseñaRegist.Name = "lblContraseñaRegist";
-            this.lblContraseñaRegist.Size = new System.Drawing.Size(153, 29);
-            this.lblContraseñaRegist.TabIndex = 101;
-            this.lblContraseñaRegist.Text = "Contraseña:";
-            // 
-            // txtContraseñaRegist
-            // 
-            this.txtContraseñaRegist.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseñaRegist.Location = new System.Drawing.Point(277, 164);
-            this.txtContraseñaRegist.Name = "txtContraseñaRegist";
-            this.txtContraseñaRegist.Size = new System.Drawing.Size(272, 34);
-            this.txtContraseñaRegist.TabIndex = 114;
-            this.txtContraseñaRegist.UseSystemPasswordChar = true;
-            // 
             // pbxSportShre
             // 
             this.pbxSportShre.Image = global::SportShare.Properties.Resources._1616437656472;
@@ -419,7 +353,6 @@
             this.pbxSportShre.TabIndex = 124;
             this.pbxSportShre.TabStop = false;
             // 
-<<<<<<< HEAD
             // errores
             // 
             this.errores.ContainerControl = this;
@@ -434,25 +367,6 @@
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-=======
-            // txtPeso
-            // 
-            this.txtPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPeso.Location = new System.Drawing.Point(278, 513);
-            this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(161, 34);
-            this.txtPeso.TabIndex = 129;
-            // 
-            // lblPeso
-            // 
-            this.lblPeso.AutoSize = true;
-            this.lblPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeso.Location = new System.Drawing.Point(160, 516);
-            this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(80, 29);
-            this.lblPeso.TabIndex = 128;
-            this.lblPeso.Text = "Peso:";
->>>>>>> origin/proyC#bueno
             // 
             // Registrarse
             // 
@@ -479,11 +393,6 @@
         private System.Windows.Forms.TextBox txtProvinciaRegist;
         private System.Windows.Forms.TextBox txtPoblaciónRegist;
         private System.Windows.Forms.TextBox txtAlturaRegist;
-<<<<<<< HEAD
-=======
-        private System.Windows.Forms.TextBox txtPesoRegist;
-        private System.Windows.Forms.TextBox txtEdadRegist;
->>>>>>> origin/proyC#bueno
         private System.Windows.Forms.TextBox txtTlfRegist;
         private System.Windows.Forms.TextBox txtApellidosRegist;
         private System.Windows.Forms.TextBox txtNombreRegist;
@@ -506,10 +415,7 @@
         private System.Windows.Forms.TextBox txtContraseñaRegist;
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.Label lblPeso;
-<<<<<<< HEAD
         private System.Windows.Forms.ErrorProvider errores;
         private System.Windows.Forms.Button btnVolver;
-=======
->>>>>>> origin/proyC#bueno
     }
 }

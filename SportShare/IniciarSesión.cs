@@ -17,7 +17,6 @@ namespace SportShare
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
         public bool ControlErrores()
         {
             bool ok = true;
@@ -42,9 +41,6 @@ namespace SportShare
             return ok;
         }
             ConexionBD bd = new ConexionBD();
-=======
-        ConexionBD bd = new ConexionBD();
->>>>>>> origin/proyC#bueno
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
             bd.AbrirConexion();
@@ -81,16 +77,7 @@ namespace SportShare
         {
             Registrarse reg = new Registrarse();
             reg.ShowDialog();
-<<<<<<< HEAD
-=======
 
-        }
->>>>>>> origin/proyC#bueno
-
-        private void IniciarSesión_Load(object sender, EventArgs e)
-        {
-            bd.AbrirConexion();
-            bd.CerrarConexion();
         }
 
        
