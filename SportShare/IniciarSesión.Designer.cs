@@ -40,6 +40,8 @@
             this.lblNomUsu = new System.Windows.Forms.Label();
             this.lblIniciarSes = new System.Windows.Forms.Label();
             this.errores = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbxIdioma = new System.Windows.Forms.ComboBox();
+            this.lblIdioma = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSportShare)).BeginInit();
             this.gbxiniciarsesion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errores)).BeginInit();
@@ -160,11 +162,37 @@
             // 
             this.errores.ContainerControl = this;
             // 
+            // cbxIdioma
+            // 
+            this.cbxIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxIdioma.FormattingEnabled = true;
+            this.cbxIdioma.Items.AddRange(new object[] {
+            "Español",
+            "Inglés"});
+            this.cbxIdioma.Location = new System.Drawing.Point(1593, 102);
+            this.cbxIdioma.Name = "cbxIdioma";
+            this.cbxIdioma.Size = new System.Drawing.Size(192, 37);
+            this.cbxIdioma.TabIndex = 2;
+            this.cbxIdioma.SelectedIndexChanged += new System.EventHandler(this.cbxIdioma_SelectedIndexChanged);
+            // 
+            // lblIdioma
+            // 
+            this.lblIdioma.AutoSize = true;
+            this.lblIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdioma.Location = new System.Drawing.Point(1590, 65);
+            this.lblIdioma.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdioma.Name = "lblIdioma";
+            this.lblIdioma.Size = new System.Drawing.Size(92, 29);
+            this.lblIdioma.TabIndex = 3;
+            this.lblIdioma.Text = "Idioma:";
+            // 
             // IniciarSesión
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1040);
+            this.Controls.Add(this.lblIdioma);
+            this.Controls.Add(this.cbxIdioma);
             this.Controls.Add(this.gbxiniciarsesion);
             this.Controls.Add(this.pbxSportShare);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -176,6 +204,7 @@
             this.gbxiniciarsesion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errores)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -192,6 +221,8 @@
         private System.Windows.Forms.Label lblRegistrar;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.ErrorProvider errores;
+        private System.Windows.Forms.Label lblIdioma;
+        private System.Windows.Forms.ComboBox cbxIdioma;
     }
 }
 

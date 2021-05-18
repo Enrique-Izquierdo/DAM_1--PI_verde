@@ -22,5 +22,19 @@ namespace SportShare
             Valoración valorac = new Valoración();
             valorac.Show();
         }
+
+        private void Pantalla_Evento_Load(object sender, EventArgs e)
+        {
+            txtCampeonato.Text = Convert.ToString(Datos.act.Id_campeonato);
+            txtCodigo.Text = Convert.ToString(Datos.act.Id_actividad);
+            txtDescripcion.Text = Datos.act.Descripcion;
+            txtDia.Text = Convert.ToString(Datos.act.Fecha_hora.ToString("yyyy-MM-dd"));
+            txtHora.Text = Convert.ToString(Datos.act.Fecha_hora.ToString("HH:mm:ss"));
+            txtLocalizacion.Text = Datos.act.Poblacion;
+            txtMateriales.Text = Datos.act.Material_necesario;
+            txtNivelDeportivo.Text = Datos.act.NivelDeportivo_exigido;
+            txtOrganizador.Text = Datos.act.Alias_creador;
+            txtPrecio.Text = Convert.ToString(Datos.act.Precio_actividad);
+        }
     }
 }

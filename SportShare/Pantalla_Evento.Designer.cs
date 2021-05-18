@@ -62,12 +62,12 @@
             this.lblNivelDeportivo = new System.Windows.Forms.Label();
             this.lblEdad = new System.Windows.Forms.Label();
             this.grpboxOrganizador = new System.Windows.Forms.GroupBox();
+            this.btnValorar = new System.Windows.Forms.Button();
             this.txtOrganizador = new System.Windows.Forms.TextBox();
             this.grpboxParticipantes = new System.Windows.Forms.GroupBox();
             this.txtParticipantes = new System.Windows.Forms.TextBox();
             this.grpboxLista = new System.Windows.Forms.GroupBox();
             this.txtLista = new System.Windows.Forms.TextBox();
-            this.btnValorar = new System.Windows.Forms.Button();
             this.grpboxDatosCelebracion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numupParticipantes)).BeginInit();
             this.grboxEstado.SuspendLayout();
@@ -428,6 +428,16 @@
             this.grpboxOrganizador.TabStop = false;
             this.grpboxOrganizador.Text = "Organizador:";
             // 
+            // btnValorar
+            // 
+            this.btnValorar.Location = new System.Drawing.Point(278, 103);
+            this.btnValorar.Name = "btnValorar";
+            this.btnValorar.Size = new System.Drawing.Size(102, 36);
+            this.btnValorar.TabIndex = 5;
+            this.btnValorar.Text = "Valorar";
+            this.btnValorar.UseVisualStyleBackColor = true;
+            this.btnValorar.Click += new System.EventHandler(this.btnValorar_Click);
+            // 
             // txtOrganizador
             // 
             this.txtOrganizador.Location = new System.Drawing.Point(17, 44);
@@ -480,16 +490,6 @@
             this.txtLista.Size = new System.Drawing.Size(393, 306);
             this.txtLista.TabIndex = 4;
             // 
-            // btnValorar
-            // 
-            this.btnValorar.Location = new System.Drawing.Point(278, 103);
-            this.btnValorar.Name = "btnValorar";
-            this.btnValorar.Size = new System.Drawing.Size(102, 36);
-            this.btnValorar.TabIndex = 5;
-            this.btnValorar.Text = "Valorar";
-            this.btnValorar.UseVisualStyleBackColor = true;
-            this.btnValorar.Click += new System.EventHandler(this.btnValorar_Click);
-            // 
             // Pantalla_Evento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -518,6 +518,7 @@
             this.Name = "Pantalla_Evento";
             this.Text = "Pantalla_Evento";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Pantalla_Evento_Load);
             this.grpboxDatosCelebracion.ResumeLayout(false);
             this.grpboxDatosCelebracion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numupParticipantes)).EndInit();

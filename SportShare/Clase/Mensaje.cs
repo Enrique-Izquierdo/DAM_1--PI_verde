@@ -12,19 +12,22 @@ namespace SportShare.Clase
     class Mensaje
     {
         private int idMensaje;
+        private string usuarioemisor;
         private string cuerpo;
-        private int idUsuarioReceptor;
+        private string usuarioReceptor;
         private DateTime fechahora;
 
         public int Idmensaje { get { return idMensaje; } set { idMensaje = value; } }
+        public string Usuarioemisor { get { return usuarioemisor; } set { usuarioemisor = value; } }
+        public string Usuarioreceptor { get { return usuarioReceptor; } set { usuarioReceptor = value; } }
         public string Cuerpo { get { return cuerpo; } set { cuerpo = value; } }
-        public int Idusuarioreceptor { get { return idUsuarioReceptor; } set { idUsuarioReceptor = value; } }
         public DateTime Fechahora { get { return fechahora; } set { fechahora = value; } }
 
-        public Mensaje(string cuer, int idusurecep, DateTime fechaho)
+        public Mensaje(string usemi, string usurecep, string cuer,  DateTime fechaho)
         {
+            usuarioemisor = usemi;
+            usuarioReceptor = usurecep;
             cuerpo = cuer;
-            idUsuarioReceptor = idusurecep;
             fechahora = fechaho;
         }
 
@@ -32,60 +35,67 @@ namespace SportShare.Clase
         {
             int retorno;
 
-            try
-            {
-                string consulta = string.Format("INSERT INTO mensaje (cuerpo,idUsuarioReceptor,fechahora) VALUES " + "('{0}','{1}','{2}')", men.idMensaje, men.cuerpo, men.Idusuarioreceptor, men.fechahora.ToString("mmmm/dd/yy - hh:mm:ss"));
+                string consulta = string.Format("INSERT INTO Mensaje (id_usuarioEmisor,id_usuarioReceptor,texto_mensaje,fecha_hora) " +
+                    "VALUES " + "('{0}','{1}','{2}','{3}')", men.usuarioemisor, men.usuarioReceptor, men.cuerpo, men.fechahora.ToString("yyyy/MM/dd - hh:mm:ss"));
 
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
 
                 retorno = comando.ExecuteNonQuery();
 
                 return retorno;
-            }
-            catch
-            {
-                return 0;
-            }
+            
         }
 
-        public int ActualizarMensaje(MySqlConnection conexion, Mensaje men)
+        public static List<Mensaje> BuscarMensajesEnviados(MySqlConnection conexion, string idusu)
         {
-            int retorno;
+           List<Mensaje> lista=new List<Mensaje>();
+            string seleccion = String.Format("Select id_usuarioEmisor,id_usuarioReceptor,texto_mensaje,fecha_hora" +
+                               " from Mensaje WHERE id_usuarioEmisor='{0}'", idusu);
 
-            try
-            {
-                string consulta = string.Format("UPDATE mensaje SET cuerpo='{0}',idUsuarioReceptor='{1}',fechahora={2}" + " WHERE idUsuarioReceptor={1}" + men.cuerpo, men.idUsuarioReceptor, men.fechahora.ToString("mmmm/dd/yy - hh:mm:ss"));
-
-                MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
-                retorno = comando.ExecuteNonQuery();
-
-                return retorno;
-            }
-            catch
-            {
-                return 0;
-            }
-        }
-
-        /*public bool VerificarMensaje(string idMensajeReceptor)
-        {
-            string consulta = string.Format("SELECT * FROM mensaje " + " WHERE idMensajeReceptor='{0}'", idMensajeReceptor);
-
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
-
+            MySqlCommand comando = new MySqlCommand(seleccion, conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
-            if(reader.HasRows)
+            if (reader.HasRows)
             {
-                reader.Close();
-                return true;
+
+                while (reader.Read())
+                {
+                    Mensaje men = new Mensaje(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3));
+                    lista.Add(men);
+
+                }
             }
-            else
+            reader.Close();
+            return lista;
+
+        }
+
+        public static List<Mensaje> BuscarMensajesRecibidos(MySqlConnection conexion, string idusu)
+        {
+            List<Mensaje> lista = new List<Mensaje>();
+            string seleccion = String.Format("Select id_usuarioEmisor,id_usuarioReceptor,texto_mensaje,fecha_hora" +
+                               " from Mensaje WHERE id_usuarioReceptor='{0}'", idusu);
+
+            MySqlCommand comando = new MySqlCommand(seleccion, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
             {
-                reader.Close();
-                return false;
+
+                while (reader.Read())
+                {
+                    Mensaje men = new Mensaje(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3));
+                    lista.Add(men);
+
+                }
             }
-        }*/
+            reader.Close();
+            return lista;
+
+        }
+
+        
+
+
     }
 }

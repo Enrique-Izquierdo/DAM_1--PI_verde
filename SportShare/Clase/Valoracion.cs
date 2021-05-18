@@ -9,46 +9,72 @@ using System.Windows.Forms;
 
 namespace SportShare.Clase
 {
-    class Valoración
+    class Valoracion
     {
         private int idValoracion;
         private string contenido_Valoracion;
-        private int idUsuario;
+        private string idUsuarioEmisor;
+        private string idUsuarioReceptor;
         private int id_actividad;
         private DateTime fechaHora;
-        public int IdValoracion { get { return idValoracion; } set { idValoracion = value; } }
         public string Contenido_Valoracion { get { return contenido_Valoracion; } set { contenido_Valoracion = value; } }
-        public int IdUsuario { get { return idUsuario; } set { idUsuario = value; } }
+        public string IdUsuarioEmisor{ get { return idUsuarioEmisor; } set { idUsuarioEmisor = value; } }
+        public string IdUsuarioReceptor { get { return idUsuarioReceptor; } set { idUsuarioReceptor = value; } }
         public int Id_actividad { get { return id_actividad; } set { id_actividad = value; } }
         public DateTime FechaHora { get { return fechaHora; } set { fechaHora = value; } }
 
-        public Valoración(int idval, string con, int usu, int act, DateTime fec)
+        public Valoracion(string con, string usuemi,string usurec, DateTime fec)
         {
-            idValoracion  =  idval;
             contenido_Valoracion=con;
-            idUsuario = usu;
-            id_actividad = act;
+            idUsuarioEmisor = usuemi;
+            idUsuarioReceptor = usurec;
             fechaHora = fec;
         }
-        public int EnviarValoracion(MySqlConnection conexion, Valoración val)
+        public void EnviarValoracion(MySqlConnection conexion,Valoracion val)
         {
             int retorno;
-            try
+           switch(Datos.val.Contenido_Valoracion)
             {
-                string consulta = String.Format("INSERT INTO Valoración (id_valoracion,contenido_Valoracion,fecha_hora,id_usuario,id_actividad) VALUES " +
-                                "('{0}','{1}','{2}','{3}','{4}','{5}')", val.idValoracion,val.contenido_Valoracion,val.fechaHora,val.idUsuario,val.id_actividad);
+                case "Contento":
+                    string insertar = String.Format("INSERT INTO Valoración (contenido_Valoracion,fecha_hora,id_usuarioEmisor,id_usuarioReceptor) VALUES " +
+                                    "('{0}','{1}','{2}','{3}','{4}','{5}')", val.contenido_Valoracion, val.fechaHora, val.idUsuarioEmisor, val.idUsuarioReceptor);
+                    string update = String.Format("UPDATE Usuarios SET total+1, total_positivas+1 WHERE alias='{0}';", val.idUsuarioReceptor);
 
-                MySqlCommand comando = new MySqlCommand(consulta, conexion);
-                retorno = comando.ExecuteNonQuery();
-            }
-            catch
-            {
-                retorno = 0;
-            }
+                    MySqlCommand comando = new MySqlCommand(insertar, conexion);
+                    MySqlCommand comando2 = new MySqlCommand(update, conexion);
+                    comando.ExecuteNonQuery();
+                    comando2.ExecuteNonQuery();
+
+                    break;
+                case "Neutral":
+                    string insertar2 = String.Format("INSERT INTO Valoración (contenido_Valoracion,fecha_hora,id_usuarioEmisor,id_usuarioReceptor) VALUES " +
+                                    "('{0}','{1}','{2}','{3}','{4}','{5}')", val.contenido_Valoracion, val.fechaHora, val.idUsuarioEmisor, val.idUsuarioReceptor);
+                    string update2 = String.Format("UPDATE Usuarios SET total+1, total_indiferentes+1 WHERE alias='{0}';", val.idUsuarioReceptor);
 
 
-            return retorno;
+                    MySqlCommand comando3 = new MySqlCommand(insertar2, conexion);
+                    MySqlCommand comando4 = new MySqlCommand(update2, conexion);
+                    comando3.ExecuteNonQuery();
+                    comando4.ExecuteNonQuery();
+                    break;
+
+                case "Triste":
+                    string insertar3 = String.Format("INSERT INTO Valoración (contenido_Valoracion,fecha_hora,id_usuarioEmisor,id_usuarioReceptor) VALUES " +
+                                    "('{0}','{1}','{2}','{3}','{4}','{5}')", val.contenido_Valoracion, val.fechaHora, val.idUsuarioEmisor, val.idUsuarioReceptor);
+                    string update3 = String.Format("UPDATE Usuarios SET total+1, total_indiferentes+1 WHERE alias='{0}';", val.idUsuarioReceptor);
+
+                    MySqlCommand comando5 = new MySqlCommand(insertar3, conexion);
+                    MySqlCommand comando6 = new MySqlCommand(update3, conexion);
+                    comando5.ExecuteNonQuery();
+                    comando6.ExecuteNonQuery();
+                    break;
+                default:
+                    break;
+            }    
+
         }
     }
+
+
 
 }

@@ -133,5 +133,10 @@ namespace SportShare
         {
             this.Close();
         }
+
+        private void Registrarse_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

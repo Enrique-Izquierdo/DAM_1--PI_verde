@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SportShare.Clase;
 
 namespace SportShare
 {
@@ -15,6 +16,22 @@ namespace SportShare
         public Valoración()
         {
             InitializeComponent();
+        }
+
+        private void picboxSonriente_Click(object sender, EventArgs e)
+        {
+            Datos.val.Contenido_Valoracion="Contento";
+        }
+
+        private void picboxNeutral_Click(object sender, EventArgs e)
+        {
+            Datos.val.Contenido_Valoracion = "Neutral";
+        }
+
+        private void picboxTriste_Click(object sender, EventArgs e)
+        {
+            Datos.val.Contenido_Valoracion = "Triste";
+            
         }
     }
 }

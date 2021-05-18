@@ -67,7 +67,6 @@ namespace SportShare.Clase
                                 usu.telefono,usu.poblacion,usu.provincia,Convert.ToDouble(usu.peso),Convert.ToDouble(usu.altura),usu.deportePreferido,usu.enfermedades);
 
                 MySqlCommand comando = new MySqlCommand(consulta,conexion);
-                MessageBox.Show(consulta);
                 retorno = comando.ExecuteNonQuery();
             
 
@@ -167,6 +166,38 @@ namespace SportShare.Clase
             comando.Parameters.AddWithValue("fn", usu.fechaNacimiento);
 
             comando.ExecuteNonQuery();
+        }
+
+        public static void AñadirAmigo(MySqlConnection conexion,string usu1,string usu2)
+        {
+          
+            string consulta = String.Format("INSERT INTO Amistad (id_usuario,id_amigo) VALUES " +
+                            "('{0}','{1}')",usu1,usu2 );
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            comando.ExecuteNonQuery();
+
+
+        }
+
+        public static  bool Sonamigos(MySqlConnection conexion, string usu1,string usu2) 
+        {
+            string consulta = string.Format("Select id_usuario,id_amigo from Amistad where id_usuario='{0}' AND id_amigo='{1}'", usu1,usu2);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+
+                reader.Close();
+                return true;
+            }
+            else
+            {
+
+                reader.Close();
+                return false;
+            }
         }
     }
 }

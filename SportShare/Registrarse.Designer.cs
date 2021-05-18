@@ -46,6 +46,7 @@
             this.lblNombreRegist = new System.Windows.Forms.Label();
             this.lblTlfRegist = new System.Windows.Forms.Label();
             this.gbxRegistrarse = new System.Windows.Forms.GroupBox();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.lblPeso = new System.Windows.Forms.Label();
             this.dtpFechNac = new System.Windows.Forms.DateTimePicker();
@@ -57,7 +58,6 @@
             this.txtContraseñaRegist = new System.Windows.Forms.TextBox();
             this.pbxSportShre = new System.Windows.Forms.PictureBox();
             this.errores = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnVolver = new System.Windows.Forms.Button();
             this.gbxRegistrarse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSportShre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errores)).BeginInit();
@@ -247,6 +247,17 @@
             this.gbxRegistrarse.TabStop = false;
             this.gbxRegistrarse.Text = "Registrarse";
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(793, 555);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(156, 53);
+            this.btnVolver.TabIndex = 130;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // txtPeso
             // 
             this.txtPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -357,17 +368,6 @@
             // 
             this.errores.ContainerControl = this;
             // 
-            // btnVolver
-            // 
-            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(793, 555);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(156, 53);
-            this.btnVolver.TabIndex = 130;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
             // Registrarse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -378,6 +378,7 @@
             this.Name = "Registrarse";
             this.Text = "Registrarse";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Registrarse_Load);
             this.gbxRegistrarse.ResumeLayout(false);
             this.gbxRegistrarse.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSportShre)).EndInit();

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 using SportShare.Clase;
 
 namespace SportShare
@@ -23,8 +24,8 @@ namespace SportShare
 
         private void tkbPrecioCrear_Scroll(object sender, EventArgs e)
         {
-            lblPrecioNumCrear.Text = tkbPrecioCrear.Value.ToString() + "$";
-            lblPrecioNumCrear.Visible = true;
+            lblDolar_CrearEvento.Text = tkbPrecio_CrearEvento.Value.ToString() + "$";
+            lblDolar_CrearEvento.Visible = true;
         }
 
         private void btnCerrarSesión_Click(object sender, EventArgs e)
@@ -38,8 +39,110 @@ namespace SportShare
             Application.Exit();
         }
 
+        public bool ControlErroresCrear()
+        {
+            bool ok = true;
+            if (txtDescripcion_CrearEvento.Text == "")
+            {
+                ok = false;
+                errores.SetError(txtDescripcion_CrearEvento, "Introduzca una descripción");                
+            }
+            else
+            {
+                errores.SetError(txtDescripcion_CrearEvento, " ");
+                //errores.Clear();
+            }
+            if (txtDireccion_CrearEvento.Text == "")
+            {
+                ok = false;
+                errores.SetError(txtDireccion_CrearEvento, "Introduzca la dirección del evento");                
+            }
+            else
+            {
+                errores.SetError(txtDireccion_CrearEvento, " ");
+                //errores.Clear();
+            }
+            if (txtMateriales_CrearEvento.Text == "")
+            {
+                ok = false;
+                errores.SetError(txtNombre_CrearEvento, "Introduzca el nombre del evento");                
+            }
+            else
+            {
+                errores.SetError(txtNombre_CrearEvento, "");
+                //errores.Clear();
+            }
+            if (txtPoblacion_CrearEvento.Text == "")
+            {
+                ok = false;
+                errores.SetError(txtPoblacion_CrearEvento, "Introduzca la población del evento");                
+            }
+            else
+            {
+                errores.SetError(txtPoblacion_CrearEvento, "");
+                //errores.Clear();
+            }
+            if (txtProvincia_CrearEvento.Text == "")
+            {
+                ok = false;
+                errores.SetError(txtProvincia_CrearEvento, "Introduzca la provincia del evento");                
+            }
+            else
+            {
+                errores.SetError(txtProvincia_CrearEvento, "");
+                //errores.Clear();
+            }
+            if (cmbDeporte_CrearEvento.Text == "")
+            {
+                ok = false;
+                errores.SetError(cmbDeporte_CrearEvento, "Introduzca el estilo de deporte del evento");                
+            }
+            else
+            {
+                errores.SetError(cmbDeporte_CrearEvento, "");
+                //errores.Clear();
+            }
+            if (nudParticipantes_CrearEvento.Text == "")
+            {
+                ok = false;
+                errores.SetError(nudParticipantes_CrearEvento, "Introduzca el número máximo de participantes");                
+            }
+            else
+            {
+                errores.SetError(nudParticipantes_CrearEvento, "");
+                //errores.Clear();
+            }
+            if (mtxtFechaHora_CrearEvento.Text == "  /  /       :")
+            {
+                ok = false;
+                errores.SetError(mtxtFechaHora_CrearEvento, "Introduzca la hora del evento");                
+            }
+            else
+            {
+                errores.SetError(mtxtFechaHora_CrearEvento, "");
+                //errores.Clear();
+            }
+            return ok;
+        }
+
         private void Principal_Load(object sender, EventArgs e)
         {
+            #region(Enrique)
+            cmbDeporte_Buscar.Text = Datos.usu.Deportepreferido;
+            CargarBD_CmbDeporte_Buscar();
+            cmbLocalidad_Buscar.Text = Datos.usu.Poblacion;
+            CargarBD_CmbLocalidad_Buscar();
+            cmbEvento_Buscar.Text = "Selecciona un evento";
+            CargarBD_CmbEvento_Buscar();
+            cmbDeporte_CrearEvento.Text = Datos.usu.Deportepreferido;
+            CargarBD_CmbDeporte_CrearEvento();
+            cmbSelecCamp_CrearEvento.Text = "Ninguno";
+            CargarBD_CmbSelecCamp_CrearEvento();
+
+            string consultaInicial = "SELECT * FROM Actividad";
+            CargarDGVBuscar_BDActividad(bd.Conexion, consultaInicial);
+            #endregion
+
             txtNomUsuPerfil.Text = Datos.usu.Alias;
             txtNombreMiPerfil.Text = Datos.usu.Nombre;
             txtApellidosMiPerfil.Text = Datos.usu.Apellidos;
@@ -91,6 +194,216 @@ namespace SportShare
             txtTelefonoMiPerfil.ReadOnly = true;
             txtEnfermedadesMiPerfil.ReadOnly = true;
             btnConfirmarMod.Visible = false;
+        }
+
+        private void btnEnviarMensaje_Click(object sender, EventArgs e)
+        {
+            bd.AbrirConexion();
+           
+            if (Usuario.UsuarioExiste(bd.Conexion, txtDestinatario.Text))
+            {
+                Mensaje men = new Mensaje(txtNomUsuPerfil.Text, txtDestinatario.Text, txtCuerpoMensaje.Text, DateTime.Now);
+                men.EnviarMensaje(bd.Conexion, men);
+                txtCuerpoMensaje.Text = "";
+                txtDestinatario.Text = "";
+                errores.Clear();
+            }
+            else
+            {
+                errores.SetError(txtDestinatario, "Escribe un nombre de usuario correcto");
+            }
+            bd.CerrarConexion();
+        }
+
+        private void btnCargarMensajes_Click(object sender, EventArgs e)
+        {
+            bd.AbrirConexion();
+            dgvMensajesEnviados.DataSource = Mensaje.BuscarMensajesEnviados(bd.Conexion, Datos.usu.Alias);
+            dgvMensajesRecibidos.DataSource = Mensaje.BuscarMensajesRecibidos(bd.Conexion, Datos.usu.Alias);
+            bd.CerrarConexion();
+        }
+
+       
+
+        private void btnAñadirAmigo_Click(object sender, EventArgs e)
+        {
+            bd.AbrirConexion();
+
+            if (Usuario.UsuarioExiste(bd.Conexion, txtAñadirAmigo.Text))
+            {
+                if (Usuario.Sonamigos(bd.Conexion, Datos.usu.Alias, txtAñadirAmigo.Text) == false)
+                {
+
+                    Usuario.AñadirAmigo(bd.Conexion, Datos.usu.Alias, txtAñadirAmigo.Text);
+                    Usuario.AñadirAmigo(bd.Conexion, txtAñadirAmigo.Text, Datos.usu.Alias);
+                   
+                    txtAñadirAmigo.Text = "";                    
+                }
+                else
+                {
+                    MessageBox.Show("El usuario " + txtAñadirAmigo.Text + " no existe.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("El usuario " + txtAñadirAmigo.Text + " ya es tu amigo.");
+            }
+            bd.CerrarConexion();
+        }
+
+        #region(Enrique)
+        private void btnCrear_CrearEvento_Click(object sender, EventArgs e)
+        {
+            int resultado;
+            if (ControlErroresCrear())
+            {
+
+                bd.AbrirConexion();
+
+                Actividad act = new Actividad(cmbDeporte_CrearEvento.Text, txtNombre_CrearEvento.Text,
+                                    txtDescripcion_CrearEvento.Text, txtDireccion_CrearEvento.Text, txtPoblacion_CrearEvento.Text,
+                                    txtProvincia_CrearEvento.Text, Convert.ToDateTime(mtxtFechaHora_CrearEvento.Text), Convert.ToInt32(nudParticipantes_CrearEvento.Value),
+                                    txtMateriales_CrearEvento.Text, dtpFechaLimite_CrearEvento.Value, Convert.ToInt32(nudEdadMinima_CrearEvento.Value),
+                                    txtNivelDeportivo_CrearEvento.Text, tkbPrecio_CrearEvento.Value, Datos.usu.Alias);
+
+                resultado = act.AgregarActividadBD(bd.Conexion);
+
+                if (resultado > 0)   // Si se ha agregado o modificado limpiamos las cajas de texto
+                {
+                    cmbDeporte_CrearEvento.SelectedIndex = -1;
+                    txtNombre_CrearEvento.Clear();
+                    txtDescripcion_CrearEvento.Clear();
+                    txtDireccion_CrearEvento.Clear();
+                    txtPoblacion_CrearEvento.Clear();
+                    txtProvincia_CrearEvento.Clear();
+                    mtxtFechaHora_CrearEvento.Clear();
+                    nudParticipantes_CrearEvento.Value = 0;
+                    txtMateriales_CrearEvento.Clear();
+                    dtpFechaLimite_CrearEvento.Value = DateTime.Now;
+                    nudEdadMinima_CrearEvento.Value = 0;
+                    txtNivelDeportivo_CrearEvento.Clear();
+                    tkbPrecio_CrearEvento.Value = 0;
+                    lblDolar_CrearEvento.Text = tkbPrecio_CrearEvento.Value.ToString() + "$";
+
+                    errores.Clear();
+                }
+            }
+                    bd.CerrarConexion();
+                
+        }
+
+        
+        private void CargarBD_CmbDeporte_CrearEvento()
+        {
+            string consulta = "SELECT tipo FROM Actividad_tipo";
+            MySqlCommand comando = new MySqlCommand(consulta, bd.Conexion);
+            bd.AbrirConexion();
+            MySqlDataReader registro = comando.ExecuteReader();
+            //string prueba = "";
+            while (registro.Read())
+            {
+                cmbDeporte_CrearEvento.Items.Add(registro["tipo"].ToString());
+                //prueba += registro["tipo"].ToString();
+            }
+            //MessageBox.Show(prueba);
+            bd.CerrarConexion();
+        }
+
+        private void CargarBD_CmbDeporte_Buscar()
+        {
+            string consulta = "SELECT tipo FROM Actividad_tipo";
+            MySqlCommand comando = new MySqlCommand(consulta, bd.Conexion);
+            bd.AbrirConexion();
+            MySqlDataReader registro = comando.ExecuteReader();
+            //string prueba = "";
+            while (registro.Read())
+            {
+                cmbDeporte_Buscar.Items.Add(registro["tipo"].ToString());
+                //prueba += registro["tipo"].ToString();
+            }
+            //MessageBox.Show(prueba);
+            bd.CerrarConexion();
+        }
+
+        private void CargarBD_CmbLocalidad_Buscar()
+        {
+            //string consulta = "SELECT DISTINCT nombre FROM tiposActividad";
+            string consulta = "SELECT DISTINCT poblacion FROM Actividad";
+            MySqlCommand comando = new MySqlCommand(consulta, bd.Conexion);
+            bd.AbrirConexion();
+            MySqlDataReader registro = comando.ExecuteReader();
+            //string prueba = "";
+            while (registro.Read())
+            {
+                cmbLocalidad_Buscar.Items.Add(registro["poblacion"].ToString());
+                //prueba += registro["poblacion"].ToString();
+            }
+            //MessageBox.Show(prueba);
+            bd.CerrarConexion();
+        }
+
+        private void CargarBD_CmbEvento_Buscar()
+        {
+            //string consulta = "SELECT DISTINCT nombre FROM tiposActividad";
+            string consulta = "SELECT DISTINCT nombre FROM Actividad";
+            MySqlCommand comando = new MySqlCommand(consulta, bd.Conexion);
+            bd.AbrirConexion();
+            MySqlDataReader registro = comando.ExecuteReader();
+            //string prueba = "";
+            while (registro.Read())
+            {
+                cmbEvento_Buscar.Items.Add(registro["nombre"].ToString());
+                //prueba += registro["poblacion"].ToString();
+            }
+            //MessageBox.Show(prueba);
+            bd.CerrarConexion();
+        }
+
+        private void CargarBD_CmbSelecCamp_CrearEvento()
+        {
+            //string consulta = "SELECT DISTINCT nombre FROM tiposActividad";
+            string consulta = "SELECT DISTINCT nombre FROM Campeonato";
+            MySqlCommand comando = new MySqlCommand(consulta, bd.Conexion);
+            bd.AbrirConexion();
+            MySqlDataReader registro = comando.ExecuteReader();
+            //string prueba = "";
+            while (registro.Read())
+            {
+                cmbSelecCamp_CrearEvento.Items.Add(registro["nombre"].ToString());
+                //prueba += registro["poblacion"].ToString();
+            }
+            //MessageBox.Show(prueba);
+            bd.CerrarConexion();
+        }
+
+        private void CargarDGVBuscar_BDActividad(MySqlConnection pConexion, string consulta)
+        {
+            
+            bd.AbrirConexion();
+            dgvBuscar.DataSource = Actividad.BuscarActividadesBD(pConexion, consulta);            
+            bd.CerrarConexion();
+        }
+
+        #endregion
+
+        private void dgvBuscar_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            bd.AbrirConexion();
+            Datos.act = Actividad.ObtenerActividad(bd.Conexion, Convert.ToInt32(dgvBuscar.Rows[e.RowIndex].Cells[0].Value));
+            Pantalla_Evento panteven = new Pantalla_Evento();
+            panteven.ShowDialog();
+            bd.CerrarConexion();
+        }
+
+
+        private void btnCrearCampeonato_Click(object sender, EventArgs e)
+        {
+            bd.AbrirConexion();
+            Campeonato cam = new Campeonato(txtNomCampeonato.Text, txtDescCampeonato.Text);
+            cam.AgregarCampeonato(bd.Conexion, cam);
+            txtDescCampeonato.Text = "";
+            txtNomCampeonato.Text = "";
+            bd.CerrarConexion();
         }
     }
 }

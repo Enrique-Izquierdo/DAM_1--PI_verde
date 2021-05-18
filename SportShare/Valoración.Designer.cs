@@ -32,33 +32,33 @@
             this.lblFoto = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnEnviarMensaje = new System.Windows.Forms.Button();
             this.grpboxValoracion = new System.Windows.Forms.GroupBox();
+            this.picboxSad = new System.Windows.Forms.PictureBox();
+            this.picboxNeu = new System.Windows.Forms.PictureBox();
+            this.picboxSonrisa = new System.Windows.Forms.PictureBox();
             this.lblPorcTristes = new System.Windows.Forms.Label();
             this.lblPorcNeutral = new System.Windows.Forms.Label();
             this.lblPorcContentos = new System.Windows.Forms.Label();
             this.lblPorcentajeTotal = new System.Windows.Forms.Label();
             this.lblValoraciones = new System.Windows.Forms.Label();
             this.grpboxValoraParticip = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picboxSportShare = new System.Windows.Forms.PictureBox();
             this.picboxTriste = new System.Windows.Forms.PictureBox();
             this.picboxNeutral = new System.Windows.Forms.PictureBox();
             this.picboxSonriente = new System.Windows.Forms.PictureBox();
-            this.picboxSad = new System.Windows.Forms.PictureBox();
-            this.picboxNeu = new System.Windows.Forms.PictureBox();
-            this.picboxSonrisa = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picboxSportShare = new System.Windows.Forms.PictureBox();
             this.picboxUsuario = new System.Windows.Forms.PictureBox();
+            this.btnEnviarValoración = new System.Windows.Forms.Button();
             this.grpboxValoracion.SuspendLayout();
-            this.grpboxValoraParticip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxSportShare)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxTriste)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxNeutral)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxSonriente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxNeu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSonrisa)).BeginInit();
+            this.grpboxValoraParticip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxTriste)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxNeutral)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxSonriente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxSportShare)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,16 +100,6 @@
             this.textBox1.Size = new System.Drawing.Size(140, 30);
             this.textBox1.TabIndex = 4;
             // 
-            // btnEnviarMensaje
-            // 
-            this.btnEnviarMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviarMensaje.Location = new System.Drawing.Point(1196, 188);
-            this.btnEnviarMensaje.Name = "btnEnviarMensaje";
-            this.btnEnviarMensaje.Size = new System.Drawing.Size(131, 62);
-            this.btnEnviarMensaje.TabIndex = 5;
-            this.btnEnviarMensaje.Text = "Enviar Mensaje";
-            this.btnEnviarMensaje.UseVisualStyleBackColor = true;
-            // 
             // grpboxValoracion
             // 
             this.grpboxValoracion.Controls.Add(this.picboxSad);
@@ -128,15 +118,45 @@
             this.grpboxValoracion.TabStop = false;
             this.grpboxValoracion.Text = "Valoración de su participación en anteriores eventos:";
             // 
+            // picboxSad
+            // 
+            this.picboxSad.Image = global::SportShare.Properties.Resources.triste;
+            this.picboxSad.Location = new System.Drawing.Point(596, 74);
+            this.picboxSad.Name = "picboxSad";
+            this.picboxSad.Size = new System.Drawing.Size(94, 92);
+            this.picboxSad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxSad.TabIndex = 7;
+            this.picboxSad.TabStop = false;
+            // 
+            // picboxNeu
+            // 
+            this.picboxNeu.Image = global::SportShare.Properties.Resources.neutral;
+            this.picboxNeu.Location = new System.Drawing.Point(427, 74);
+            this.picboxNeu.Name = "picboxNeu";
+            this.picboxNeu.Size = new System.Drawing.Size(94, 92);
+            this.picboxNeu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxNeu.TabIndex = 6;
+            this.picboxNeu.TabStop = false;
+            // 
+            // picboxSonrisa
+            // 
+            this.picboxSonrisa.Image = global::SportShare.Properties.Resources.sonriente;
+            this.picboxSonrisa.Location = new System.Drawing.Point(251, 74);
+            this.picboxSonrisa.Name = "picboxSonrisa";
+            this.picboxSonrisa.Size = new System.Drawing.Size(94, 92);
+            this.picboxSonrisa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxSonrisa.TabIndex = 5;
+            this.picboxSonrisa.TabStop = false;
+            // 
             // lblPorcTristes
             // 
             this.lblPorcTristes.AutoSize = true;
             this.lblPorcTristes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPorcTristes.Location = new System.Drawing.Point(591, 184);
             this.lblPorcTristes.Name = "lblPorcTristes";
-            this.lblPorcTristes.Size = new System.Drawing.Size(139, 50);
+            this.lblPorcTristes.Size = new System.Drawing.Size(132, 50);
             this.lblPorcTristes.TabIndex = 4;
-            this.lblPorcTristes.Text = "Porcentage de\r\nTristes:";
+            this.lblPorcTristes.Text = "Porcentaje de\r\nTristes:";
             this.lblPorcTristes.Visible = false;
             // 
             // lblPorcNeutral
@@ -145,9 +165,9 @@
             this.lblPorcNeutral.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPorcNeutral.Location = new System.Drawing.Point(422, 184);
             this.lblPorcNeutral.Name = "lblPorcNeutral";
-            this.lblPorcNeutral.Size = new System.Drawing.Size(139, 50);
+            this.lblPorcNeutral.Size = new System.Drawing.Size(132, 50);
             this.lblPorcNeutral.TabIndex = 3;
-            this.lblPorcNeutral.Text = "Porcentage de\r\nNeutrales:";
+            this.lblPorcNeutral.Text = "Porcentaje de\r\nNeutrales:";
             this.lblPorcNeutral.Visible = false;
             // 
             // lblPorcContentos
@@ -156,9 +176,9 @@
             this.lblPorcContentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPorcContentos.Location = new System.Drawing.Point(246, 184);
             this.lblPorcContentos.Name = "lblPorcContentos";
-            this.lblPorcContentos.Size = new System.Drawing.Size(139, 50);
+            this.lblPorcContentos.Size = new System.Drawing.Size(132, 50);
             this.lblPorcContentos.TabIndex = 2;
-            this.lblPorcContentos.Text = "Porcentage de\r\nContentos:";
+            this.lblPorcContentos.Text = "Porcentaje de\r\nContentos:";
             this.lblPorcContentos.Visible = false;
             // 
             // lblPorcentajeTotal
@@ -194,6 +214,39 @@
             this.grpboxValoraParticip.TabStop = false;
             this.grpboxValoraParticip.Text = "Valora su participación:";
             // 
+            // picboxTriste
+            // 
+            this.picboxTriste.Image = global::SportShare.Properties.Resources.triste;
+            this.picboxTriste.Location = new System.Drawing.Point(407, 70);
+            this.picboxTriste.Name = "picboxTriste";
+            this.picboxTriste.Size = new System.Drawing.Size(94, 92);
+            this.picboxTriste.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxTriste.TabIndex = 2;
+            this.picboxTriste.TabStop = false;
+            this.picboxTriste.Click += new System.EventHandler(this.picboxTriste_Click);
+            // 
+            // picboxNeutral
+            // 
+            this.picboxNeutral.Image = global::SportShare.Properties.Resources.neutral;
+            this.picboxNeutral.Location = new System.Drawing.Point(246, 70);
+            this.picboxNeutral.Name = "picboxNeutral";
+            this.picboxNeutral.Size = new System.Drawing.Size(94, 92);
+            this.picboxNeutral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxNeutral.TabIndex = 1;
+            this.picboxNeutral.TabStop = false;
+            this.picboxNeutral.Click += new System.EventHandler(this.picboxNeutral_Click);
+            // 
+            // picboxSonriente
+            // 
+            this.picboxSonriente.Image = global::SportShare.Properties.Resources.sonriente;
+            this.picboxSonriente.Location = new System.Drawing.Point(74, 70);
+            this.picboxSonriente.Name = "picboxSonriente";
+            this.picboxSonriente.Size = new System.Drawing.Size(94, 92);
+            this.picboxSonriente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxSonriente.TabIndex = 0;
+            this.picboxSonriente.TabStop = false;
+            this.picboxSonriente.Click += new System.EventHandler(this.picboxSonriente_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(1570, 134);
@@ -212,66 +265,6 @@
             this.picboxSportShare.TabIndex = 8;
             this.picboxSportShare.TabStop = false;
             // 
-            // picboxTriste
-            // 
-            this.picboxTriste.Image = global::SportShare.Properties.Resources.triste;
-            this.picboxTriste.Location = new System.Drawing.Point(407, 70);
-            this.picboxTriste.Name = "picboxTriste";
-            this.picboxTriste.Size = new System.Drawing.Size(94, 92);
-            this.picboxTriste.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxTriste.TabIndex = 2;
-            this.picboxTriste.TabStop = false;
-            // 
-            // picboxNeutral
-            // 
-            this.picboxNeutral.Image = global::SportShare.Properties.Resources.neutral;
-            this.picboxNeutral.Location = new System.Drawing.Point(246, 70);
-            this.picboxNeutral.Name = "picboxNeutral";
-            this.picboxNeutral.Size = new System.Drawing.Size(94, 92);
-            this.picboxNeutral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxNeutral.TabIndex = 1;
-            this.picboxNeutral.TabStop = false;
-            // 
-            // picboxSonriente
-            // 
-            this.picboxSonriente.Image = global::SportShare.Properties.Resources.sonriente;
-            this.picboxSonriente.Location = new System.Drawing.Point(74, 70);
-            this.picboxSonriente.Name = "picboxSonriente";
-            this.picboxSonriente.Size = new System.Drawing.Size(94, 92);
-            this.picboxSonriente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxSonriente.TabIndex = 0;
-            this.picboxSonriente.TabStop = false;
-            // 
-            // picboxSad
-            // 
-            this.picboxSad.Image = global::SportShare.Properties.Resources.triste;
-            this.picboxSad.Location = new System.Drawing.Point(596, 74);
-            this.picboxSad.Name = "picboxSad";
-            this.picboxSad.Size = new System.Drawing.Size(94, 92);
-            this.picboxSad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxSad.TabIndex = 7;
-            this.picboxSad.TabStop = false;
-            // 
-            // picboxNeu
-            // 
-            this.picboxNeu.Image = global::SportShare.Properties.Resources.neutral;
-            this.picboxNeu.Location = new System.Drawing.Point(427, 74);
-            this.picboxNeu.Name = "picboxNeu";
-            this.picboxNeu.Size = new System.Drawing.Size(94, 92);
-            this.picboxNeu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxNeu.TabIndex = 6;
-            this.picboxNeu.TabStop = false;
-            // 
-            // picboxSonrisa
-            // 
-            this.picboxSonrisa.Image = global::SportShare.Properties.Resources.sonriente;
-            this.picboxSonrisa.Location = new System.Drawing.Point(251, 74);
-            this.picboxSonrisa.Name = "picboxSonrisa";
-            this.picboxSonrisa.Size = new System.Drawing.Size(94, 92);
-            this.picboxSonrisa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxSonrisa.TabIndex = 5;
-            this.picboxSonrisa.TabStop = false;
-            // 
             // picboxUsuario
             // 
             this.picboxUsuario.Image = global::SportShare.Properties.Resources.user;
@@ -282,6 +275,16 @@
             this.picboxUsuario.TabIndex = 1;
             this.picboxUsuario.TabStop = false;
             // 
+            // btnEnviarValoración
+            // 
+            this.btnEnviarValoración.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarValoración.Location = new System.Drawing.Point(1187, 933);
+            this.btnEnviarValoración.Name = "btnEnviarValoración";
+            this.btnEnviarValoración.Size = new System.Drawing.Size(131, 62);
+            this.btnEnviarValoración.TabIndex = 5;
+            this.btnEnviarValoración.Text = "Enviar Valoración";
+            this.btnEnviarValoración.UseVisualStyleBackColor = true;
+            // 
             // Valoración
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -291,7 +294,7 @@
             this.Controls.Add(this.picboxSportShare);
             this.Controls.Add(this.grpboxValoraParticip);
             this.Controls.Add(this.grpboxValoracion);
-            this.Controls.Add(this.btnEnviarMensaje);
+            this.Controls.Add(this.btnEnviarValoración);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblFoto);
@@ -302,15 +305,15 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.grpboxValoracion.ResumeLayout(false);
             this.grpboxValoracion.PerformLayout();
-            this.grpboxValoraParticip.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxSportShare)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxTriste)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxNeutral)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxSonriente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxNeu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxSonrisa)).EndInit();
+            this.grpboxValoraParticip.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picboxTriste)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxNeutral)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxSonriente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxSportShare)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -324,7 +327,6 @@
         private System.Windows.Forms.Label lblFoto;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnEnviarMensaje;
         private System.Windows.Forms.GroupBox grpboxValoracion;
         private System.Windows.Forms.Label lblPorcContentos;
         private System.Windows.Forms.Label lblPorcentajeTotal;
@@ -340,5 +342,6 @@
         private System.Windows.Forms.PictureBox picboxNeu;
         private System.Windows.Forms.PictureBox picboxSportShare;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnEnviarValoración;
     }
 }

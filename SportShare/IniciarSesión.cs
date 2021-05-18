@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SportShare.Clase;
+using System.Globalization;
+using SportShare.Idiomas;
+using System.Threading;
 
 namespace SportShare
 {
@@ -16,6 +19,15 @@ namespace SportShare
         public IniciarSesión()
         {
             InitializeComponent();
+        }
+        private void AplicarIdioma()
+        {
+            lblIniciarSes.Text = StringRecursos.InicioSes;
+            lblNomUsu.Text = StringRecursos.NomUsu;
+            lblRegistrar.Text = StringRecursos.Registrar;
+            lblContraseña.Text = StringRecursos.Contraseña;
+            btnRegistrarse.Text = StringRecursos.Registrarse;
+            btnIniciarSesion.Text = StringRecursos.IniciarSesion;
         }
         public bool ControlErrores()
         {
@@ -80,6 +92,26 @@ namespace SportShare
 
         }
 
-       
+        private void cbxIdioma_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cultura = "";
+            switch (cbxIdioma.Text)
+            {
+                case "Castellano":
+                    {
+                        cultura = "ES-ES";
+                        break;
+                    }
+                case "Inglés":
+                    {
+                        cultura = "EN-GB";
+                        break;
+                    }
+            }
+            Datos.cultura = cultura;
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura);
+            AplicarIdioma();
+            
+        }
     }
 }

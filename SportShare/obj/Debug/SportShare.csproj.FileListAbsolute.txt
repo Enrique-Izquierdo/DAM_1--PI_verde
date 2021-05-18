@@ -38,7 +38,6 @@ C:\Users\frparu\Downloads\SportShare\obj\Debug\SportShare.Valoración.resources
 C:\Users\frparu\Downloads\SportShare\obj\Debug\SportShare.Registrarse.resources
 C:\Users\frparu\Desktop\Repositorio P.I\SportShare\obj\Debug\SportShare.csprojAssemblyReference.cache
 C:\Users\frparu\Desktop\Repositorio P.I\SportShare\obj\Debug\SportShare.exe.config
-C:\Users\frparu\Desktop\Repositorio P.I\SportShare\obj\Debug\SportShare.Idiomas.Español.resources
 C:\Users\frparu\Desktop\Repositorio P.I\SportShare\obj\Debug\SportShare.IniciarSesión.resources
 C:\Users\frparu\Desktop\Repositorio P.I\SportShare\obj\Debug\SportShare.Pantalla_Evento.resources
 C:\Users\frparu\Desktop\Repositorio P.I\SportShare\obj\Debug\SportShare.Principal.resources
@@ -86,7 +85,6 @@ C:\Users\frparu\Desktop\SportShare\bin\Debug\System.Runtime.CompilerServices.Uns
 C:\Users\frparu\Desktop\SportShare\bin\Debug\MySql.Data.xml
 C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.csprojAssemblyReference.cache
 C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.exe.config
-C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.Idiomas.Español.resources
 C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.IniciarSesión.resources
 C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.Pantalla_Evento.resources
 C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.Principal.resources
@@ -98,3 +96,44 @@ C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.csproj.CoreCompileInputs
 C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.csproj.CopyComplete
 C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.exe
 C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.pdb
+C:\Users\frparu\Desktop\Repositorio P.I\SportShare\bin\Debug\EN-GB\SportShare.resources.dll
+C:\Users\frparu\Desktop\Repositorio P.I\SportShare\obj\Debug\SportShare.Idiomas.StringRecursos.resources
+C:\Users\frparu\Desktop\Repositorio P.I\SportShare\obj\Debug\SportShare.Idiomas.StringRecursos.EN-GB.resources
+C:\Users\frparu\Desktop\Repositorio P.I\SportShare\obj\Debug\EN-GB\SportShare.resources.dll
+D:\SportShare\bin\Debug\SportShare.exe.config
+D:\SportShare\bin\Debug\SportShare.exe
+D:\SportShare\bin\Debug\SportShare.pdb
+D:\SportShare\bin\Debug\EN-GB\SportShare.resources.dll
+D:\SportShare\bin\Debug\Google.Protobuf.dll
+D:\SportShare\bin\Debug\Zstandard.Net.dll
+D:\SportShare\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\SportShare\bin\Debug\BouncyCastle.Crypto.dll
+D:\SportShare\bin\Debug\Ubiety.Dns.Core.dll
+D:\SportShare\bin\Debug\Renci.SshNet.dll
+D:\SportShare\bin\Debug\System.Memory.dll
+D:\SportShare\bin\Debug\System.Buffers.dll
+D:\SportShare\bin\Debug\K4os.Compression.LZ4.dll
+D:\SportShare\bin\Debug\K4os.Hash.xxHash.dll
+D:\SportShare\bin\Debug\System.Numerics.Vectors.dll
+D:\SportShare\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\SportShare\bin\Debug\MySql.Data.xml
+D:\SportShare\obj\Debug\SportShare.csprojAssemblyReference.cache
+D:\SportShare\obj\Debug\SportShare.exe.config
+D:\SportShare\obj\Debug\SportShare.Idiomas.StringRecursos.resources
+D:\SportShare\obj\Debug\SportShare.IniciarSesión.resources
+D:\SportShare\obj\Debug\SportShare.Pantalla_Evento.resources
+D:\SportShare\obj\Debug\SportShare.Principal.resources
+D:\SportShare\obj\Debug\SportShare.Properties.Resources.resources
+D:\SportShare\obj\Debug\SportShare.Registrarse.resources
+D:\SportShare\obj\Debug\SportShare.Valoración.resources
+D:\SportShare\obj\Debug\SportShare.Idiomas.StringRecursos.EN-GB.resources
+D:\SportShare\obj\Debug\SportShare.csproj.GenerateResource.cache
+D:\SportShare\obj\Debug\SportShare.csproj.CoreCompileInputs.cache
+D:\SportShare\obj\Debug\EN-GB\SportShare.resources.dll
+D:\SportShare\obj\Debug\SportShare.csproj.CopyComplete
+D:\SportShare\obj\Debug\SportShare.exe
+D:\SportShare\obj\Debug\SportShare.pdb
+C:\Users\frparu\Desktop\SportShare\bin\Debug\EN-GB\SportShare.resources.dll
+C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.Idiomas.StringRecursos.resources
+C:\Users\frparu\Desktop\SportShare\obj\Debug\SportShare.Idiomas.StringRecursos.EN-GB.resources
+C:\Users\frparu\Desktop\SportShare\obj\Debug\EN-GB\SportShare.resources.dll

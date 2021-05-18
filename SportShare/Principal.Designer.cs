@@ -28,9 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.tbcPrincipal = new System.Windows.Forms.TabControl();
             this.tbpBuscar = new System.Windows.Forms.TabPage();
+            this.cmbEvento_Buscar = new System.Windows.Forms.ComboBox();
+            this.lblEvento_Buscar = new System.Windows.Forms.Label();
+            this.cmbLocalidad_Buscar = new System.Windows.Forms.ComboBox();
+            this.lblLocalidad_Buscar = new System.Windows.Forms.Label();
+            this.cmbDeporte_Buscar = new System.Windows.Forms.ComboBox();
+            this.lblDeporte_Buscar = new System.Windows.Forms.Label();
             this.pbxbuscar = new System.Windows.Forms.PictureBox();
             this.gbxdestacadosbuscar = new System.Windows.Forms.GroupBox();
             this.lblDestacadosBusc = new System.Windows.Forms.Label();
@@ -40,47 +47,50 @@
             this.btnTenisBusc = new System.Windows.Forms.Button();
             this.btnCiclismoBusc = new System.Windows.Forms.Button();
             this.dgvBuscar = new System.Windows.Forms.DataGridView();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.tbpCrear = new System.Windows.Forms.TabPage();
-            this.cbxDeporteCrear = new System.Windows.Forms.ComboBox();
-            this.lblDeporteCrear = new System.Windows.Forms.Label();
-            this.bttnVolver = new System.Windows.Forms.Button();
-            this.grpboxLista = new System.Windows.Forms.GroupBox();
+            this.tbpCrearEvento = new System.Windows.Forms.TabPage();
+            this.grbCampeonato_CrearEvento = new System.Windows.Forms.GroupBox();
+            this.cmbSelecCamp_CrearEvento = new System.Windows.Forms.ComboBox();
+            this.lblSelecCamp_CrearEvento = new System.Windows.Forms.Label();
+            this.rdbtnNo_CrearEvento = new System.Windows.Forms.RadioButton();
+            this.rdbtnSi_CrearEvento = new System.Windows.Forms.RadioButton();
+            this.cmbDeporte_CrearEvento = new System.Windows.Forms.ComboBox();
+            this.lblDeporte_CrearEvento = new System.Windows.Forms.Label();
+            this.btnVolver_CrearEvento = new System.Windows.Forms.Button();
             this.btnCrearCampeonato = new System.Windows.Forms.Button();
-            this.btnAñadirActiCampeonato = new System.Windows.Forms.Button();
-            this.dgvActividadesCampeonato = new System.Windows.Forms.DataGridView();
-            this.grpboxRequisitos = new System.Windows.Forms.GroupBox();
-            this.lblPrecioNumCrear = new System.Windows.Forms.Label();
-            this.tkbPrecioCrear = new System.Windows.Forms.TrackBar();
-            this.numupEdad = new System.Windows.Forms.NumericUpDown();
-            this.lblPrecio = new System.Windows.Forms.Label();
-            this.txtMateriales = new System.Windows.Forms.TextBox();
-            this.lblMateriales = new System.Windows.Forms.Label();
-            this.txtNivelDeportivo = new System.Windows.Forms.TextBox();
-            this.lblNivelDeportivo = new System.Windows.Forms.Label();
-            this.lblEdad = new System.Windows.Forms.Label();
-            this.bttnCancelar = new System.Windows.Forms.Button();
-            this.bttnSi = new System.Windows.Forms.Button();
-            this.grboxEstado = new System.Windows.Forms.GroupBox();
-            this.txtlistaespera = new System.Windows.Forms.TextBox();
-            this.lblListaEspera = new System.Windows.Forms.Label();
-            this.txtparticipacionaceptada = new System.Windows.Forms.TextBox();
-            this.lblPaticipación = new System.Windows.Forms.Label();
-            this.dtpfechlimite = new System.Windows.Forms.DateTimePicker();
-            this.lblFechaLimite = new System.Windows.Forms.Label();
-            this.numupParticipantes = new System.Windows.Forms.NumericUpDown();
-            this.lblNumParticipantes = new System.Windows.Forms.Label();
-            this.grpboxDatosCelebracion = new System.Windows.Forms.GroupBox();
-            this.txtHora = new System.Windows.Forms.TextBox();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.txtDia = new System.Windows.Forms.TextBox();
-            this.lblDia = new System.Windows.Forms.Label();
-            this.txtLocalizacion = new System.Windows.Forms.TextBox();
-            this.lblLocalizacion = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.lblDescripcion = new System.Windows.Forms.Label();
-            this.txtNombreEvento = new System.Windows.Forms.TextBox();
-            this.lblNombreEvento = new System.Windows.Forms.Label();
+            this.grbRequisitosParticipantes_CrearEvento = new System.Windows.Forms.GroupBox();
+            this.lblDolar_CrearEvento = new System.Windows.Forms.Label();
+            this.tkbPrecio_CrearEvento = new System.Windows.Forms.TrackBar();
+            this.nudEdadMinima_CrearEvento = new System.Windows.Forms.NumericUpDown();
+            this.lblPrecio_CrearEvento = new System.Windows.Forms.Label();
+            this.txtMateriales_CrearEvento = new System.Windows.Forms.TextBox();
+            this.lblMateriales_CrearEvento = new System.Windows.Forms.Label();
+            this.txtNivelDeportivo_CrearEvento = new System.Windows.Forms.TextBox();
+            this.lblNivelDeportivo_CrearEvento = new System.Windows.Forms.Label();
+            this.lblEdadMinima_CrearEvento = new System.Windows.Forms.Label();
+            this.btnCancelar_CrearEvento = new System.Windows.Forms.Button();
+            this.btnCrear_CrearEvento = new System.Windows.Forms.Button();
+            this.grbEstadoInscripcion_CrearEvento = new System.Windows.Forms.GroupBox();
+            this.txtListaEspera_CrearEvento = new System.Windows.Forms.TextBox();
+            this.lblListaEspera_CrearEvento = new System.Windows.Forms.Label();
+            this.txtParticipacionAceptada_CrearEvento = new System.Windows.Forms.TextBox();
+            this.lblPaticipacionAceptada_CrearEvento = new System.Windows.Forms.Label();
+            this.dtpFechaLimite_CrearEvento = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaLimite_CrearEvento = new System.Windows.Forms.Label();
+            this.nudParticipantes_CrearEvento = new System.Windows.Forms.NumericUpDown();
+            this.lblNumParticipantes_CrearEvento = new System.Windows.Forms.Label();
+            this.grbDatosCelebracion_CrearEvento = new System.Windows.Forms.GroupBox();
+            this.mtxtFechaHora_CrearEvento = new System.Windows.Forms.MaskedTextBox();
+            this.txtProvincia_CrearEvento = new System.Windows.Forms.TextBox();
+            this.lblProvincia_CrearEvento = new System.Windows.Forms.Label();
+            this.lblHora_CrearEvento = new System.Windows.Forms.Label();
+            this.txtPoblacion_CrearEvento = new System.Windows.Forms.TextBox();
+            this.lblPoblacion_CrearEvento = new System.Windows.Forms.Label();
+            this.txtDireccion_CrearEvento = new System.Windows.Forms.TextBox();
+            this.lblDireccion_CrearEvento = new System.Windows.Forms.Label();
+            this.txtDescripcion_CrearEvento = new System.Windows.Forms.TextBox();
+            this.lblDescripcion_CrearEvento = new System.Windows.Forms.Label();
+            this.txtNombre_CrearEvento = new System.Windows.Forms.TextBox();
+            this.lblNombre_CrearEvento = new System.Windows.Forms.Label();
             this.gbxderCrear = new System.Windows.Forms.GroupBox();
             this.grpboxOrganizador = new System.Windows.Forms.GroupBox();
             this.txtNomCampeonato = new System.Windows.Forms.TextBox();
@@ -101,12 +111,18 @@
             this.btnMisEventosFutbol = new System.Windows.Forms.Button();
             this.lblDestacadosMIsEventos = new System.Windows.Forms.Label();
             this.tbpNotificaciones = new System.Windows.Forms.TabPage();
+            this.btnCargarMensajes = new System.Windows.Forms.Button();
             this.dgvMensajesEnviados = new System.Windows.Forms.DataGridView();
             this.dgvMensajesRecibidos = new System.Windows.Forms.DataGridView();
             this.lblMensajesEnviados = new System.Windows.Forms.Label();
             this.lblMensajesRecibidos = new System.Windows.Forms.Label();
             this.gbxderNotif = new System.Windows.Forms.GroupBox();
-            this.pbxlogoNotificaciones = new System.Windows.Forms.PictureBox();
+            this.btnEnviarMensaje = new System.Windows.Forms.Button();
+            this.gbxEnviarMensaje = new System.Windows.Forms.GroupBox();
+            this.txtCuerpoMensaje = new System.Windows.Forms.TextBox();
+            this.lblCurpoMensaje = new System.Windows.Forms.Label();
+            this.txtDestinatario = new System.Windows.Forms.TextBox();
+            this.lblDestinatario = new System.Windows.Forms.Label();
             this.tbpAyuda = new System.Windows.Forms.TabPage();
             this.pbxFacebook = new System.Windows.Forms.PictureBox();
             this.pbxTwitter = new System.Windows.Forms.PictureBox();
@@ -127,6 +143,7 @@
             this.gbxderAyuda = new System.Windows.Forms.GroupBox();
             this.pbxlogoAyuda = new System.Windows.Forms.PictureBox();
             this.tbpMiPerfil = new System.Windows.Forms.TabPage();
+            this.btnConfirmarMod = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.txtDepPrefMiPerfil = new System.Windows.Forms.TextBox();
             this.txtEnfermedadesMiPerfil = new System.Windows.Forms.TextBox();
@@ -154,25 +171,27 @@
             this.gbxMisUltEvenMiPerfil = new System.Windows.Forms.GroupBox();
             this.dgvMiUltEvenMiPerfil = new System.Windows.Forms.DataGridView();
             this.gbxAmigosMiPerfil = new System.Windows.Forms.GroupBox();
+            this.btnAñadirAmigo = new System.Windows.Forms.Button();
+            this.lblAñadirAmigo = new System.Windows.Forms.Label();
+            this.txtAñadirAmigo = new System.Windows.Forms.TextBox();
             this.dgvAmigosMiPerfil = new System.Windows.Forms.DataGridView();
             this.btnCerrarSesión = new System.Windows.Forms.Button();
             this.pbxsportshare = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnConfirmarMod = new System.Windows.Forms.Button();
+            this.errores = new System.Windows.Forms.ErrorProvider(this.components);
             this.tbcPrincipal.SuspendLayout();
             this.tbpBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxbuscar)).BeginInit();
             this.gbxdestacadosbuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).BeginInit();
-            this.tbpCrear.SuspendLayout();
-            this.grpboxLista.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvActividadesCampeonato)).BeginInit();
-            this.grpboxRequisitos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tkbPrecioCrear)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numupEdad)).BeginInit();
-            this.grboxEstado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numupParticipantes)).BeginInit();
-            this.grpboxDatosCelebracion.SuspendLayout();
+            this.tbpCrearEvento.SuspendLayout();
+            this.grbCampeonato_CrearEvento.SuspendLayout();
+            this.grbRequisitosParticipantes_CrearEvento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tkbPrecio_CrearEvento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudEdadMinima_CrearEvento)).BeginInit();
+            this.grbEstadoInscripcion_CrearEvento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudParticipantes_CrearEvento)).BeginInit();
+            this.grbDatosCelebracion_CrearEvento.SuspendLayout();
             this.gbxderCrear.SuspendLayout();
             this.grpboxOrganizador.SuspendLayout();
             this.grpboxParticipantes.SuspendLayout();
@@ -184,7 +203,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMensajesEnviados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMensajesRecibidos)).BeginInit();
             this.gbxderNotif.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxlogoNotificaciones)).BeginInit();
+            this.gbxEnviarMensaje.SuspendLayout();
             this.tbpAyuda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFacebook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTwitter)).BeginInit();
@@ -201,12 +220,13 @@
             this.gbxAmigosMiPerfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmigosMiPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxsportshare)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errores)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcPrincipal
             // 
             this.tbcPrincipal.Controls.Add(this.tbpBuscar);
-            this.tbcPrincipal.Controls.Add(this.tbpCrear);
+            this.tbcPrincipal.Controls.Add(this.tbpCrearEvento);
             this.tbcPrincipal.Controls.Add(this.tbpMisEventos);
             this.tbcPrincipal.Controls.Add(this.tbpNotificaciones);
             this.tbcPrincipal.Controls.Add(this.tbpAyuda);
@@ -222,10 +242,15 @@
             // 
             // tbpBuscar
             // 
+            this.tbpBuscar.Controls.Add(this.cmbEvento_Buscar);
+            this.tbpBuscar.Controls.Add(this.lblEvento_Buscar);
+            this.tbpBuscar.Controls.Add(this.cmbLocalidad_Buscar);
+            this.tbpBuscar.Controls.Add(this.lblLocalidad_Buscar);
+            this.tbpBuscar.Controls.Add(this.cmbDeporte_Buscar);
+            this.tbpBuscar.Controls.Add(this.lblDeporte_Buscar);
             this.tbpBuscar.Controls.Add(this.pbxbuscar);
             this.tbpBuscar.Controls.Add(this.gbxdestacadosbuscar);
             this.tbpBuscar.Controls.Add(this.dgvBuscar);
-            this.tbpBuscar.Controls.Add(this.txtBuscar);
             this.tbpBuscar.Location = new System.Drawing.Point(4, 45);
             this.tbpBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.tbpBuscar.Name = "tbpBuscar";
@@ -234,6 +259,63 @@
             this.tbpBuscar.TabIndex = 0;
             this.tbpBuscar.Text = "    Buscar    ";
             this.tbpBuscar.UseVisualStyleBackColor = true;
+            // 
+            // cmbEvento_Buscar
+            // 
+            this.cmbEvento_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEvento_Buscar.FormattingEnabled = true;
+            this.cmbEvento_Buscar.Location = new System.Drawing.Point(1004, 70);
+            this.cmbEvento_Buscar.Name = "cmbEvento_Buscar";
+            this.cmbEvento_Buscar.Size = new System.Drawing.Size(245, 37);
+            this.cmbEvento_Buscar.TabIndex = 46;
+            // 
+            // lblEvento_Buscar
+            // 
+            this.lblEvento_Buscar.AutoSize = true;
+            this.lblEvento_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEvento_Buscar.Location = new System.Drawing.Point(905, 77);
+            this.lblEvento_Buscar.Name = "lblEvento_Buscar";
+            this.lblEvento_Buscar.Size = new System.Drawing.Size(93, 29);
+            this.lblEvento_Buscar.TabIndex = 45;
+            this.lblEvento_Buscar.Text = "Evento:";
+            // 
+            // cmbLocalidad_Buscar
+            // 
+            this.cmbLocalidad_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbLocalidad_Buscar.FormattingEnabled = true;
+            this.cmbLocalidad_Buscar.Location = new System.Drawing.Point(628, 70);
+            this.cmbLocalidad_Buscar.Name = "cmbLocalidad_Buscar";
+            this.cmbLocalidad_Buscar.Size = new System.Drawing.Size(208, 37);
+            this.cmbLocalidad_Buscar.TabIndex = 44;
+            // 
+            // lblLocalidad_Buscar
+            // 
+            this.lblLocalidad_Buscar.AutoSize = true;
+            this.lblLocalidad_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalidad_Buscar.Location = new System.Drawing.Point(498, 77);
+            this.lblLocalidad_Buscar.Name = "lblLocalidad_Buscar";
+            this.lblLocalidad_Buscar.Size = new System.Drawing.Size(124, 29);
+            this.lblLocalidad_Buscar.TabIndex = 43;
+            this.lblLocalidad_Buscar.Text = "Localidad:";
+            // 
+            // cmbDeporte_Buscar
+            // 
+            this.cmbDeporte_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDeporte_Buscar.FormattingEnabled = true;
+            this.cmbDeporte_Buscar.Location = new System.Drawing.Point(241, 70);
+            this.cmbDeporte_Buscar.Name = "cmbDeporte_Buscar";
+            this.cmbDeporte_Buscar.Size = new System.Drawing.Size(208, 37);
+            this.cmbDeporte_Buscar.TabIndex = 42;
+            // 
+            // lblDeporte_Buscar
+            // 
+            this.lblDeporte_Buscar.AutoSize = true;
+            this.lblDeporte_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeporte_Buscar.Location = new System.Drawing.Point(129, 77);
+            this.lblDeporte_Buscar.Name = "lblDeporte_Buscar";
+            this.lblDeporte_Buscar.Size = new System.Drawing.Size(106, 29);
+            this.lblDeporte_Buscar.TabIndex = 41;
+            this.lblDeporte_Buscar.Text = "Deporte:";
             // 
             // pbxbuscar
             // 
@@ -328,6 +410,8 @@
             // 
             // dgvBuscar
             // 
+            this.dgvBuscar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvBuscar.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBuscar.Location = new System.Drawing.Point(168, 191);
             this.dgvBuscar.Name = "dgvBuscar";
@@ -335,48 +419,99 @@
             this.dgvBuscar.RowTemplate.Height = 24;
             this.dgvBuscar.Size = new System.Drawing.Size(1169, 583);
             this.dgvBuscar.TabIndex = 9;
+            this.dgvBuscar.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBuscar_CellDoubleClick);
             // 
-            // txtBuscar
+            // tbpCrearEvento
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(168, 70);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(1118, 41);
-            this.txtBuscar.TabIndex = 7;
+            this.tbpCrearEvento.Controls.Add(this.grbCampeonato_CrearEvento);
+            this.tbpCrearEvento.Controls.Add(this.cmbDeporte_CrearEvento);
+            this.tbpCrearEvento.Controls.Add(this.lblDeporte_CrearEvento);
+            this.tbpCrearEvento.Controls.Add(this.btnVolver_CrearEvento);
+            this.tbpCrearEvento.Controls.Add(this.grbRequisitosParticipantes_CrearEvento);
+            this.tbpCrearEvento.Controls.Add(this.btnCancelar_CrearEvento);
+            this.tbpCrearEvento.Controls.Add(this.btnCrear_CrearEvento);
+            this.tbpCrearEvento.Controls.Add(this.grbEstadoInscripcion_CrearEvento);
+            this.tbpCrearEvento.Controls.Add(this.dtpFechaLimite_CrearEvento);
+            this.tbpCrearEvento.Controls.Add(this.lblFechaLimite_CrearEvento);
+            this.tbpCrearEvento.Controls.Add(this.nudParticipantes_CrearEvento);
+            this.tbpCrearEvento.Controls.Add(this.lblNumParticipantes_CrearEvento);
+            this.tbpCrearEvento.Controls.Add(this.grbDatosCelebracion_CrearEvento);
+            this.tbpCrearEvento.Controls.Add(this.txtDescripcion_CrearEvento);
+            this.tbpCrearEvento.Controls.Add(this.lblDescripcion_CrearEvento);
+            this.tbpCrearEvento.Controls.Add(this.txtNombre_CrearEvento);
+            this.tbpCrearEvento.Controls.Add(this.lblNombre_CrearEvento);
+            this.tbpCrearEvento.Controls.Add(this.gbxderCrear);
+            this.tbpCrearEvento.Location = new System.Drawing.Point(4, 45);
+            this.tbpCrearEvento.Margin = new System.Windows.Forms.Padding(4);
+            this.tbpCrearEvento.Name = "tbpCrearEvento";
+            this.tbpCrearEvento.Padding = new System.Windows.Forms.Padding(4);
+            this.tbpCrearEvento.Size = new System.Drawing.Size(2048, 882);
+            this.tbpCrearEvento.TabIndex = 1;
+            this.tbpCrearEvento.Text = "    Crear    ";
+            this.tbpCrearEvento.UseVisualStyleBackColor = true;
             // 
-            // tbpCrear
+            // grbCampeonato_CrearEvento
             // 
-            this.tbpCrear.Controls.Add(this.cbxDeporteCrear);
-            this.tbpCrear.Controls.Add(this.lblDeporteCrear);
-            this.tbpCrear.Controls.Add(this.bttnVolver);
-            this.tbpCrear.Controls.Add(this.grpboxLista);
-            this.tbpCrear.Controls.Add(this.grpboxRequisitos);
-            this.tbpCrear.Controls.Add(this.bttnCancelar);
-            this.tbpCrear.Controls.Add(this.bttnSi);
-            this.tbpCrear.Controls.Add(this.grboxEstado);
-            this.tbpCrear.Controls.Add(this.dtpfechlimite);
-            this.tbpCrear.Controls.Add(this.lblFechaLimite);
-            this.tbpCrear.Controls.Add(this.numupParticipantes);
-            this.tbpCrear.Controls.Add(this.lblNumParticipantes);
-            this.tbpCrear.Controls.Add(this.grpboxDatosCelebracion);
-            this.tbpCrear.Controls.Add(this.txtDescripcion);
-            this.tbpCrear.Controls.Add(this.lblDescripcion);
-            this.tbpCrear.Controls.Add(this.txtNombreEvento);
-            this.tbpCrear.Controls.Add(this.lblNombreEvento);
-            this.tbpCrear.Controls.Add(this.gbxderCrear);
-            this.tbpCrear.Location = new System.Drawing.Point(4, 45);
-            this.tbpCrear.Margin = new System.Windows.Forms.Padding(4);
-            this.tbpCrear.Name = "tbpCrear";
-            this.tbpCrear.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpCrear.Size = new System.Drawing.Size(2048, 882);
-            this.tbpCrear.TabIndex = 1;
-            this.tbpCrear.Text = "    Crear    ";
-            this.tbpCrear.UseVisualStyleBackColor = true;
+            this.grbCampeonato_CrearEvento.Controls.Add(this.cmbSelecCamp_CrearEvento);
+            this.grbCampeonato_CrearEvento.Controls.Add(this.lblSelecCamp_CrearEvento);
+            this.grbCampeonato_CrearEvento.Controls.Add(this.rdbtnNo_CrearEvento);
+            this.grbCampeonato_CrearEvento.Controls.Add(this.rdbtnSi_CrearEvento);
+            this.grbCampeonato_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbCampeonato_CrearEvento.Location = new System.Drawing.Point(58, 293);
+            this.grbCampeonato_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbCampeonato_CrearEvento.Name = "grbCampeonato_CrearEvento";
+            this.grbCampeonato_CrearEvento.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbCampeonato_CrearEvento.Size = new System.Drawing.Size(659, 146);
+            this.grbCampeonato_CrearEvento.TabIndex = 41;
+            this.grbCampeonato_CrearEvento.TabStop = false;
+            this.grbCampeonato_CrearEvento.Text = "Forma parte de Campeonato:";
             // 
-            // cbxDeporteCrear
+            // cmbSelecCamp_CrearEvento
             // 
-            this.cbxDeporteCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxDeporteCrear.FormattingEnabled = true;
-            this.cbxDeporteCrear.Items.AddRange(new object[] {
+            this.cmbSelecCamp_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSelecCamp_CrearEvento.FormattingEnabled = true;
+            this.cmbSelecCamp_CrearEvento.Location = new System.Drawing.Point(146, 86);
+            this.cmbSelecCamp_CrearEvento.Name = "cmbSelecCamp_CrearEvento";
+            this.cmbSelecCamp_CrearEvento.Size = new System.Drawing.Size(483, 37);
+            this.cmbSelecCamp_CrearEvento.TabIndex = 42;
+            // 
+            // lblSelecCamp_CrearEvento
+            // 
+            this.lblSelecCamp_CrearEvento.AutoSize = true;
+            this.lblSelecCamp_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelecCamp_CrearEvento.Location = new System.Drawing.Point(141, 46);
+            this.lblSelecCamp_CrearEvento.Name = "lblSelecCamp_CrearEvento";
+            this.lblSelecCamp_CrearEvento.Size = new System.Drawing.Size(297, 29);
+            this.lblSelecCamp_CrearEvento.TabIndex = 41;
+            this.lblSelecCamp_CrearEvento.Text = "Seleccione Campeonanto:";
+            // 
+            // rdbtnNo_CrearEvento
+            // 
+            this.rdbtnNo_CrearEvento.AutoSize = true;
+            this.rdbtnNo_CrearEvento.Checked = true;
+            this.rdbtnNo_CrearEvento.Location = new System.Drawing.Point(22, 86);
+            this.rdbtnNo_CrearEvento.Name = "rdbtnNo_CrearEvento";
+            this.rdbtnNo_CrearEvento.Size = new System.Drawing.Size(66, 33);
+            this.rdbtnNo_CrearEvento.TabIndex = 13;
+            this.rdbtnNo_CrearEvento.TabStop = true;
+            this.rdbtnNo_CrearEvento.Text = "No";
+            this.rdbtnNo_CrearEvento.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnSi_CrearEvento
+            // 
+            this.rdbtnSi_CrearEvento.AutoSize = true;
+            this.rdbtnSi_CrearEvento.Location = new System.Drawing.Point(22, 44);
+            this.rdbtnSi_CrearEvento.Name = "rdbtnSi_CrearEvento";
+            this.rdbtnSi_CrearEvento.Size = new System.Drawing.Size(56, 33);
+            this.rdbtnSi_CrearEvento.TabIndex = 12;
+            this.rdbtnSi_CrearEvento.Text = "Si";
+            this.rdbtnSi_CrearEvento.UseVisualStyleBackColor = true;
+            // 
+            // cmbDeporte_CrearEvento
+            // 
+            this.cmbDeporte_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDeporte_CrearEvento.FormattingEnabled = true;
+            this.cmbDeporte_CrearEvento.Items.AddRange(new object[] {
             "Futbol",
             "Baloncesto",
             "Tenis",
@@ -389,409 +524,395 @@
             "Badminton",
             "Hockey",
             "Baseball"});
-            this.cbxDeporteCrear.Location = new System.Drawing.Point(346, 187);
-            this.cbxDeporteCrear.Name = "cbxDeporteCrear";
-            this.cbxDeporteCrear.Size = new System.Drawing.Size(208, 37);
-            this.cbxDeporteCrear.TabIndex = 40;
-            this.cbxDeporteCrear.Text = "Futbol";
+            this.cmbDeporte_CrearEvento.Location = new System.Drawing.Point(346, 147);
+            this.cmbDeporte_CrearEvento.Name = "cmbDeporte_CrearEvento";
+            this.cmbDeporte_CrearEvento.Size = new System.Drawing.Size(208, 37);
+            this.cmbDeporte_CrearEvento.TabIndex = 40;
+            this.cmbDeporte_CrearEvento.Text = "Futbol";
             // 
-            // lblDeporteCrear
+            // lblDeporte_CrearEvento
             // 
-            this.lblDeporteCrear.AutoSize = true;
-            this.lblDeporteCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeporteCrear.Location = new System.Drawing.Point(212, 190);
-            this.lblDeporteCrear.Name = "lblDeporteCrear";
-            this.lblDeporteCrear.Size = new System.Drawing.Size(106, 29);
-            this.lblDeporteCrear.TabIndex = 39;
-            this.lblDeporteCrear.Text = "Deporte:";
+            this.lblDeporte_CrearEvento.AutoSize = true;
+            this.lblDeporte_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeporte_CrearEvento.Location = new System.Drawing.Point(216, 154);
+            this.lblDeporte_CrearEvento.Name = "lblDeporte_CrearEvento";
+            this.lblDeporte_CrearEvento.Size = new System.Drawing.Size(106, 29);
+            this.lblDeporte_CrearEvento.TabIndex = 39;
+            this.lblDeporte_CrearEvento.Text = "Deporte:";
             // 
-            // bttnVolver
+            // btnVolver_CrearEvento
             // 
-            this.bttnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnVolver.Location = new System.Drawing.Point(1260, 702);
-            this.bttnVolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bttnVolver.Name = "bttnVolver";
-            this.bttnVolver.Size = new System.Drawing.Size(207, 68);
-            this.bttnVolver.TabIndex = 38;
-            this.bttnVolver.Text = "Volver a pantalla\r\nanterior";
-            this.bttnVolver.UseVisualStyleBackColor = true;
-            // 
-            // grpboxLista
-            // 
-            this.grpboxLista.BackColor = System.Drawing.Color.LightGray;
-            this.grpboxLista.Controls.Add(this.btnCrearCampeonato);
-            this.grpboxLista.Controls.Add(this.btnAñadirActiCampeonato);
-            this.grpboxLista.Controls.Add(this.dgvActividadesCampeonato);
-            this.grpboxLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpboxLista.Location = new System.Drawing.Point(1575, 508);
-            this.grpboxLista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpboxLista.Name = "grpboxLista";
-            this.grpboxLista.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpboxLista.Size = new System.Drawing.Size(431, 296);
-            this.grpboxLista.TabIndex = 37;
-            this.grpboxLista.TabStop = false;
-            this.grpboxLista.Text = "Actividad:";
+            this.btnVolver_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver_CrearEvento.Location = new System.Drawing.Point(1260, 702);
+            this.btnVolver_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVolver_CrearEvento.Name = "btnVolver_CrearEvento";
+            this.btnVolver_CrearEvento.Size = new System.Drawing.Size(207, 68);
+            this.btnVolver_CrearEvento.TabIndex = 38;
+            this.btnVolver_CrearEvento.Text = "Volver a pantalla\r\nanterior";
+            this.btnVolver_CrearEvento.UseVisualStyleBackColor = true;
             // 
             // btnCrearCampeonato
             // 
             this.btnCrearCampeonato.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearCampeonato.Location = new System.Drawing.Point(215, 207);
+            this.btnCrearCampeonato.Location = new System.Drawing.Point(254, 500);
             this.btnCrearCampeonato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCrearCampeonato.Name = "btnCrearCampeonato";
             this.btnCrearCampeonato.Size = new System.Drawing.Size(199, 68);
             this.btnCrearCampeonato.TabIndex = 34;
             this.btnCrearCampeonato.Text = "Crear Campeonato";
             this.btnCrearCampeonato.UseVisualStyleBackColor = true;
-            // 
-            // btnAñadirActiCampeonato
-            // 
-            this.btnAñadirActiCampeonato.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadirActiCampeonato.Location = new System.Drawing.Point(6, 207);
-            this.btnAñadirActiCampeonato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAñadirActiCampeonato.Name = "btnAñadirActiCampeonato";
-            this.btnAñadirActiCampeonato.Size = new System.Drawing.Size(199, 68);
-            this.btnAñadirActiCampeonato.TabIndex = 33;
-            this.btnAñadirActiCampeonato.Text = "Añadir Actividad";
-            this.btnAñadirActiCampeonato.UseVisualStyleBackColor = true;
-            // 
-            // dgvActividadesCampeonato
-            // 
-            this.dgvActividadesCampeonato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvActividadesCampeonato.Location = new System.Drawing.Point(6, 43);
-            this.dgvActividadesCampeonato.Name = "dgvActividadesCampeonato";
-            this.dgvActividadesCampeonato.RowHeadersWidth = 51;
-            this.dgvActividadesCampeonato.RowTemplate.Height = 24;
-            this.dgvActividadesCampeonato.Size = new System.Drawing.Size(408, 142);
-            this.dgvActividadesCampeonato.TabIndex = 0;
-            // 
-            // grpboxRequisitos
-            // 
-            this.grpboxRequisitos.Controls.Add(this.lblPrecioNumCrear);
-            this.grpboxRequisitos.Controls.Add(this.tkbPrecioCrear);
-            this.grpboxRequisitos.Controls.Add(this.numupEdad);
-            this.grpboxRequisitos.Controls.Add(this.lblPrecio);
-            this.grpboxRequisitos.Controls.Add(this.txtMateriales);
-            this.grpboxRequisitos.Controls.Add(this.lblMateriales);
-            this.grpboxRequisitos.Controls.Add(this.txtNivelDeportivo);
-            this.grpboxRequisitos.Controls.Add(this.lblNivelDeportivo);
-            this.grpboxRequisitos.Controls.Add(this.lblEdad);
-            this.grpboxRequisitos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpboxRequisitos.Location = new System.Drawing.Point(46, 336);
-            this.grpboxRequisitos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpboxRequisitos.Name = "grpboxRequisitos";
-            this.grpboxRequisitos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpboxRequisitos.Size = new System.Drawing.Size(659, 434);
-            this.grpboxRequisitos.TabIndex = 34;
-            this.grpboxRequisitos.TabStop = false;
-            this.grpboxRequisitos.Text = "Requisitos a cumplir por participantes:";
-            // 
-            // lblPrecioNumCrear
-            // 
-            this.lblPrecioNumCrear.AutoSize = true;
-            this.lblPrecioNumCrear.Location = new System.Drawing.Point(276, 328);
-            this.lblPrecioNumCrear.Name = "lblPrecioNumCrear";
-            this.lblPrecioNumCrear.Size = new System.Drawing.Size(26, 29);
-            this.lblPrecioNumCrear.TabIndex = 13;
-            this.lblPrecioNumCrear.Text = "$";
-            this.lblPrecioNumCrear.Visible = false;
-            // 
-            // tkbPrecioCrear
-            // 
-            this.tkbPrecioCrear.AllowDrop = true;
-            this.tkbPrecioCrear.BackColor = System.Drawing.SystemColors.Window;
-            this.tkbPrecioCrear.Location = new System.Drawing.Point(319, 328);
-            this.tkbPrecioCrear.Maximum = 500;
-            this.tkbPrecioCrear.Name = "tkbPrecioCrear";
-            this.tkbPrecioCrear.Size = new System.Drawing.Size(278, 56);
-            this.tkbPrecioCrear.TabIndex = 12;
-            this.tkbPrecioCrear.Tag = "0";
-            this.tkbPrecioCrear.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.tkbPrecioCrear.Scroll += new System.EventHandler(this.tkbPrecioCrear_Scroll);
-            // 
-            // numupEdad
-            // 
-            this.numupEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numupEdad.Location = new System.Drawing.Point(275, 62);
-            this.numupEdad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numupEdad.Name = "numupEdad";
-            this.numupEdad.Size = new System.Drawing.Size(67, 30);
-            this.numupEdad.TabIndex = 11;
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(166, 328);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(89, 29);
-            this.lblPrecio.TabIndex = 9;
-            this.lblPrecio.Text = "Precio:";
-            // 
-            // txtMateriales
-            // 
-            this.txtMateriales.Location = new System.Drawing.Point(276, 244);
-            this.txtMateriales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMateriales.Multiline = true;
-            this.txtMateriales.Name = "txtMateriales";
-            this.txtMateriales.Size = new System.Drawing.Size(309, 34);
-            this.txtMateriales.TabIndex = 8;
-            // 
-            // lblMateriales
-            // 
-            this.lblMateriales.AutoSize = true;
-            this.lblMateriales.Location = new System.Drawing.Point(25, 248);
-            this.lblMateriales.Name = "lblMateriales";
-            this.lblMateriales.Size = new System.Drawing.Size(232, 29);
-            this.lblMateriales.TabIndex = 7;
-            this.lblMateriales.Text = "Materiales a aportar:";
-            // 
-            // txtNivelDeportivo
-            // 
-            this.txtNivelDeportivo.Location = new System.Drawing.Point(274, 153);
-            this.txtNivelDeportivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNivelDeportivo.Name = "txtNivelDeportivo";
-            this.txtNivelDeportivo.Size = new System.Drawing.Size(309, 34);
-            this.txtNivelDeportivo.TabIndex = 6;
-            // 
-            // lblNivelDeportivo
-            // 
-            this.lblNivelDeportivo.AutoSize = true;
-            this.lblNivelDeportivo.Location = new System.Drawing.Point(71, 157);
-            this.lblNivelDeportivo.Name = "lblNivelDeportivo";
-            this.lblNivelDeportivo.Size = new System.Drawing.Size(184, 29);
-            this.lblNivelDeportivo.TabIndex = 5;
-            this.lblNivelDeportivo.Text = "Nivel Deportivo:";
-            // 
-            // lblEdad
-            // 
-            this.lblEdad.AutoSize = true;
-            this.lblEdad.Location = new System.Drawing.Point(181, 65);
-            this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(76, 29);
-            this.lblEdad.TabIndex = 3;
-            this.lblEdad.Text = "Edad:";
-            // 
-            // bttnCancelar
-            // 
-            this.bttnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnCancelar.Location = new System.Drawing.Point(1042, 702);
-            this.bttnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bttnCancelar.Name = "bttnCancelar";
-            this.bttnCancelar.Size = new System.Drawing.Size(196, 68);
-            this.bttnCancelar.TabIndex = 33;
-            this.bttnCancelar.Text = "Cancelar\r";
-            this.bttnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // bttnSi
-            // 
-            this.bttnSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnSi.Location = new System.Drawing.Point(825, 702);
-            this.bttnSi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bttnSi.Name = "bttnSi";
-            this.bttnSi.Size = new System.Drawing.Size(199, 68);
-            this.bttnSi.TabIndex = 32;
-            this.bttnSi.Text = "Crear";
-            this.bttnSi.UseVisualStyleBackColor = true;
-            // 
-            // grboxEstado
-            // 
-            this.grboxEstado.Controls.Add(this.txtlistaespera);
-            this.grboxEstado.Controls.Add(this.lblListaEspera);
-            this.grboxEstado.Controls.Add(this.txtparticipacionaceptada);
-            this.grboxEstado.Controls.Add(this.lblPaticipación);
-            this.grboxEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grboxEstado.Location = new System.Drawing.Point(826, 460);
-            this.grboxEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grboxEstado.Name = "grboxEstado";
-            this.grboxEstado.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grboxEstado.Size = new System.Drawing.Size(641, 215);
-            this.grboxEstado.TabIndex = 31;
-            this.grboxEstado.TabStop = false;
-            this.grboxEstado.Text = "Estado de mi inscripción:";
-            // 
-            // txtlistaespera
-            // 
-            this.txtlistaespera.Location = new System.Drawing.Point(367, 138);
-            this.txtlistaespera.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtlistaespera.Name = "txtlistaespera";
-            this.txtlistaespera.Size = new System.Drawing.Size(139, 34);
-            this.txtlistaespera.TabIndex = 6;
-            // 
-            // lblListaEspera
-            // 
-            this.lblListaEspera.AutoSize = true;
-            this.lblListaEspera.Location = new System.Drawing.Point(107, 138);
-            this.lblListaEspera.Name = "lblListaEspera";
-            this.lblListaEspera.Size = new System.Drawing.Size(212, 29);
-            this.lblListaEspera.TabIndex = 5;
-            this.lblListaEspera.Text = "En lista de espera:";
-            // 
-            // txtparticipacionaceptada
-            // 
-            this.txtparticipacionaceptada.Location = new System.Drawing.Point(367, 74);
-            this.txtparticipacionaceptada.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtparticipacionaceptada.Name = "txtparticipacionaceptada";
-            this.txtparticipacionaceptada.Size = new System.Drawing.Size(139, 34);
-            this.txtparticipacionaceptada.TabIndex = 4;
-            // 
-            // lblPaticipación
-            // 
-            this.lblPaticipación.AutoSize = true;
-            this.lblPaticipación.Location = new System.Drawing.Point(55, 78);
-            this.lblPaticipación.Name = "lblPaticipación";
-            this.lblPaticipación.Size = new System.Drawing.Size(263, 29);
-            this.lblPaticipación.TabIndex = 3;
-            this.lblPaticipación.Text = "Participación aceptada:";
-            // 
-            // dtpfechlimite
-            // 
-            this.dtpfechlimite.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpfechlimite.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpfechlimite.Location = new System.Drawing.Point(1238, 396);
-            this.dtpfechlimite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpfechlimite.Name = "dtpfechlimite";
-            this.dtpfechlimite.Size = new System.Drawing.Size(187, 34);
-            this.dtpfechlimite.TabIndex = 30;
-            // 
-            // lblFechaLimite
-            // 
-            this.lblFechaLimite.AutoSize = true;
-            this.lblFechaLimite.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaLimite.Location = new System.Drawing.Point(866, 396);
-            this.lblFechaLimite.Name = "lblFechaLimite";
-            this.lblFechaLimite.Size = new System.Drawing.Size(272, 29);
-            this.lblFechaLimite.TabIndex = 29;
-            this.lblFechaLimite.Text = "Fecha límite inscripción:";
-            // 
-            // numupParticipantes
-            // 
-            this.numupParticipantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numupParticipantes.Location = new System.Drawing.Point(1238, 336);
-            this.numupParticipantes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numupParticipantes.Name = "numupParticipantes";
-            this.numupParticipantes.Size = new System.Drawing.Size(67, 34);
-            this.numupParticipantes.TabIndex = 28;
-            // 
-            // lblNumParticipantes
-            // 
-            this.lblNumParticipantes.AutoSize = true;
-            this.lblNumParticipantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumParticipantes.Location = new System.Drawing.Point(866, 339);
-            this.lblNumParticipantes.Name = "lblNumParticipantes";
-            this.lblNumParticipantes.Size = new System.Drawing.Size(309, 29);
-            this.lblNumParticipantes.TabIndex = 27;
-            this.lblNumParticipantes.Text = "Núm. máximo participantes:";
-            // 
-            // grpboxDatosCelebracion
-            // 
-            this.grpboxDatosCelebracion.Controls.Add(this.txtHora);
-            this.grpboxDatosCelebracion.Controls.Add(this.lblHora);
-            this.grpboxDatosCelebracion.Controls.Add(this.txtDia);
-            this.grpboxDatosCelebracion.Controls.Add(this.lblDia);
-            this.grpboxDatosCelebracion.Controls.Add(this.txtLocalizacion);
-            this.grpboxDatosCelebracion.Controls.Add(this.lblLocalizacion);
-            this.grpboxDatosCelebracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpboxDatosCelebracion.Location = new System.Drawing.Point(826, 63);
-            this.grpboxDatosCelebracion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpboxDatosCelebracion.Name = "grpboxDatosCelebracion";
-            this.grpboxDatosCelebracion.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpboxDatosCelebracion.Size = new System.Drawing.Size(632, 237);
-            this.grpboxDatosCelebracion.TabIndex = 26;
-            this.grpboxDatosCelebracion.TabStop = false;
-            this.grpboxDatosCelebracion.Text = "Datos Celebración Evento:";
-            // 
-            // txtHora
-            // 
-            this.txtHora.Location = new System.Drawing.Point(228, 167);
-            this.txtHora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(361, 34);
-            this.txtHora.TabIndex = 8;
-            // 
-            // lblHora
-            // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Location = new System.Drawing.Point(121, 167);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(71, 29);
-            this.lblHora.TabIndex = 7;
-            this.lblHora.Text = "Hora:";
-            // 
-            // txtDia
-            // 
-            this.txtDia.Location = new System.Drawing.Point(228, 113);
-            this.txtDia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDia.Name = "txtDia";
-            this.txtDia.Size = new System.Drawing.Size(361, 34);
-            this.txtDia.TabIndex = 6;
-            // 
-            // lblDia
-            // 
-            this.lblDia.AutoSize = true;
-            this.lblDia.Location = new System.Drawing.Point(137, 118);
-            this.lblDia.Name = "lblDia";
-            this.lblDia.Size = new System.Drawing.Size(55, 29);
-            this.lblDia.TabIndex = 5;
-            this.lblDia.Text = "Día:";
-            // 
-            // txtLocalizacion
-            // 
-            this.txtLocalizacion.Location = new System.Drawing.Point(228, 57);
-            this.txtLocalizacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtLocalizacion.Name = "txtLocalizacion";
-            this.txtLocalizacion.Size = new System.Drawing.Size(361, 34);
-            this.txtLocalizacion.TabIndex = 4;
-            // 
-            // lblLocalizacion
-            // 
-            this.lblLocalizacion.AutoSize = true;
-            this.lblLocalizacion.Location = new System.Drawing.Point(40, 60);
-            this.lblLocalizacion.Name = "lblLocalizacion";
-            this.lblLocalizacion.Size = new System.Drawing.Size(152, 29);
-            this.lblLocalizacion.TabIndex = 3;
-            this.lblLocalizacion.Text = "Localización:";
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(346, 116);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(359, 44);
-            this.txtDescripcion.TabIndex = 23;
-            // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(53, 125);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(267, 29);
-            this.lblDescripcion.TabIndex = 22;
-            this.lblDescripcion.Text = "Descripción del Evento:";
-            // 
-            // txtNombreEvento
-            // 
-            this.txtNombreEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreEvento.Location = new System.Drawing.Point(346, 60);
-            this.txtNombreEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNombreEvento.Name = "txtNombreEvento";
-            this.txtNombreEvento.Size = new System.Drawing.Size(261, 34);
-            this.txtNombreEvento.TabIndex = 21;
-            // 
-            // lblNombreEvento
-            // 
-            this.lblNombreEvento.AutoSize = true;
-            this.lblNombreEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreEvento.Location = new System.Drawing.Point(131, 63);
-            this.lblNombreEvento.Name = "lblNombreEvento";
-            this.lblNombreEvento.Size = new System.Drawing.Size(187, 29);
-            this.lblNombreEvento.TabIndex = 20;
-            this.lblNombreEvento.Text = "Nombre Evento:";
+            this.btnCrearCampeonato.Click += new System.EventHandler(this.btnCrearCampeonato_Click);
+            // 
+            // grbRequisitosParticipantes_CrearEvento
+            // 
+            this.grbRequisitosParticipantes_CrearEvento.Controls.Add(this.lblDolar_CrearEvento);
+            this.grbRequisitosParticipantes_CrearEvento.Controls.Add(this.tkbPrecio_CrearEvento);
+            this.grbRequisitosParticipantes_CrearEvento.Controls.Add(this.nudEdadMinima_CrearEvento);
+            this.grbRequisitosParticipantes_CrearEvento.Controls.Add(this.lblPrecio_CrearEvento);
+            this.grbRequisitosParticipantes_CrearEvento.Controls.Add(this.txtMateriales_CrearEvento);
+            this.grbRequisitosParticipantes_CrearEvento.Controls.Add(this.lblMateriales_CrearEvento);
+            this.grbRequisitosParticipantes_CrearEvento.Controls.Add(this.txtNivelDeportivo_CrearEvento);
+            this.grbRequisitosParticipantes_CrearEvento.Controls.Add(this.lblNivelDeportivo_CrearEvento);
+            this.grbRequisitosParticipantes_CrearEvento.Controls.Add(this.lblEdadMinima_CrearEvento);
+            this.grbRequisitosParticipantes_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbRequisitosParticipantes_CrearEvento.Location = new System.Drawing.Point(58, 482);
+            this.grbRequisitosParticipantes_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbRequisitosParticipantes_CrearEvento.Name = "grbRequisitosParticipantes_CrearEvento";
+            this.grbRequisitosParticipantes_CrearEvento.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbRequisitosParticipantes_CrearEvento.Size = new System.Drawing.Size(659, 301);
+            this.grbRequisitosParticipantes_CrearEvento.TabIndex = 34;
+            this.grbRequisitosParticipantes_CrearEvento.TabStop = false;
+            this.grbRequisitosParticipantes_CrearEvento.Text = "Requisitos a cumplir por participantes:";
+            // 
+            // lblDolar_CrearEvento
+            // 
+            this.lblDolar_CrearEvento.AutoSize = true;
+            this.lblDolar_CrearEvento.Location = new System.Drawing.Point(276, 235);
+            this.lblDolar_CrearEvento.Name = "lblDolar_CrearEvento";
+            this.lblDolar_CrearEvento.Size = new System.Drawing.Size(26, 29);
+            this.lblDolar_CrearEvento.TabIndex = 13;
+            this.lblDolar_CrearEvento.Text = "$";
+            this.lblDolar_CrearEvento.Visible = false;
+            // 
+            // tkbPrecio_CrearEvento
+            // 
+            this.tkbPrecio_CrearEvento.AllowDrop = true;
+            this.tkbPrecio_CrearEvento.BackColor = System.Drawing.SystemColors.Window;
+            this.tkbPrecio_CrearEvento.Location = new System.Drawing.Point(319, 236);
+            this.tkbPrecio_CrearEvento.Maximum = 500;
+            this.tkbPrecio_CrearEvento.Name = "tkbPrecio_CrearEvento";
+            this.tkbPrecio_CrearEvento.Size = new System.Drawing.Size(278, 56);
+            this.tkbPrecio_CrearEvento.TabIndex = 12;
+            this.tkbPrecio_CrearEvento.Tag = "0";
+            this.tkbPrecio_CrearEvento.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.tkbPrecio_CrearEvento.Scroll += new System.EventHandler(this.tkbPrecioCrear_Scroll);
+            // 
+            // nudEdadMinima_CrearEvento
+            // 
+            this.nudEdadMinima_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudEdadMinima_CrearEvento.Location = new System.Drawing.Point(275, 66);
+            this.nudEdadMinima_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudEdadMinima_CrearEvento.Name = "nudEdadMinima_CrearEvento";
+            this.nudEdadMinima_CrearEvento.Size = new System.Drawing.Size(67, 30);
+            this.nudEdadMinima_CrearEvento.TabIndex = 11;
+            // 
+            // lblPrecio_CrearEvento
+            // 
+            this.lblPrecio_CrearEvento.AutoSize = true;
+            this.lblPrecio_CrearEvento.Location = new System.Drawing.Point(166, 235);
+            this.lblPrecio_CrearEvento.Name = "lblPrecio_CrearEvento";
+            this.lblPrecio_CrearEvento.Size = new System.Drawing.Size(89, 29);
+            this.lblPrecio_CrearEvento.TabIndex = 9;
+            this.lblPrecio_CrearEvento.Text = "Precio:";
+            // 
+            // txtMateriales_CrearEvento
+            // 
+            this.txtMateriales_CrearEvento.Location = new System.Drawing.Point(276, 176);
+            this.txtMateriales_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMateriales_CrearEvento.Multiline = true;
+            this.txtMateriales_CrearEvento.Name = "txtMateriales_CrearEvento";
+            this.txtMateriales_CrearEvento.Size = new System.Drawing.Size(309, 34);
+            this.txtMateriales_CrearEvento.TabIndex = 8;
+            // 
+            // lblMateriales_CrearEvento
+            // 
+            this.lblMateriales_CrearEvento.AutoSize = true;
+            this.lblMateriales_CrearEvento.Location = new System.Drawing.Point(25, 179);
+            this.lblMateriales_CrearEvento.Name = "lblMateriales_CrearEvento";
+            this.lblMateriales_CrearEvento.Size = new System.Drawing.Size(232, 29);
+            this.lblMateriales_CrearEvento.TabIndex = 7;
+            this.lblMateriales_CrearEvento.Text = "Materiales a aportar:";
+            // 
+            // txtNivelDeportivo_CrearEvento
+            // 
+            this.txtNivelDeportivo_CrearEvento.Location = new System.Drawing.Point(274, 117);
+            this.txtNivelDeportivo_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNivelDeportivo_CrearEvento.Name = "txtNivelDeportivo_CrearEvento";
+            this.txtNivelDeportivo_CrearEvento.Size = new System.Drawing.Size(309, 34);
+            this.txtNivelDeportivo_CrearEvento.TabIndex = 6;
+            // 
+            // lblNivelDeportivo_CrearEvento
+            // 
+            this.lblNivelDeportivo_CrearEvento.AutoSize = true;
+            this.lblNivelDeportivo_CrearEvento.Location = new System.Drawing.Point(71, 120);
+            this.lblNivelDeportivo_CrearEvento.Name = "lblNivelDeportivo_CrearEvento";
+            this.lblNivelDeportivo_CrearEvento.Size = new System.Drawing.Size(184, 29);
+            this.lblNivelDeportivo_CrearEvento.TabIndex = 5;
+            this.lblNivelDeportivo_CrearEvento.Text = "Nivel Deportivo:";
+            // 
+            // lblEdadMinima_CrearEvento
+            // 
+            this.lblEdadMinima_CrearEvento.AutoSize = true;
+            this.lblEdadMinima_CrearEvento.Location = new System.Drawing.Point(181, 68);
+            this.lblEdadMinima_CrearEvento.Name = "lblEdadMinima_CrearEvento";
+            this.lblEdadMinima_CrearEvento.Size = new System.Drawing.Size(76, 29);
+            this.lblEdadMinima_CrearEvento.TabIndex = 3;
+            this.lblEdadMinima_CrearEvento.Text = "Edad:";
+            // 
+            // btnCancelar_CrearEvento
+            // 
+            this.btnCancelar_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar_CrearEvento.Location = new System.Drawing.Point(1042, 702);
+            this.btnCancelar_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancelar_CrearEvento.Name = "btnCancelar_CrearEvento";
+            this.btnCancelar_CrearEvento.Size = new System.Drawing.Size(196, 68);
+            this.btnCancelar_CrearEvento.TabIndex = 33;
+            this.btnCancelar_CrearEvento.Text = "Cancelar\r";
+            this.btnCancelar_CrearEvento.UseVisualStyleBackColor = true;
+            // 
+            // btnCrear_CrearEvento
+            // 
+            this.btnCrear_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear_CrearEvento.Location = new System.Drawing.Point(825, 702);
+            this.btnCrear_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCrear_CrearEvento.Name = "btnCrear_CrearEvento";
+            this.btnCrear_CrearEvento.Size = new System.Drawing.Size(199, 68);
+            this.btnCrear_CrearEvento.TabIndex = 32;
+            this.btnCrear_CrearEvento.Text = "Crear";
+            this.btnCrear_CrearEvento.UseVisualStyleBackColor = true;
+            this.btnCrear_CrearEvento.Click += new System.EventHandler(this.btnCrear_CrearEvento_Click);
+            // 
+            // grbEstadoInscripcion_CrearEvento
+            // 
+            this.grbEstadoInscripcion_CrearEvento.Controls.Add(this.txtListaEspera_CrearEvento);
+            this.grbEstadoInscripcion_CrearEvento.Controls.Add(this.lblListaEspera_CrearEvento);
+            this.grbEstadoInscripcion_CrearEvento.Controls.Add(this.txtParticipacionAceptada_CrearEvento);
+            this.grbEstadoInscripcion_CrearEvento.Controls.Add(this.lblPaticipacionAceptada_CrearEvento);
+            this.grbEstadoInscripcion_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbEstadoInscripcion_CrearEvento.Location = new System.Drawing.Point(826, 460);
+            this.grbEstadoInscripcion_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbEstadoInscripcion_CrearEvento.Name = "grbEstadoInscripcion_CrearEvento";
+            this.grbEstadoInscripcion_CrearEvento.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbEstadoInscripcion_CrearEvento.Size = new System.Drawing.Size(641, 215);
+            this.grbEstadoInscripcion_CrearEvento.TabIndex = 31;
+            this.grbEstadoInscripcion_CrearEvento.TabStop = false;
+            this.grbEstadoInscripcion_CrearEvento.Text = "Estado de mi inscripción:";
+            // 
+            // txtListaEspera_CrearEvento
+            // 
+            this.txtListaEspera_CrearEvento.Location = new System.Drawing.Point(367, 138);
+            this.txtListaEspera_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtListaEspera_CrearEvento.Name = "txtListaEspera_CrearEvento";
+            this.txtListaEspera_CrearEvento.Size = new System.Drawing.Size(139, 34);
+            this.txtListaEspera_CrearEvento.TabIndex = 6;
+            // 
+            // lblListaEspera_CrearEvento
+            // 
+            this.lblListaEspera_CrearEvento.AutoSize = true;
+            this.lblListaEspera_CrearEvento.Location = new System.Drawing.Point(107, 137);
+            this.lblListaEspera_CrearEvento.Name = "lblListaEspera_CrearEvento";
+            this.lblListaEspera_CrearEvento.Size = new System.Drawing.Size(212, 29);
+            this.lblListaEspera_CrearEvento.TabIndex = 5;
+            this.lblListaEspera_CrearEvento.Text = "En lista de espera:";
+            // 
+            // txtParticipacionAceptada_CrearEvento
+            // 
+            this.txtParticipacionAceptada_CrearEvento.Location = new System.Drawing.Point(367, 74);
+            this.txtParticipacionAceptada_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtParticipacionAceptada_CrearEvento.Name = "txtParticipacionAceptada_CrearEvento";
+            this.txtParticipacionAceptada_CrearEvento.Size = new System.Drawing.Size(139, 34);
+            this.txtParticipacionAceptada_CrearEvento.TabIndex = 4;
+            // 
+            // lblPaticipacionAceptada_CrearEvento
+            // 
+            this.lblPaticipacionAceptada_CrearEvento.AutoSize = true;
+            this.lblPaticipacionAceptada_CrearEvento.Location = new System.Drawing.Point(55, 77);
+            this.lblPaticipacionAceptada_CrearEvento.Name = "lblPaticipacionAceptada_CrearEvento";
+            this.lblPaticipacionAceptada_CrearEvento.Size = new System.Drawing.Size(263, 29);
+            this.lblPaticipacionAceptada_CrearEvento.TabIndex = 3;
+            this.lblPaticipacionAceptada_CrearEvento.Text = "Participación aceptada:";
+            // 
+            // dtpFechaLimite_CrearEvento
+            // 
+            this.dtpFechaLimite_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaLimite_CrearEvento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaLimite_CrearEvento.Location = new System.Drawing.Point(1207, 377);
+            this.dtpFechaLimite_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpFechaLimite_CrearEvento.Name = "dtpFechaLimite_CrearEvento";
+            this.dtpFechaLimite_CrearEvento.Size = new System.Drawing.Size(187, 34);
+            this.dtpFechaLimite_CrearEvento.TabIndex = 30;
+            // 
+            // lblFechaLimite_CrearEvento
+            // 
+            this.lblFechaLimite_CrearEvento.AutoSize = true;
+            this.lblFechaLimite_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaLimite_CrearEvento.Location = new System.Drawing.Point(839, 381);
+            this.lblFechaLimite_CrearEvento.Name = "lblFechaLimite_CrearEvento";
+            this.lblFechaLimite_CrearEvento.Size = new System.Drawing.Size(272, 29);
+            this.lblFechaLimite_CrearEvento.TabIndex = 29;
+            this.lblFechaLimite_CrearEvento.Text = "Fecha límite inscripción:";
+            // 
+            // nudParticipantes_CrearEvento
+            // 
+            this.nudParticipantes_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudParticipantes_CrearEvento.Location = new System.Drawing.Point(425, 211);
+            this.nudParticipantes_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudParticipantes_CrearEvento.Name = "nudParticipantes_CrearEvento";
+            this.nudParticipantes_CrearEvento.Size = new System.Drawing.Size(67, 34);
+            this.nudParticipantes_CrearEvento.TabIndex = 28;
+            // 
+            // lblNumParticipantes_CrearEvento
+            // 
+            this.lblNumParticipantes_CrearEvento.AutoSize = true;
+            this.lblNumParticipantes_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumParticipantes_CrearEvento.Location = new System.Drawing.Point(57, 218);
+            this.lblNumParticipantes_CrearEvento.Name = "lblNumParticipantes_CrearEvento";
+            this.lblNumParticipantes_CrearEvento.Size = new System.Drawing.Size(309, 29);
+            this.lblNumParticipantes_CrearEvento.TabIndex = 27;
+            this.lblNumParticipantes_CrearEvento.Text = "Núm. máximo participantes:";
+            // 
+            // grbDatosCelebracion_CrearEvento
+            // 
+            this.grbDatosCelebracion_CrearEvento.Controls.Add(this.mtxtFechaHora_CrearEvento);
+            this.grbDatosCelebracion_CrearEvento.Controls.Add(this.txtProvincia_CrearEvento);
+            this.grbDatosCelebracion_CrearEvento.Controls.Add(this.lblProvincia_CrearEvento);
+            this.grbDatosCelebracion_CrearEvento.Controls.Add(this.lblHora_CrearEvento);
+            this.grbDatosCelebracion_CrearEvento.Controls.Add(this.txtPoblacion_CrearEvento);
+            this.grbDatosCelebracion_CrearEvento.Controls.Add(this.lblPoblacion_CrearEvento);
+            this.grbDatosCelebracion_CrearEvento.Controls.Add(this.txtDireccion_CrearEvento);
+            this.grbDatosCelebracion_CrearEvento.Controls.Add(this.lblDireccion_CrearEvento);
+            this.grbDatosCelebracion_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbDatosCelebracion_CrearEvento.Location = new System.Drawing.Point(825, 25);
+            this.grbDatosCelebracion_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbDatosCelebracion_CrearEvento.Name = "grbDatosCelebracion_CrearEvento";
+            this.grbDatosCelebracion_CrearEvento.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbDatosCelebracion_CrearEvento.Size = new System.Drawing.Size(632, 309);
+            this.grbDatosCelebracion_CrearEvento.TabIndex = 26;
+            this.grbDatosCelebracion_CrearEvento.TabStop = false;
+            this.grbDatosCelebracion_CrearEvento.Text = "Datos Celebración Evento:";
+            // 
+            // mtxtFechaHora_CrearEvento
+            // 
+            this.mtxtFechaHora_CrearEvento.Location = new System.Drawing.Point(228, 240);
+            this.mtxtFechaHora_CrearEvento.Mask = "00/00/0000 00:00";
+            this.mtxtFechaHora_CrearEvento.Name = "mtxtFechaHora_CrearEvento";
+            this.mtxtFechaHora_CrearEvento.Size = new System.Drawing.Size(361, 34);
+            this.mtxtFechaHora_CrearEvento.TabIndex = 11;
+            this.mtxtFechaHora_CrearEvento.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtProvincia_CrearEvento
+            // 
+            this.txtProvincia_CrearEvento.Location = new System.Drawing.Point(228, 176);
+            this.txtProvincia_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtProvincia_CrearEvento.Name = "txtProvincia_CrearEvento";
+            this.txtProvincia_CrearEvento.Size = new System.Drawing.Size(361, 34);
+            this.txtProvincia_CrearEvento.TabIndex = 10;
+            // 
+            // lblProvincia_CrearEvento
+            // 
+            this.lblProvincia_CrearEvento.AutoSize = true;
+            this.lblProvincia_CrearEvento.Location = new System.Drawing.Point(49, 178);
+            this.lblProvincia_CrearEvento.Name = "lblProvincia_CrearEvento";
+            this.lblProvincia_CrearEvento.Size = new System.Drawing.Size(118, 29);
+            this.lblProvincia_CrearEvento.TabIndex = 9;
+            this.lblProvincia_CrearEvento.Text = "Provincia:";
+            // 
+            // lblHora_CrearEvento
+            // 
+            this.lblHora_CrearEvento.AutoSize = true;
+            this.lblHora_CrearEvento.Location = new System.Drawing.Point(121, 242);
+            this.lblHora_CrearEvento.Name = "lblHora_CrearEvento";
+            this.lblHora_CrearEvento.Size = new System.Drawing.Size(71, 29);
+            this.lblHora_CrearEvento.TabIndex = 7;
+            this.lblHora_CrearEvento.Text = "Hora:";
+            // 
+            // txtPoblacion_CrearEvento
+            // 
+            this.txtPoblacion_CrearEvento.Location = new System.Drawing.Point(228, 117);
+            this.txtPoblacion_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPoblacion_CrearEvento.Name = "txtPoblacion_CrearEvento";
+            this.txtPoblacion_CrearEvento.Size = new System.Drawing.Size(361, 34);
+            this.txtPoblacion_CrearEvento.TabIndex = 6;
+            // 
+            // lblPoblacion_CrearEvento
+            // 
+            this.lblPoblacion_CrearEvento.AutoSize = true;
+            this.lblPoblacion_CrearEvento.Location = new System.Drawing.Point(49, 118);
+            this.lblPoblacion_CrearEvento.Name = "lblPoblacion_CrearEvento";
+            this.lblPoblacion_CrearEvento.Size = new System.Drawing.Size(127, 29);
+            this.lblPoblacion_CrearEvento.TabIndex = 5;
+            this.lblPoblacion_CrearEvento.Text = "Población:";
+            // 
+            // txtDireccion_CrearEvento
+            // 
+            this.txtDireccion_CrearEvento.Location = new System.Drawing.Point(228, 57);
+            this.txtDireccion_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDireccion_CrearEvento.Name = "txtDireccion_CrearEvento";
+            this.txtDireccion_CrearEvento.Size = new System.Drawing.Size(361, 34);
+            this.txtDireccion_CrearEvento.TabIndex = 4;
+            // 
+            // lblDireccion_CrearEvento
+            // 
+            this.lblDireccion_CrearEvento.AutoSize = true;
+            this.lblDireccion_CrearEvento.Location = new System.Drawing.Point(49, 61);
+            this.lblDireccion_CrearEvento.Name = "lblDireccion_CrearEvento";
+            this.lblDireccion_CrearEvento.Size = new System.Drawing.Size(121, 29);
+            this.lblDireccion_CrearEvento.TabIndex = 3;
+            this.lblDireccion_CrearEvento.Text = "Dirección:";
+            // 
+            // txtDescripcion_CrearEvento
+            // 
+            this.txtDescripcion_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion_CrearEvento.Location = new System.Drawing.Point(346, 92);
+            this.txtDescripcion_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescripcion_CrearEvento.Multiline = true;
+            this.txtDescripcion_CrearEvento.Name = "txtDescripcion_CrearEvento";
+            this.txtDescripcion_CrearEvento.Size = new System.Drawing.Size(359, 36);
+            this.txtDescripcion_CrearEvento.TabIndex = 23;
+            // 
+            // lblDescripcion_CrearEvento
+            // 
+            this.lblDescripcion_CrearEvento.AutoSize = true;
+            this.lblDescripcion_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion_CrearEvento.Location = new System.Drawing.Point(57, 99);
+            this.lblDescripcion_CrearEvento.Name = "lblDescripcion_CrearEvento";
+            this.lblDescripcion_CrearEvento.Size = new System.Drawing.Size(267, 29);
+            this.lblDescripcion_CrearEvento.TabIndex = 22;
+            this.lblDescripcion_CrearEvento.Text = "Descripción del Evento:";
+            // 
+            // txtNombre_CrearEvento
+            // 
+            this.txtNombre_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre_CrearEvento.Location = new System.Drawing.Point(346, 37);
+            this.txtNombre_CrearEvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombre_CrearEvento.Name = "txtNombre_CrearEvento";
+            this.txtNombre_CrearEvento.Size = new System.Drawing.Size(359, 34);
+            this.txtNombre_CrearEvento.TabIndex = 21;
+            // 
+            // lblNombre_CrearEvento
+            // 
+            this.lblNombre_CrearEvento.AutoSize = true;
+            this.lblNombre_CrearEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre_CrearEvento.Location = new System.Drawing.Point(135, 44);
+            this.lblNombre_CrearEvento.Name = "lblNombre_CrearEvento";
+            this.lblNombre_CrearEvento.Size = new System.Drawing.Size(187, 29);
+            this.lblNombre_CrearEvento.TabIndex = 20;
+            this.lblNombre_CrearEvento.Text = "Nombre Evento:";
             // 
             // gbxderCrear
             // 
             this.gbxderCrear.BackColor = System.Drawing.Color.LightGray;
+            this.gbxderCrear.Controls.Add(this.btnCrearCampeonato);
             this.gbxderCrear.Controls.Add(this.grpboxOrganizador);
             this.gbxderCrear.Controls.Add(this.grpboxParticipantes);
             this.gbxderCrear.Location = new System.Drawing.Point(1553, -18);
@@ -832,7 +953,7 @@
             // lblCampeonatoExistente
             // 
             this.lblCampeonatoExistente.AutoSize = true;
-            this.lblCampeonatoExistente.Location = new System.Drawing.Point(14, 50);
+            this.lblCampeonatoExistente.Location = new System.Drawing.Point(14, 49);
             this.lblCampeonatoExistente.Name = "lblCampeonatoExistente";
             this.lblCampeonatoExistente.Size = new System.Drawing.Size(251, 29);
             this.lblCampeonatoExistente.TabIndex = 4;
@@ -987,6 +1108,7 @@
             // 
             // tbpNotificaciones
             // 
+            this.tbpNotificaciones.Controls.Add(this.btnCargarMensajes);
             this.tbpNotificaciones.Controls.Add(this.dgvMensajesEnviados);
             this.tbpNotificaciones.Controls.Add(this.dgvMensajesRecibidos);
             this.tbpNotificaciones.Controls.Add(this.lblMensajesEnviados);
@@ -1000,18 +1122,33 @@
             this.tbpNotificaciones.Text = "    Notificaciones    ";
             this.tbpNotificaciones.UseVisualStyleBackColor = true;
             // 
+            // btnCargarMensajes
+            // 
+            this.btnCargarMensajes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargarMensajes.Location = new System.Drawing.Point(1238, 49);
+            this.btnCargarMensajes.Name = "btnCargarMensajes";
+            this.btnCargarMensajes.Size = new System.Drawing.Size(223, 53);
+            this.btnCargarMensajes.TabIndex = 104;
+            this.btnCargarMensajes.Text = "Cargar Mensajes";
+            this.btnCargarMensajes.UseVisualStyleBackColor = true;
+            this.btnCargarMensajes.Click += new System.EventHandler(this.btnCargarMensajes_Click);
+            // 
             // dgvMensajesEnviados
             // 
-            this.dgvMensajesEnviados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMensajesEnviados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvMensajesEnviados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvMensajesEnviados.ColumnHeadersHeight = 50;
             this.dgvMensajesEnviados.Location = new System.Drawing.Point(123, 512);
             this.dgvMensajesEnviados.Name = "dgvMensajesEnviados";
-            this.dgvMensajesEnviados.RowHeadersWidth = 51;
+            this.dgvMensajesEnviados.RowHeadersWidth = 50;
             this.dgvMensajesEnviados.RowTemplate.Height = 24;
             this.dgvMensajesEnviados.Size = new System.Drawing.Size(1268, 238);
             this.dgvMensajesEnviados.TabIndex = 8;
             // 
             // dgvMensajesRecibidos
             // 
+            this.dgvMensajesRecibidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvMensajesRecibidos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvMensajesRecibidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMensajesRecibidos.Location = new System.Drawing.Point(123, 135);
             this.dgvMensajesRecibidos.Name = "dgvMensajesRecibidos";
@@ -1043,22 +1180,76 @@
             // gbxderNotif
             // 
             this.gbxderNotif.BackColor = System.Drawing.Color.LightGray;
-            this.gbxderNotif.Controls.Add(this.pbxlogoNotificaciones);
+            this.gbxderNotif.Controls.Add(this.btnEnviarMensaje);
+            this.gbxderNotif.Controls.Add(this.gbxEnviarMensaje);
             this.gbxderNotif.Location = new System.Drawing.Point(1553, -18);
             this.gbxderNotif.Name = "gbxderNotif";
             this.gbxderNotif.Size = new System.Drawing.Size(870, 919);
             this.gbxderNotif.TabIndex = 0;
             this.gbxderNotif.TabStop = false;
             // 
-            // pbxlogoNotificaciones
+            // btnEnviarMensaje
             // 
-            this.pbxlogoNotificaciones.Image = global::SportShare.Properties.Resources._1620828087484__1_;
-            this.pbxlogoNotificaciones.Location = new System.Drawing.Point(183, 123);
-            this.pbxlogoNotificaciones.Name = "pbxlogoNotificaciones";
-            this.pbxlogoNotificaciones.Size = new System.Drawing.Size(126, 555);
-            this.pbxlogoNotificaciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxlogoNotificaciones.TabIndex = 1;
-            this.pbxlogoNotificaciones.TabStop = false;
+            this.btnEnviarMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarMensaje.Location = new System.Drawing.Point(274, 584);
+            this.btnEnviarMensaje.Name = "btnEnviarMensaje";
+            this.btnEnviarMensaje.Size = new System.Drawing.Size(143, 53);
+            this.btnEnviarMensaje.TabIndex = 103;
+            this.btnEnviarMensaje.Text = "Enviar";
+            this.btnEnviarMensaje.UseVisualStyleBackColor = true;
+            this.btnEnviarMensaje.Click += new System.EventHandler(this.btnEnviarMensaje_Click);
+            // 
+            // gbxEnviarMensaje
+            // 
+            this.gbxEnviarMensaje.Controls.Add(this.txtCuerpoMensaje);
+            this.gbxEnviarMensaje.Controls.Add(this.lblCurpoMensaje);
+            this.gbxEnviarMensaje.Controls.Add(this.txtDestinatario);
+            this.gbxEnviarMensaje.Controls.Add(this.lblDestinatario);
+            this.gbxEnviarMensaje.Location = new System.Drawing.Point(27, 125);
+            this.gbxEnviarMensaje.Name = "gbxEnviarMensaje";
+            this.gbxEnviarMensaje.Size = new System.Drawing.Size(390, 443);
+            this.gbxEnviarMensaje.TabIndex = 0;
+            this.gbxEnviarMensaje.TabStop = false;
+            this.gbxEnviarMensaje.Text = "Enviar Mensaje";
+            // 
+            // txtCuerpoMensaje
+            // 
+            this.txtCuerpoMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuerpoMensaje.Location = new System.Drawing.Point(23, 219);
+            this.txtCuerpoMensaje.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCuerpoMensaje.Multiline = true;
+            this.txtCuerpoMensaje.Name = "txtCuerpoMensaje";
+            this.txtCuerpoMensaje.Size = new System.Drawing.Size(343, 197);
+            this.txtCuerpoMensaje.TabIndex = 25;
+            // 
+            // lblCurpoMensaje
+            // 
+            this.lblCurpoMensaje.AutoSize = true;
+            this.lblCurpoMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurpoMensaje.Location = new System.Drawing.Point(18, 177);
+            this.lblCurpoMensaje.Name = "lblCurpoMensaje";
+            this.lblCurpoMensaje.Size = new System.Drawing.Size(197, 29);
+            this.lblCurpoMensaje.TabIndex = 24;
+            this.lblCurpoMensaje.Text = "Cuerpo Mensaje:";
+            // 
+            // txtDestinatario
+            // 
+            this.txtDestinatario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDestinatario.Location = new System.Drawing.Point(23, 116);
+            this.txtDestinatario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDestinatario.Name = "txtDestinatario";
+            this.txtDestinatario.Size = new System.Drawing.Size(261, 34);
+            this.txtDestinatario.TabIndex = 23;
+            // 
+            // lblDestinatario
+            // 
+            this.lblDestinatario.AutoSize = true;
+            this.lblDestinatario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDestinatario.Location = new System.Drawing.Point(18, 74);
+            this.lblDestinatario.Name = "lblDestinatario";
+            this.lblDestinatario.Size = new System.Drawing.Size(147, 29);
+            this.lblDestinatario.TabIndex = 22;
+            this.lblDestinatario.Text = "Destinatario:";
             // 
             // tbpAyuda
             // 
@@ -1304,6 +1495,17 @@
             this.tbpMiPerfil.Text = "    Mi Perfil    ";
             this.tbpMiPerfil.UseVisualStyleBackColor = true;
             // 
+            // btnConfirmarMod
+            // 
+            this.btnConfirmarMod.Location = new System.Drawing.Point(1228, 677);
+            this.btnConfirmarMod.Name = "btnConfirmarMod";
+            this.btnConfirmarMod.Size = new System.Drawing.Size(218, 53);
+            this.btnConfirmarMod.TabIndex = 101;
+            this.btnConfirmarMod.Text = "Confirmar";
+            this.btnConfirmarMod.UseVisualStyleBackColor = true;
+            this.btnConfirmarMod.Visible = false;
+            this.btnConfirmarMod.Click += new System.EventHandler(this.btnConfirmarMod_Click);
+            // 
             // btnModificar
             // 
             this.btnModificar.Location = new System.Drawing.Point(989, 677);
@@ -1538,9 +1740,9 @@
             // gbxMisUltEvenMiPerfil
             // 
             this.gbxMisUltEvenMiPerfil.Controls.Add(this.dgvMiUltEvenMiPerfil);
-            this.gbxMisUltEvenMiPerfil.Location = new System.Drawing.Point(35, 470);
+            this.gbxMisUltEvenMiPerfil.Location = new System.Drawing.Point(35, 539);
             this.gbxMisUltEvenMiPerfil.Name = "gbxMisUltEvenMiPerfil";
-            this.gbxMisUltEvenMiPerfil.Size = new System.Drawing.Size(440, 342);
+            this.gbxMisUltEvenMiPerfil.Size = new System.Drawing.Size(440, 241);
             this.gbxMisUltEvenMiPerfil.TabIndex = 1;
             this.gbxMisUltEvenMiPerfil.TabStop = false;
             this.gbxMisUltEvenMiPerfil.Text = "Mis Últimos Eventos";
@@ -1548,22 +1750,52 @@
             // dgvMiUltEvenMiPerfil
             // 
             this.dgvMiUltEvenMiPerfil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMiUltEvenMiPerfil.Location = new System.Drawing.Point(15, 51);
+            this.dgvMiUltEvenMiPerfil.Location = new System.Drawing.Point(15, 41);
             this.dgvMiUltEvenMiPerfil.Name = "dgvMiUltEvenMiPerfil";
             this.dgvMiUltEvenMiPerfil.RowHeadersWidth = 51;
             this.dgvMiUltEvenMiPerfil.RowTemplate.Height = 24;
-            this.dgvMiUltEvenMiPerfil.Size = new System.Drawing.Size(408, 267);
+            this.dgvMiUltEvenMiPerfil.Size = new System.Drawing.Size(408, 172);
             this.dgvMiUltEvenMiPerfil.TabIndex = 0;
             // 
             // gbxAmigosMiPerfil
             // 
+            this.gbxAmigosMiPerfil.Controls.Add(this.btnAñadirAmigo);
+            this.gbxAmigosMiPerfil.Controls.Add(this.lblAñadirAmigo);
+            this.gbxAmigosMiPerfil.Controls.Add(this.txtAñadirAmigo);
             this.gbxAmigosMiPerfil.Controls.Add(this.dgvAmigosMiPerfil);
             this.gbxAmigosMiPerfil.Location = new System.Drawing.Point(35, 90);
             this.gbxAmigosMiPerfil.Name = "gbxAmigosMiPerfil";
-            this.gbxAmigosMiPerfil.Size = new System.Drawing.Size(440, 342);
+            this.gbxAmigosMiPerfil.Size = new System.Drawing.Size(440, 393);
             this.gbxAmigosMiPerfil.TabIndex = 0;
             this.gbxAmigosMiPerfil.TabStop = false;
             this.gbxAmigosMiPerfil.Text = "Amigos";
+            // 
+            // btnAñadirAmigo
+            // 
+            this.btnAñadirAmigo.Location = new System.Drawing.Point(210, 321);
+            this.btnAñadirAmigo.Name = "btnAñadirAmigo";
+            this.btnAñadirAmigo.Size = new System.Drawing.Size(129, 53);
+            this.btnAñadirAmigo.TabIndex = 102;
+            this.btnAñadirAmigo.Text = "Añadir";
+            this.btnAñadirAmigo.UseVisualStyleBackColor = true;
+            this.btnAñadirAmigo.Click += new System.EventHandler(this.btnAñadirAmigo_Click);
+            // 
+            // lblAñadirAmigo
+            // 
+            this.lblAñadirAmigo.AutoSize = true;
+            this.lblAñadirAmigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAñadirAmigo.Location = new System.Drawing.Point(10, 266);
+            this.lblAñadirAmigo.Name = "lblAñadirAmigo";
+            this.lblAñadirAmigo.Size = new System.Drawing.Size(176, 29);
+            this.lblAñadirAmigo.TabIndex = 66;
+            this.lblAñadirAmigo.Text = "Añadir Amigo:";
+            // 
+            // txtAñadirAmigo
+            // 
+            this.txtAñadirAmigo.Location = new System.Drawing.Point(210, 257);
+            this.txtAñadirAmigo.Name = "txtAñadirAmigo";
+            this.txtAñadirAmigo.Size = new System.Drawing.Size(200, 41);
+            this.txtAñadirAmigo.TabIndex = 1;
             // 
             // dgvAmigosMiPerfil
             // 
@@ -1572,7 +1804,7 @@
             this.dgvAmigosMiPerfil.Name = "dgvAmigosMiPerfil";
             this.dgvAmigosMiPerfil.RowHeadersWidth = 51;
             this.dgvAmigosMiPerfil.RowTemplate.Height = 24;
-            this.dgvAmigosMiPerfil.Size = new System.Drawing.Size(408, 267);
+            this.dgvAmigosMiPerfil.Size = new System.Drawing.Size(408, 172);
             this.dgvAmigosMiPerfil.TabIndex = 0;
             // 
             // btnCerrarSesión
@@ -1607,16 +1839,9 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnConfirmarMod
+            // errores
             // 
-            this.btnConfirmarMod.Location = new System.Drawing.Point(1228, 677);
-            this.btnConfirmarMod.Name = "btnConfirmarMod";
-            this.btnConfirmarMod.Size = new System.Drawing.Size(218, 53);
-            this.btnConfirmarMod.TabIndex = 101;
-            this.btnConfirmarMod.Text = "Confirmar";
-            this.btnConfirmarMod.UseVisualStyleBackColor = true;
-            this.btnConfirmarMod.Visible = false;
-            this.btnConfirmarMod.Click += new System.EventHandler(this.btnConfirmarMod_Click);
+            this.errores.ContainerControl = this;
             // 
             // Principal
             // 
@@ -1639,19 +1864,19 @@
             this.gbxdestacadosbuscar.ResumeLayout(false);
             this.gbxdestacadosbuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).EndInit();
-            this.tbpCrear.ResumeLayout(false);
-            this.tbpCrear.PerformLayout();
-            this.grpboxLista.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvActividadesCampeonato)).EndInit();
-            this.grpboxRequisitos.ResumeLayout(false);
-            this.grpboxRequisitos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tkbPrecioCrear)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numupEdad)).EndInit();
-            this.grboxEstado.ResumeLayout(false);
-            this.grboxEstado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numupParticipantes)).EndInit();
-            this.grpboxDatosCelebracion.ResumeLayout(false);
-            this.grpboxDatosCelebracion.PerformLayout();
+            this.tbpCrearEvento.ResumeLayout(false);
+            this.tbpCrearEvento.PerformLayout();
+            this.grbCampeonato_CrearEvento.ResumeLayout(false);
+            this.grbCampeonato_CrearEvento.PerformLayout();
+            this.grbRequisitosParticipantes_CrearEvento.ResumeLayout(false);
+            this.grbRequisitosParticipantes_CrearEvento.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tkbPrecio_CrearEvento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudEdadMinima_CrearEvento)).EndInit();
+            this.grbEstadoInscripcion_CrearEvento.ResumeLayout(false);
+            this.grbEstadoInscripcion_CrearEvento.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudParticipantes_CrearEvento)).EndInit();
+            this.grbDatosCelebracion_CrearEvento.ResumeLayout(false);
+            this.grbDatosCelebracion_CrearEvento.PerformLayout();
             this.gbxderCrear.ResumeLayout(false);
             this.grpboxOrganizador.ResumeLayout(false);
             this.grpboxOrganizador.PerformLayout();
@@ -1668,7 +1893,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMensajesEnviados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMensajesRecibidos)).EndInit();
             this.gbxderNotif.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxlogoNotificaciones)).EndInit();
+            this.gbxEnviarMensaje.ResumeLayout(false);
+            this.gbxEnviarMensaje.PerformLayout();
             this.tbpAyuda.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxFacebook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTwitter)).EndInit();
@@ -1685,8 +1911,10 @@
             this.gbxMisUltEvenMiPerfil.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMiUltEvenMiPerfil)).EndInit();
             this.gbxAmigosMiPerfil.ResumeLayout(false);
+            this.gbxAmigosMiPerfil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmigosMiPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxsportshare)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1695,7 +1923,7 @@
 
         private System.Windows.Forms.TabControl tbcPrincipal;
         private System.Windows.Forms.TabPage tbpBuscar;
-        private System.Windows.Forms.TabPage tbpCrear;
+        private System.Windows.Forms.TabPage tbpCrearEvento;
         private System.Windows.Forms.TabPage tbpMisEventos;
         private System.Windows.Forms.TabPage tbpNotificaciones;
         private System.Windows.Forms.TabPage tbpAyuda;
@@ -1706,12 +1934,12 @@
         private System.Windows.Forms.Button btnCiclismoBusc;
         private System.Windows.Forms.Button btnTenisBusc;
         private System.Windows.Forms.Button btnBaloncestoBusc;
-        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dgvBuscar;
         private System.Windows.Forms.GroupBox gbxdestacadosbuscar;
         private System.Windows.Forms.PictureBox pbxsportshare;
         private System.Windows.Forms.PictureBox pbxbuscar;
         private System.Windows.Forms.GroupBox gbxderCrear;
+
         private System.Windows.Forms.GroupBox gbxderMisEventos;
         private System.Windows.Forms.GroupBox gbxderNotif;
         private System.Windows.Forms.GroupBox gbxderAyuda;
@@ -1726,48 +1954,43 @@
         private System.Windows.Forms.Label lblEventActiv;
         private System.Windows.Forms.DataGridView dgvEventPas;
         private System.Windows.Forms.DataGridView dgvEventActiv;
-        private System.Windows.Forms.GroupBox grpboxLista;
         private System.Windows.Forms.GroupBox grpboxParticipantes;
         private System.Windows.Forms.TextBox txtDescCampeonato;
         private System.Windows.Forms.GroupBox grpboxOrganizador;
-        private System.Windows.Forms.GroupBox grpboxRequisitos;
-        private System.Windows.Forms.NumericUpDown numupEdad;
-        private System.Windows.Forms.Label lblPrecio;
-        private System.Windows.Forms.TextBox txtMateriales;
-        private System.Windows.Forms.Label lblMateriales;
-        private System.Windows.Forms.TextBox txtNivelDeportivo;
-        private System.Windows.Forms.Label lblNivelDeportivo;
-        private System.Windows.Forms.Label lblEdad;
-        private System.Windows.Forms.Button bttnCancelar;
-        private System.Windows.Forms.Button bttnSi;
-        private System.Windows.Forms.GroupBox grboxEstado;
-        private System.Windows.Forms.TextBox txtlistaespera;
-        private System.Windows.Forms.Label lblListaEspera;
-        private System.Windows.Forms.TextBox txtparticipacionaceptada;
-        private System.Windows.Forms.Label lblPaticipación;
-        private System.Windows.Forms.DateTimePicker dtpfechlimite;
-        private System.Windows.Forms.Label lblFechaLimite;
-        private System.Windows.Forms.NumericUpDown numupParticipantes;
-        private System.Windows.Forms.Label lblNumParticipantes;
-        private System.Windows.Forms.GroupBox grpboxDatosCelebracion;
-        private System.Windows.Forms.TextBox txtHora;
-        private System.Windows.Forms.Label lblHora;
-        private System.Windows.Forms.TextBox txtDia;
-        private System.Windows.Forms.Label lblDia;
-        private System.Windows.Forms.TextBox txtLocalizacion;
-        private System.Windows.Forms.Label lblLocalizacion;
-        private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.TextBox txtNombreEvento;
-        private System.Windows.Forms.Label lblNombreEvento;
-        private System.Windows.Forms.Button bttnVolver;
-        private System.Windows.Forms.ComboBox cbxDeporteCrear;
-        private System.Windows.Forms.Label lblDeporteCrear;
-        private System.Windows.Forms.TrackBar tkbPrecioCrear;
-        private System.Windows.Forms.Label lblPrecioNumCrear;
+        private System.Windows.Forms.GroupBox grbRequisitosParticipantes_CrearEvento;
+        private System.Windows.Forms.NumericUpDown nudEdadMinima_CrearEvento;
+        private System.Windows.Forms.Label lblPrecio_CrearEvento;
+        private System.Windows.Forms.TextBox txtMateriales_CrearEvento;
+        private System.Windows.Forms.Label lblMateriales_CrearEvento;
+        private System.Windows.Forms.TextBox txtNivelDeportivo_CrearEvento;
+        private System.Windows.Forms.Label lblNivelDeportivo_CrearEvento;
+        private System.Windows.Forms.Label lblEdadMinima_CrearEvento;
+        private System.Windows.Forms.Button btnCancelar_CrearEvento;
+        private System.Windows.Forms.Button btnCrear_CrearEvento;
+        private System.Windows.Forms.GroupBox grbEstadoInscripcion_CrearEvento;
+        private System.Windows.Forms.TextBox txtListaEspera_CrearEvento;
+        private System.Windows.Forms.Label lblListaEspera_CrearEvento;
+        private System.Windows.Forms.TextBox txtParticipacionAceptada_CrearEvento;
+        private System.Windows.Forms.Label lblPaticipacionAceptada_CrearEvento;
+        private System.Windows.Forms.DateTimePicker dtpFechaLimite_CrearEvento;
+        private System.Windows.Forms.Label lblFechaLimite_CrearEvento;
+        private System.Windows.Forms.NumericUpDown nudParticipantes_CrearEvento;
+        private System.Windows.Forms.Label lblNumParticipantes_CrearEvento;
+        private System.Windows.Forms.GroupBox grbDatosCelebracion_CrearEvento;
+        private System.Windows.Forms.Label lblHora_CrearEvento;
+        private System.Windows.Forms.TextBox txtPoblacion_CrearEvento;
+        private System.Windows.Forms.Label lblPoblacion_CrearEvento;
+        private System.Windows.Forms.TextBox txtDireccion_CrearEvento;
+        private System.Windows.Forms.Label lblDireccion_CrearEvento;
+        private System.Windows.Forms.TextBox txtDescripcion_CrearEvento;
+        private System.Windows.Forms.Label lblDescripcion_CrearEvento;
+        private System.Windows.Forms.TextBox txtNombre_CrearEvento;
+        private System.Windows.Forms.Label lblNombre_CrearEvento;
+        private System.Windows.Forms.Button btnVolver_CrearEvento;
+        private System.Windows.Forms.ComboBox cmbDeporte_CrearEvento;
+        private System.Windows.Forms.TrackBar tkbPrecio_CrearEvento;
+        private System.Windows.Forms.Label lblDolar_CrearEvento;
         private System.Windows.Forms.Button btnCrearCampeonato;
-        private System.Windows.Forms.Button btnAñadirActiCampeonato;
-        private System.Windows.Forms.DataGridView dgvActividadesCampeonato;
         private System.Windows.Forms.Label lblCampeonatoExistente;
         private System.Windows.Forms.TextBox txtNomCampeonato;
         private System.Windows.Forms.TextBox textBox1;
@@ -1820,8 +2043,33 @@
         private System.Windows.Forms.TextBox txtDepPrefMiPerfil;
         private System.Windows.Forms.Button btnCerrarSesión;
         private System.Windows.Forms.PictureBox pbxlogoAyuda;
-        private System.Windows.Forms.PictureBox pbxlogoNotificaciones;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnConfirmarMod;
+        private System.Windows.Forms.GroupBox gbxEnviarMensaje;
+        private System.Windows.Forms.TextBox txtDestinatario;
+        private System.Windows.Forms.Label lblDestinatario;
+        private System.Windows.Forms.TextBox txtCuerpoMensaje;
+        private System.Windows.Forms.Label lblCurpoMensaje;
+        private System.Windows.Forms.Button btnEnviarMensaje;
+        private System.Windows.Forms.ErrorProvider errores;
+        private System.Windows.Forms.Button btnCargarMensajes;
+        private System.Windows.Forms.MaskedTextBox mtxtFechaHora_CrearEvento;
+        private System.Windows.Forms.TextBox txtProvincia_CrearEvento;
+        private System.Windows.Forms.Label lblProvincia_CrearEvento;
+        private System.Windows.Forms.GroupBox grbCampeonato_CrearEvento;
+        private System.Windows.Forms.ComboBox cmbSelecCamp_CrearEvento;
+        private System.Windows.Forms.Label lblSelecCamp_CrearEvento;
+        private System.Windows.Forms.RadioButton rdbtnNo_CrearEvento;
+        private System.Windows.Forms.RadioButton rdbtnSi_CrearEvento;
+        private System.Windows.Forms.Label lblDeporte_CrearEvento;
+        private System.Windows.Forms.Label lblAñadirAmigo;
+        private System.Windows.Forms.TextBox txtAñadirAmigo;
+        private System.Windows.Forms.Button btnAñadirAmigo;
+        private System.Windows.Forms.ComboBox cmbEvento_Buscar;
+        private System.Windows.Forms.Label lblEvento_Buscar;
+        private System.Windows.Forms.ComboBox cmbLocalidad_Buscar;
+        private System.Windows.Forms.Label lblLocalidad_Buscar;
+        private System.Windows.Forms.ComboBox cmbDeporte_Buscar;
+        private System.Windows.Forms.Label lblDeporte_Buscar;
     }
 }

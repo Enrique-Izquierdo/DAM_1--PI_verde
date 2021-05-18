@@ -47,14 +47,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clase\Actividades.cs" />
+    <Compile Include="Clase\Actividad.cs" />
     <Compile Include="Clase\Campeonato.cs" />
-    <Compile Include="Clase\ConexiónBD.cs" />
+    <Compile Include="Clase\ConexionBD.cs" />
     <Compile Include="Clase\Datos.cs" />
     <Compile Include="Clase\Mensaje.cs" />
     <Compile Include="Clase\Usuario.cs" />
-    <Compile Include="Clase\Valoración.cs" />
-    <Compile Include="Idiomas\Español.Designer.cs" />
+    <Compile Include="Clase\Valoracion.cs" />
+    <Compile Include="Idiomas\StringRecursos.Designer.cs" />
+    <Compile Include="Idiomas\StringRecursos.EN-GB.Designer.cs" />
     <Compile Include="IniciarSesión.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,7 +88,8 @@
     <Compile Include="Valoración.Designer.cs">
       <DependentUpon>Valoración.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Idiomas\Español.resx" />
+    <EmbeddedResource Include="Idiomas\StringRecursos.EN-GB.resx" />
+    <EmbeddedResource Include="Idiomas\StringRecursos.resx" />
     <EmbeddedResource Include="IniciarSesión.resx">
       <DependentUpon>IniciarSesión.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,5 +164,6 @@
   <ItemGroup>
     <None Include="Resources\1620828087484 %281%29.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
